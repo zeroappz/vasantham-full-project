@@ -1,0 +1,839 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	
+	<title>Vasantham Health Centre - Medical and Doctor Website CMS</title>
+	
+	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+	<link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css" media="screen">
+	<script src="assets/js/google-code-prettify/prettify.js"></script>
+
+	
+	<script src="assets/js/jquery.js"></script>
+	
+	<script src="assets/js/jquery.scrollTo.js"></script>
+	<script src="assets/js/jquery.easing.js"></script>
+	
+	<script>document.createElement('section');var duration='500',easing='swing';</script>
+	<script src="assets/js/script.js"></script>
+	
+	<style>
+		html{background-color:#EFEFEF;color:#1C140D;}
+		::-moz-selection{background:#CBE86B;color:#1C140D;}
+		::selection{background:#CBE86B;color:#1C140D;}
+		#documenter_sidebar #documenter_logo{background-image:url();}
+		a{color:#889C48;}
+		.btn {
+			border-radius:3px;
+		}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #CBE86B, #889C48);
+			  background-image: -ms-linear-gradient(top, #CBE86B, #889C48);
+			  background-image: -webkit-gradient(linear, 0 0, 0 CBE86B%, from(#F2E9E1), to(#889C48));
+			  background-image: -webkit-linear-gradient(top, #CBE86B, #889C48);
+			  background-image: -o-linear-gradient(top, #CBE86B, #889C48);
+			  background-image: linear-gradient(top, #CBE86B, #889C48);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CBE86B', endColorstr='#889C48', GradientType=0);
+			  border-color: #889C48 #889C48 #bfbfbf;
+			  color:#FFFFFF;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  border-color: #CBE86B #CBE86B #bfbfbf;
+		  background-color: #889C48;
+		}
+		hr{border-top:1px solid #CCCCCC;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ul a{background-color:#F2E9E1;color:#1C140D;}
+		#documenter_sidebar ul a{-webkit-text-shadow:1px 1px 0px #FFF6ED;-moz-text-shadow:1px 1px 0px #FFF6ED;text-shadow:1px 1px 0px #FFF6ED;}
+		#documenter_sidebar ul{border-top:1px solid #D1C9C2;}
+		#documenter_sidebar ul a{border-top:1px solid #FFF6ED;border-bottom:1px solid #D1C9C2;color:#1C140D;}
+		#documenter_sidebar ul a:hover{background:#CBE86B;color:#1C140D;border-top:1px solid #CBE86B;}
+		#documenter_sidebar ul a.current{background:#CBE86B;color:#1C140D;border-top:1px solid #CBE86B;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+		
+		.pp1 {
+			padding: 3px 8px;
+			background-color: rgb(255, 236, 236);
+			display: inline;
+			font-weight: bold;
+		}
+	</style>
+	
+</head>
+<body class="documenter-project-carland">
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo">
+		</a>
+		<ul id="documenter_nav">
+			<li><a class="current" href="#Welcome">Welcome</a></li>				
+			<li><a href="#Introduction" title="Introduction">Introduction</a></li>
+			<li><a href="#Features" title="Features">Features</a></li>
+			<li><a href="#Installation" title="Installation">Installation</a></li>
+			<li><a href="#Dashboard" title="Dashboard">Dashboard</a></li>
+			<li><a href="#User" title="User">User</a></li>
+			<li><a href="#Settings" title="Settings">Settings</a></li>
+			<li><a href="#Page" title="Page">Page</a></li>
+			<li><a href="#Menu" title="Menu">Menu</a></li>
+			
+			<li><a href="#News_category" title="News Category">News Category</a></li>
+			<li><a href="#News" title="News">News</a></li>
+			<li><a href="#News_comment" title="Comment">Comment</a></li>
+
+			<li><a href="#Doctor_designation" title="Doctor Designation">Doctor Designation</a></li>
+			<li><a href="#Doctor" title="Doctor">Doctor</a></li>
+
+			<li><a href="#Slider" title="Slider">Slider</a></li>
+			<li><a href="#Testimonial" title="Testimonial">Testimonial</a></li>
+			<li><a href="#Partner" title="Partner">Partner</a></li>
+			<li><a href="#Service" title="Service">Service</a></li>
+			<li><a href="#Department" title="Department">Department</a></li>
+
+			<li><a href="#Pricing_plan" title="Pricing Plan">Pricing Plan</a></li>
+			<li><a href="#Pricing_item" title="Pricing Item">Pricing Item</a></li>
+
+			<li><a href="#FAQ_category" title="FAQ Category">FAQ Category</a></li>
+			<li><a href="#FAQ" title="FAQ">FAQ</a></li>
+			
+			<li><a href="#Photo_Category" title="Photo Category">Photo Category</a></li>
+			<li><a href="#Photo" title="Photo">Photo</a></li>
+			<li><a href="#Video_Category" title="Video Category">Video Category</a></li>
+			<li><a href="#Video" title="Video">Video</a></li>
+
+			<li><a href="#Advertisement_Home" title="Advertisement (Home)">Advertisement (Home)</a></li>
+			<li><a href="#Advertisement_Sidebar" title="Advertisement (Sidebar)">Advertisement (Sidebar)</a></li>
+			<li><a href="#Advertisement_Category" title="Advertisement (Category)">Advertisement (Category)</a></li>
+
+			<li><a href="#File_Upload" title="File Upload">File Upload</a></li>
+			<li><a href="#Social_Media" title="Social Media">Social Media</a></li>
+			<li><a href="#Subscriber" title="Subscriber">Subscriber</a></li>
+			<li><a href="#support" title="Support">Support</a></li>
+
+		</ul>
+	</div>
+	<div id="documenter_content">
+
+
+<section id="Welcome">
+	<h1>Vasantham Health Centre</h1>
+	<h2>Medical and Doctor Website CMS</h2>
+	<div id="documenter_buttons">
+		
+	</div>
+	<hr>
+	<ul>
+		<li>Author Email: <a href="mailto:jbbr.1990@gmail.com">jbbr.1990@gmail.com</a></li>
+		<li>Share By: <a href="https://nullphpscript.com">Nullphpscript.com</a></li>
+	</ul>
+	<p></p>
+</section>
+	
+<section id="Introduction">
+	<div class="page-header"><h3>Introduction</h3>
+	<p>
+		Vasantham Health Centre is a responsive Medical and Doctor Website Content Management System (CMS). It is a complete solution for a doctor or medical website. This CMS is built completely with PHP and MySQL. It has a nice and attractive front end and back end interface that are really awesome and eyecatching. The back end has a lot of nice and maintainable features that are needed for a modern and professional website to handle the contents easily by client. Almost all kinds of changes are possible to do using the admin panel without having any kind or programming language knowledge. 
+	</p>
+	<p>
+		This CMS is built using the procedural php and without any framework. For this reason, it can be customized easily by most of the developers. This CMS script was prepared using the PDO feature of PHP language. That's why, no SQL injection and XSS attack is possible here and your website will be safe. Also in all pages, admin level security and invalid page url submission checking were done.
+	</p>
+</section>
+
+<section id="Features">
+	<div class="page-header"><h3>Features</h3>
+	<p>
+		This CMS script has the following features:
+	</p>
+	<ul>
+		<li>Easy and simple interface to use</li>
+		<li>Fully responsive for any kind of device</li>
+		<li>Powerful admin backend like WordPress</li>
+		<li>Clean coding with proper commenting</li>
+		<li>Secured coding against SQL injection</li>
+		<li>Direct access or invalid URL press stopped for each pages</li>
+		<li>Statistics of some data in dashboard</li>
+		<li>Multilevel user management</li>
+		<li>Multiple category layouts for the home page sections</li>
+		<li>Unlimited news category and post creation and management</li>
+		<li>Unlimited photo and video category creation and management</li>
+		<li>Unlimited photo and video post creation and management</li>
+		<li>Unlimited page creation and management</li>
+		<li>Unlimited menu creation with dropdown</li>
+		<li>Unlimited department creation and management with modern features</li>
+		<li>Unlimited doctor creation and management</li>
+		<li>Unlimited service creation and management</li>
+		<li>Unlimited pricing table categories and pricing table creation and management</li>
+		<li>Unlimited testimonial creation and management</li>
+		<li>Unlimited partner or sponsor creation and management</li>
+		<li>Unlimited FAQ categories and item creation and management</li>
+		<li>Facebook comment section for each post</li>
+		<li>SEO meta data setup for each post, page and category</li>
+		<li>SEO friendly URL structure</li>
+		<li>Unlimited file uploading system</li>
+		<li>All major social media URL setup for top bar and sidebar</li>
+		<li>Unlimited Advertisement management with website links</li>
+		<li>Subscriber data export as CSV format</li>
+	</ul>
+</section>
+
+<section id="Installation">
+	<div class="page-header"><h3>Installation</h3>
+	<p>
+		In order to install the CMS, please follow these steps:
+	</p>
+	<div class="gap-0"></div>
+	<ol>
+		<li>
+			Search for the zip file <b>cms.zip</b> in the main theme folders that you have downloaded.
+		</li>
+		<li>
+			Now upload the <b>cms.zip</b> file into your server using FTP or Cpanel. Extract this and use. You can use our cms into root domain or subdomain.
+		</li>
+		<li>
+			Create mysql database using cpanel or your hosting providers' system. Then import the <b>Vasantham Health Centre.sql</b> file (that you got into the theme's folder) into your created database.
+		</li>
+		<li>
+			Now you will have to edit the configuration file. Into our CMS folder, go to: <b>admin > config.php</b> and open it with a text editor. Change the following marked information: 
+			<p>
+				<img src="assets/images/1.png" alt="" style="width: auto;max-width: 90%;">
+			</p>
+		</li>
+	</ol>
+
+</section>
+
+
+<section id="Dashboard">
+	<div class="page-header"><h3>Dashboard</h3>
+	<p>
+		In the dashboard, you will be able to get all the total data for news, categories, users, photos, videos and subscribers. From the top right corner menu, any user can change his profile information, password, photo etc.
+	</p>
+	<p>
+		<img src="https://s1.postimg.org/8qsegv5o3z/screenshot.jpg" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+<section id="User">
+	<div class="page-header"><h3>User</h3>
+	<p>
+		In this CMS, unlimited users can be created under total 2 roles, one is <b>admin</b> and another is <b>publisher</b>. Here user's email address will be treated as username in this website. User photo upload is optional field. User can be setup as active, edit or delete.
+	</p>
+	<p>
+		<b>Admin</b> can do almost everything of this website, except removing <b>Super Admin</b> and managing the users.
+	</p>
+	<p>
+		<b>Publisher</b> can do only work with file, news, photo, video and subscriber options.
+	</p>
+	<p>
+		<img src="https://s1.postimg.org/1ghb5tk367/screenshot.jpg" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+<section id="Settings">
+	<div class="page-header"><h3>Settings</h3>
+	<p>
+		In this cms, you can change the following things in the settings:
+	</p>
+	<ul>
+		<li>Logo Image</li>
+		<li>Favicon Image</li>
+		<li>Footer About Us section, copyright section, contact or website email, number, fax and google map code</li>
+		<li>Contact form email address, subject and thank you message</li>
+		<li>Setting up how many recent news and popular news will be shown in the sidebar, footer and home page</li>
+		<li>Home page meta title, meta keywords and meta description</li>
+		<li>Home page title, subtitle and active or inactive status setup for service, department, doctor, pricing, testimonial, latest news and partner.</li>
+	</ul>
+	<p>
+		<img src="https://s1.postimg.org/7k9389szbz/screenshot.jpg" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+
+<section id="Page">
+	<div class="page-header"><h3>Page</h3>
+	<p>
+		When you will try to add a new page, you will have to follow these steps:
+	</p>
+	<ol>
+		<li>In the main page, click on <b>Add New</b>.</li>
+		<li>Put <b>Page Name</b> in the text field. It is mandatory.</li>
+		<li>You can put page slug manually, or keep empty. If you keep this empty, slug will be automatically generated by the system.</li>
+		<li>Place the <b>Page Content</b> into the content editor.</li>
+		<li>Select your desired <b>Page Layout</b> from the drop down.</li>
+		<li>Upload a <b>Banner</b> for the page to show in the front page.</li>
+		<li>You can make the page <b>Active</b> or <b>Inactive</b>.</li>
+		<li>Put the SEO information (meta title, meta keyword and meta description).</li>
+	</ol>
+	<p>
+		You can edit, delete, activate or deactivate page any time from the page main page.
+	</p>
+	<p>
+		<img src="https://s1.postimg.org/353fh665tb/screenshot.jpg" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+<section id="Menu">
+	<div class="page-header"><h3>Menu</h3>
+	<p>
+		You can add category item, page item, or any other manual link as the menu in this cms. When you will add category or page item as your menu item, select the desired category or page from the dropdown, then give them a order and select the parent for them. If you want to setup that menu as main menu item, select <b>No Parent</b> option from the dropdown, otherwise select another menu as parent. In <b>Other Menu</b> section, you can setup an external link or manual link and name as menu item. In this case, you will get an extra <b>URL</b> field to put url manually.
+	</p>
+	<p>
+		<img src="https://s1.postimg.org/3twp171mbj/screenshot.jpg" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+
+<section id="News_category">
+	<div class="page-header"><h3>News Category</h3>
+	<p>
+		When you will try to add a new category, you will have to follow these steps:
+	</p>
+	<ol>
+		<li>In the category page, click on <b>Add New</b>.</li>
+		<li>Put <b>Category Name</b> in the text field. It is mandatory.</li>
+		<li>You can put category slug manually, or keep empty. If you keep this empty, slug will be automatically generated by the system.</li>
+		<li>You can make the category <b>Active</b> or <b>Inactive</b>.</li>
+		<li>Put the SEO information (meta title, meta keyword and meta description).</li>
+	</ol>
+	<p>
+		You can edit, delete, activate or deactivate category any time from the category main page.
+	</p>
+	<p>
+		<img src="https://s1.postimg.org/3xgayx2u8v/screenshot.jpg" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+
+<section id="News">
+	<div class="page-header"><h3>News</h3>
+	<p>
+		When you will try to add a news, you will have to follow these steps:
+	</p>
+	<ol>
+		<li>In the main news page, click on <b>Add New</b>.</li>
+		<li>Put <b>News Title</b> in the text field. It is mandatory.</li>
+		<li>Put <b>News Content</b> in the text editor. It is mandatory.</li>
+		<li>You can select a date for <b>News Publish Date</b> from the datepicker popup. You can give it a future date if you want to publish that news in a future date.</li>
+		<li><b>Featured Photo</b> is optional. If you put no photo a placeholder photo will be shown in the front end for that news.</li>
+		<li>You can select category for a news from the dropdown list.</li>
+		<li><b>Publisher</b> is optional. But if you keep it empty, the logged in user will be treated as the publisher of this news.</li>
+		<li>Put the SEO information (meta title, meta keyword and meta description).</li>
+	</ol>
+	<p>
+		You can edit, delete, publish or unpublish news any time from the news main page.
+	</p>
+	<p>
+		<img src="https://s1.postimg.org/1h83vz0d5r/screenshot.jpg" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+<section id="News_comment">
+	<div class="page-header"><h3>Comment</h3>
+	<p>
+		Go to the facebook developer section (<a href="https://developers.facebook.com/docs/plugins/comments/">https://developers.facebook.com/docs/plugins/comments/</a>) to get your comment codes. Then just place it in the marked textarea and update it.
+	</p>
+	<p>
+		<img src="https://s1.postimg.org/4c0s1rkhe7/screenshot.jpg" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+<section id="Doctor_designation">
+	<div class="page-header"><h3>Doctor Designation</h3>
+	<p>
+		When you will try to add a new designation, you will have to follow these steps:
+	</p>
+	<ol>
+		<li>In the designation page, click on <b>Add New</b>.</li>
+		<li>Put <b>Designation Name</b> in the text field. It is mandatory.</li>
+	</ol>
+	<p>
+		You can edit, delete, activate or deactivate designation any time from the designation main page.
+	</p>
+	<p>
+		<img src="https://s1.postimg.org/60a4yyg4gv/screenshot.jpg" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+
+
+<section id="Doctor">
+	<div class="page-header"><h3>Doctor</h3>
+	<p>
+		When you will try to add a doctor, you will have to follow these steps:
+	</p>
+	<ol>
+		<li>In the main doctor page, click on <b>Add New</b>.</li>
+		<li>Put <b>Doctor Name</b> in the text field. It is mandatory.</li>
+		<li>Put <b>Doctor Slug</b> in the text field. It is options. If you keep it blank, it will be automatically generated by the system.</li>
+		<li>Select a designation for the doctor from the dropdown list.</li>
+		<li>You must have to enter a <b>Photo</b> for doctor.</li>
+		<li>You must have to enter a <b>Banner</b> for doctor page.</li>
+		<li>Put <b>Doctor Degree</b> in the textbox. </li>
+		<li>Put <b>Doctor Detail</b> in the text editor. </li>
+		<li>Put social media links for doctor like facebook, twitter etc. If you keep any social media links empty it will not be shown in the doctor profile page in front end.</li>
+		<li>Put <b>Address</b>, <b>Practice Location</b>, <b>Phone</b>, <b>Email</b> and <b>Website</b> for the doctor. But those are optional.</li>
+		<li>Keep doctor <b>Status</b> active or inactive. If it is inactive, it will not be shown in the front end.</li>
+		<li>Put the SEO information (meta title, meta keyword and meta description).</li>
+	</ol>
+	<p>
+		You can edit, delete, publish or unpublish doctor any time from the doctor main page.
+	</p>
+	<p>
+		<img src="https://s1.postimg.org/7kzvyfhej3/screenshot.jpg" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+
+
+<section id="Slider">
+	<div class="page-header"><h3>Slider</h3>
+	<p>
+		You can create unlimited sliders for the home page. When you will try to add a slider, you will have to follow these steps:
+	</p>
+	<ol>
+		<li>In the main slider page, click on <b>Add New</b>.</li>
+		<li>Select a <b>Photo</b> for slider</li>
+		<li>Put <b>Slider Heading</b> in the text field.</li>
+		<li>Put <b>Slider Sub-Heading</b> in the text field. It is optional. If it is not given, sub-heading will not be shown in slider.</li>
+		<li>Put <b>Slider Content</b> in the text field. It is optional. If it is not given, content will not be shown in slider.</li>
+		<li>Put <b>Button Text</b> in the text field. It is optional. If it is not given, button will not be shown in slider.</li>
+		<li>Put <b>Button URL</b> in the text field.</li>
+		<li>Select a <b>position</b> (left, center or right) for the slider text over the slider photo. </li>
+		<li>Keep the <b>Status</b> active or inactive. If it is inactive, it will not be shown in the front end.</li>
+	</ol>
+	<p>
+		You can edit, delete, publish or unpublish slider any time from the slider main page.
+	</p>
+	<p>
+		<img src="https://s1.postimg.org/5btmt3zbfz/screenshot.jpg" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+
+
+
+<section id="Testimonial">
+	<div class="page-header"><h3>Testimonial</h3>
+	<p>
+		You can create unlimited testimonials for the home page. When you will try to add a testimonial, you will have to follow these steps:
+	</p>
+	<ol>
+		<li>In the main testimonial page, click on <b>Add New</b>.</li>
+		<li>Put <b>Client Name</b> in the text field.</li>
+		<li>Put <b>Client Designation</b> in the text field.</li>
+		<li>Put <b>Client Company Name</b> in the text field.</li>
+		<li>Select a client <b>Photo</b> to upload.</li>
+		<li>Put <b>Client Comment</b> in the textarea.</li>
+	</ol>
+	<p>
+		You can edit, delete, publish or unpublish testimonial any time from the testimonial main page.
+	</p>
+	<p>
+		<img src="https://s1.postimg.org/7zvuhmzi73/screenshot.jpg" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+
+<section id="Partner">
+	<div class="page-header"><h3>Partner</h3>
+	<p>
+		You can create unlimited partners/sponsors/logos for the home page. When you will try to add an item, you will have to follow these steps:
+	</p>
+	<ol>
+		<li>In the main partner page, click on <b>Add New</b>.</li>
+		<li>Put <b>Name</b> in the text field.</li>
+		<li>Put <b>URL</b> in the text field. It is optional. If it is set, the partner logo will have a link.</li>
+		<li>Select a client <b>Photo</b> to upload.</li>
+	</ol>
+	<p>
+		You can edit, delete, publish or unpublish partner any time from the partner main page.
+	</p>
+	<p>
+		<img src="https://s1.postimg.org/1w42f73wfj/screenshot.jpg" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+
+
+<section id="Service">
+	<div class="page-header"><h3>Service</h3>
+	<p>
+		You can create unlimited services for the home page. When you will try to add a service, you will have to follow these steps:
+	</p>
+	<ol>
+		<li>In the main service page, click on <b>Add New</b>.</li>
+		<li>Put <b>Name</b> in the text field.</li>
+		<li>Put <b>Slug</b> in the text field. If it is not set, a slug will be generated automatically by the system.</li>
+		<li>Put <b>Description</b> in the textarea.</li>
+		<li>Put <b>Short Description</b> in the textarea.</li>
+		<li>Select a service main/featured <b>Photo</b> to upload.</li>
+		<li>Select a service page <b>Banner</b> to upload.</li>
+	</ol>
+	<p>
+		You can edit, delete, publish or unpublish service any time from the service main page.
+	</p>
+	<p>
+		<img src="https://s1.postimg.org/8slhdjf44v/screenshot.jpg" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+
+<section id="Department">
+	<div class="page-header"><h3>Department</h3>
+	<p>
+		You can create unlimited departments. When you will try to add a department, you will have to follow these steps:
+	</p>
+	<ol>
+		<li>In the main department page, click on <b>Add New</b>.</li>
+		<li>Put <b>Name</b> in the text field.</li>
+		<li>Put <b>Slug</b> in the text field. If it is not set, a slug will be generated automatically by the system.</li>
+		<li>Put <b>Details</b> in the textarea.</li>
+		<li><b>Address</b>, <b>Phone</b>, <b>Fax</b>, <b>Email</b> fields are optional.</li>
+		<li>Select a main/featured department <b>Photo</b> to upload.</li>
+		<li>Select a department page <b>Banner</b> to upload.</li>
+		<li>Department section has unlimited <b>Openning Hours</b>. You can add new row and this way unlimited times. </li>
+		<li>Department section has unlimited <b>FAQ</b>. You can add new row and this way unlimited times. </li>
+		<li>Put the SEO information (meta title, meta keyword and meta description).</li>
+	</ol>
+	<p>
+		You can edit, delete, publish or unpublish department any time from the department main page.
+	</p>
+	<p>
+		<img src="https://s1.postimg.org/3o9so9kz8f/screenshot.jpg" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+
+<section id="Pricing_plan">
+	<div class="page-header"><h3>Pricing Plan</h3>
+	<p>
+		You can create unlimited pricing plan categories. When you will try to add a pricing plan, you will have to follow these steps:
+	</p>
+	<ol>
+		<li>In the main pricing plan page, click on <b>Add New</b>.</li>
+		<li>Put <b>Name</b>, <b>Price</b>, <b>Button Text</b> and <b>Button URLs</b> in the text field.</li>
+	</ol>
+	<p>
+		You can edit, delete, publish or unpublish pricing plan any time from the pricing plan main page.
+	</p>
+	<p>
+		<img src="https://s1.postimg.org/61cf5h3i67/screenshot.jpg" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+
+<section id="Pricing_item">
+	<div class="page-header"><h3>Pricing Item</h3>
+	<p>
+		You can create unlimited pricing items. When you will try to add a pricing item, you will have to follow these steps:
+	</p>
+	<ol>
+		<li>In the main pricing plan page, click on <b>Add New</b>.</li>
+		<li>Put <b>Item Name</b> in the text field.</li>
+		<li>Select a pricing plan from dropdown for that item.</li>
+	</ol>
+	<p>
+		You can edit, delete, publish or unpublish pricing item any time from the pricing item main page.
+	</p>
+	<p>
+		<img src="https://s1.postimg.org/3dmyv4dgv3/screenshot.jpg" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+
+
+<section id="FAQ_category">
+	<div class="page-header"><h3>FAQ Category</h3>
+	<p>
+		You can create unlimited FAQ categories. When you will try to add a FAQ category, you will have to follow these steps:
+	</p>
+	<ol>
+		<li>In the main FAQ category page, click on <b>Add New</b>.</li>
+		<li>Put <b>FAQ Category Name</b>in the text field.</li>
+	</ol>
+	<p>
+		You can edit, delete, publish or unpublish FAQ category any time from the FAQ category main page.
+	</p>
+	<p>
+		<img src="https://s1.postimg.org/2sq2mzedlr/screenshot.jpg" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+
+<section id="FAQ">
+	<div class="page-header"><h3>FAQ</h3>
+	<p>
+		You can create unlimited FAQs. When you will try to add a FAQ item, you will have to follow these steps:
+	</p>
+	<ol>
+		<li>In the main FAQ page, click on <b>Add New</b>.</li>
+		<li>Put <b>FAQ Title</b> in the text field.</li>
+		<li>Put <b>FAQ Content</b> in the textarea.</li>
+		<li>Select a FAQ Category from dropdown for that item.</li>
+	</ol>
+	<p>
+		You can edit, delete, publish or unpublish FAQ item any time from the FAQ item main page.
+	</p>
+	<p>
+		<img src="https://s1.postimg.org/4dftmglvfj/screenshot.jpg" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+
+
+<section id="Photo_Category">
+	<div class="page-header"><h3>Photo Category</h3>
+	<p>
+		In the main photo category page, click on <b>Add New</b>. Then put a category name and make it active or inactive.
+	</p>
+	<p>
+		<img src="https://s1.postimg.org/3061wl2ypb/screenshot.jpg" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+<section id="Photo">
+	<div class="page-header"><h3>Photo</h3>
+	<p>
+		When you will try to add a photo, you will have to follow these steps:
+	</p>
+	<ol>
+		<li>In the main photos page, click on <b>Add New</b>.</li>
+		<li>Put any caption as <b>Photo Caption</b> just to understand about the photo.</li>
+		<li>Upload your desired photo. Only these photos are allowed: jpg, jpeg, gif, png.</li>
+		<li>Select a category for this photo.</li>
+	</ol>
+	<p>
+		You can edit or delete photo any time from the photo main page.
+	</p>
+	<p>
+		<img src="https://s1.postimg.org/2t2u15ptcf/screenshot.jpg" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+<section id="Video_Category">
+	<div class="page-header"><h3>Video Category</h3>
+	<p>
+		In the main video category page, click on <b>Add New</b>. Then put a category name and make it active or inactive.
+	</p>
+	<p>
+		<img src="https://s1.postimg.org/30itar86of/screenshot.jpg" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+<section id="Video">
+	<div class="page-header"><h3>Video</h3>
+	<p>
+		When you will try to add a video, you will have to follow these steps:
+	</p>
+	<ol>
+		<li>In the main videos page, click on <b>Add New</b>.</li>
+		<li>Put any title as <b>Video Title</b> just to understand about the video.</li>
+		<li>Put <b>iframe Code</b> for the video you want to add. You can take the iframe code from YouTube, Vimeo or any other website who gives you iframe code.</li>
+		<li>Select a category for this video.</li>
+	</ol>
+	<p>
+		You can edit or delete video any time from the video main page.
+	</p>
+	<p>
+		<img src="https://s1.postimg.org/1568i531f3/screenshot.jpg" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+
+<section id="Advertisement_Home">
+	<div class="page-header"><h3>Advertisement (Home)</h3>
+	<p>
+		There are total 2 fixed locations to put your advertisement in the home page as static advertisement. One location is into the header and another location is under the featured news section. From the backend, go to <b>Advertisement (Home)</b> section. You will get there total two tabs: <b>Inside Header</b> and <b>Under Featured News</b>.
+	</p>
+	<p>
+		You can link the advertisement to an external URL or not. Put a jpg, jpeg, png or gif photo as advertisement. Recommended size of banner for advertisement (home) is given below:
+	</p>
+	<ol>
+		<li><b>Inside Header:</b> Recommended size is: 848X130.</li>
+		<li><b>Under Featured News:</b> Recommended size is: 1170X120. But you can use long height image here.</li>
+	</ol>
+	<p>
+		<img src="https://s1.postimg.org/9m0n1ssbcv/screenshot.jpg" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+<section id="Advertisement_Sidebar">
+	<div class="page-header"><h3>Advertisement (Sidebar)</h3>
+	<p>
+		There are total 2 locations to put your advertisement in sidebar. You can add unlimited photos in those sections. One section is Sidebar Top and another is Sidebar Bottom. From the backend, go to <b>Advertisement (Sidebar)</b> section. You can add, edit, delete and show sidebar advertisements.
+	</p>
+	<p>
+		You can link the advertisement to an external URL or not. Put a jpg, jpeg, png or gif photo as advertisement. Recommended width of banner for advertisement (sidebar) is 500px. You can make height as long as you can. 
+	<p>
+		<img src="https://s1.postimg.org/1qsnilyn33/screenshot.jpg" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+<section id="Advertisement_Category">
+	<div class="page-header"><h3>Advertisement (Home Category)</h3>
+	<p>
+		This section is a bit tricky. It can be seemed as tough, but it is easy. We are explaining the procedure below. 
+	</p>
+	<p>
+		You know there are some categories in the home page. You can setup which categories you want to show on the home page. We already have showed it. Now, in this advertisement section, just add categories one by one and those will be shown on below the home page category sections following order.
+	</p>
+	<p>
+		From the backend, go to <b>Advertisement (Category)</b> section. You can add, edit, delete and show  advertisements.
+	</p>
+	<p>
+		You can link the advertisement to an external URL or not. Put a jpg, jpeg, png or gif photo as advertisement. Recommended size for these advertisements is: 750X120. You can make height as long as you can. 
+	<p>
+		<img src="https://s1.postimg.org/6yny5m9uwf/screenshot.jpg" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+
+<section id="File_Upload">
+	<div class="page-header"><h3>File Upload</h3>
+	<p>
+		When you will try to add a file, you will have to follow these steps:
+	</p>
+	<ol>
+		<li>In the main files page, click on <b>Add New</b>.</li>
+		<li>Put any title as <b>File Name</b> just to understand about the file.</li>
+		<li>Upload your desired file. Only these files are allowed: jpg, jpeg, gif, png, pdf, doc, docx, ppt, pptx, xls, xlsx, zip, rar.</li>
+	</ol>
+	<p>
+		You can edit or delete file any time from the file main page.
+	</p>
+	<p>
+		<img src="https://s1.postimg.org/4bo0nlajnz/screenshot.jpg" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+
+
+
+
+<section id="Social_Media">
+	<div class="page-header"><h3>Social Media</h3>
+	<p>
+		This CMS supports to use total 16 social media to show as icon in the website. For each item, you will get to put a URL section. If you keep any URL field blank, that will not be shown in the website. The social media list is given below: 
+	</p>
+	<ol>
+		<li>Facebook</li>
+		<li>Twitter</li>
+		<li>LinkedIn</li>
+		<li>Google Plus</li>
+		<li>Pinterest</li>
+		<li>YouTube</li>
+		<li>Instagram</li>
+		<li>Tumblr</li>
+		<li>Flickr</li>
+		<li>Reddit</li>
+		<li>Snapchat</li>
+		<li>WhatsApp</li>
+		<li>Quora</li>
+		<li>StumbleUpon</li>
+		<li>Delicious</li>
+		<li>Digg</li>
+	</ol>
+	<p>
+		<img src="https://s1.postimg.org/1dbqk3kabz/screenshot.jpg" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+
+
+
+<section id="Subscriber">
+	<div class="page-header"><h3>Subscriber</h3>
+	<p>
+		You will get all the subscriber names in this list. Sometimes, clear the pending subscriber list who are not verifying for a long time. You can download the subscriber list as CSV file.
+	</p>
+	<p>
+		<img src="https://s1.postimg.org/2gph6ywben/screenshot.jpg" alt="" style="width: auto;max-width: 90%;">
+	</p>
+</section>
+
+
+
+<section id="support">
+	<div class="page-header"><h3>Support</h3>
+	<h4>Support Process (if support is on)</h4>
+	<div class="gap-10"></div>
+	<ol>
+		<li>
+			First look at the navigation menu on the left side of the documentation. You will get all important topics here. 
+		</li>
+		<li>
+			Search the entire document pressing "ctrl+F", enter your query string and press "Search".
+		</li>
+		<li>
+			If you still do not get the answer of your question, then contact us via codecanyon and always give your live URL when asking for help.
+		</li>
+		<li>
+			When asking for help, please provide the details and also give some screenshots if possible.
+		</li>
+	</ol>
+	<div class="gap-0"></div>
+	<h4>Why we do not give support through codecanyon comment section?</h4>
+	<div class="gap-10"></div>
+	<ol>
+		<li>
+			Do not ask for support in the comment section of codecanyon. Because our codecanyon account access is restricted and support team will not be able to reply. 
+		</li>
+		<li>
+			It is tough to track the communication in this way.	
+		</li>
+		<li>
+			We think, it is not wise to show eveyone your website's URL and other sensitive information.
+		</li>
+	</ol>
+	<div class="gap-0"></div>
+	<h4>Support Hours and Time</h4>
+	<p>
+		We generally work for 18 hours a day and 7 days in a week. So you will get very prompt answer always from us within 24-48 hours except the marked holidays.
+	</p>	
+	<div class="gap-0"></div>
+	<h4>Advanced or Modification Support</h4>
+	<p>
+		If you request us help, which only needs us to write a couple lines of code, we will assist you in that. But if your query requires to write a lot of codes to be published, we can only provide you guidance and you need to hire a developer if you don't have that skills to implement it yourself.
+	</p>
+	<div class="gap-0"></div>
+	<h4>Bug Fixing</h4>
+	<p>
+		We promise to solve all the bugs as quickly as possible within 24-48 hours after those are brought to our attention.
+	</p>
+</section>
+
+
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!-- Main Footer -->
+<footer class="main-footer">
+    <!--Widgets Section-->
+    <div class="widgets-section" style="background-image: url(images/background/7.jpg);">
+        <div class="auto-container">
+            <div class="row">
+                <!--Big Column-->
+                <div class="big-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                    <div class="row">
+                        <!--Footer Column-->
+                        <div class="footer-column col-xl-7 col-lg-6 col-md-6 col-sm-12">
+                            <div class="footer-widget about-widget">
+                                <div class="logo">
+                                    <a href="index.php"><img src="images/logo-2.png" alt="" /></a>
+                                </div>
+                                <div class="text">
+                                    <p>Vasantham Health Centre Pvt Ltd in Vadasery, Nagercoil has a well-equipped clinic with all the modern equipment.
+                                        Our Clinic has grown to provide a world class facility for the clinic advanced restorative. Being a specialized Hospitals, the doctor offers a number of medical services.
+                                        These include Heart Conditions, Chest Pain Treatment, Neurology, Cardiology, Nephrology, Dental Examination, Clinical Cardiology among others.</p>
+                                </div>
+                                <ul class="social-icon-three">
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-skype"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!--Footer Column-->
+                        <div class="footer-column col-xl-5 col-lg-6 col-md-6 col-sm-12">
+                            <div class="footer-widget">
+                                <h2 class="widget-title">Departments</h2>
+                                <ul class="user-links">
+                                    <li><a href="#">Surgery & Radiology</a></li>
+                                    <li><a href="#">Obstetrics & Gynaecology</a></li>
+                                    <li><a href="#">Neurology & Nephrology</a></li>
+                                    <li><a href="#">Plastic surgery</a></li>
+                                    <li><a href="#">Pediatrics</a></li>
+                                    <li><a href="#">Cardiology</a></li>
+                                    <li><a href="#">Dermatology</a></li>
+                                    <li><a href="#">and more...</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!--Footer Column-->
+                <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                    <!--Footer Column-->
+                    <div class="footer-widget contact-widget">
+                        <h2 class="widget-title">Contact Us</h2>
+                        <!--Footer Column-->
+                        <div class="widget-content">
+                            <ul class="contact-list">
+                                <li>
+                                    <span class="icon flaticon-placeholder"></span>
+                                    <div class="text">Dennison road, Nagercoil-629001 <Br>TN, India</div>
+                                </li>
+
+                                <li>
+                                    <span class="icon flaticon-call-1"></span>
+                                    <div class="text">Mon to Sat : 06:30 - 20:00</div>
+                                    <a href="tel:+89868679575"><strong>04652-222526</strong></a>
+                                </li>
+
+                                <li>
+                                    <span class="icon flaticon-email"></span>
+                                    <div class="text">Feel free to reach us?<br>
+                                        <a href="mailto:vasanthamhealthcentre@gmail.com"><strong>vasanthamhealthcentre@gmail.com</strong></a></div>
+                                </li>
+
+                                <li>
+                                    <span class="icon flaticon-back-in-time"></span>
+                                    <div class="text">Monday - Sunday<br>
+                                        <strong>24*7</strong></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer Bottom-->
+    <div class="footer-bottom">
+        <!-- Scroll To Top -->
+        <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+        <div class="auto-container">
+            <div class="inner-container clearfix">
+                <div class="footer-nav">
+                    <ul class="clearfix">
+                        <li><a href="index.php">Privacy Policy</a></li>
+                        <li><a href="about-us.php">Contact</a></li>
+                        <li><a href="services.php">Supplier</a></li>
+                    </ul>
+                </div>
+
+                <div class="copyright-text">
+                    <p>Copyright © 2020 <a href="#"> Vasantham HealthCare </a> All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--End Main Footer -->

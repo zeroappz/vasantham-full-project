@@ -1,0 +1,344 @@
+/**
+ * Color Code: #1AABDD;
+ * 
+ */
+.heading-normal h2 {
+	color: #1AABDD!important;
+	border-bottom: 2px solid #1AABDD;
+}
+.top-bar {
+	background: #1AABDD;
+}
+.sf-menu li:hover a {
+	color: #1AABDD;
+}
+.sf-menu li li:hover {
+	background: #1AABDD;
+}
+.slider p.button a {	
+    background: #1AABDD;
+}
+.service-v1 .icon span {
+	color: #1AABDD;
+}
+.department-v1 .department-tab .nav-tabs > li > a {
+	color: #1AABDD;
+}
+.department-v1 .department-tab .nav-tabs > li.active > a:after {
+	color: #1AABDD;
+}
+.department-v1 .department-tab .nav-tabs > li.active > a,
+.department-v1 .department-tab .nav-tabs > li.active > a:hover,
+.department-v1 .department-tab .nav-tabs > li.active > a:focus,
+.department-v1 .department-tab .nav-tabs > li a:hover,
+.department-v1 .department-tab .nav-tabs > li a:focus {
+  	background-color: #1AABDD!important;
+}
+.department-v1 .department-tab .department-content ul li:hover {
+	background: #1AABDD;
+}
+.department-v1 .department-tab .department-content p.button a {
+    background: #1AABDD;
+}
+.doctor-v1 .owl-controls .owl-prev:hover,
+.doctor-v1 .owl-controls .owl-next:hover {
+	background: #1AABDD;
+}
+.doctor-v1 .text h3 {
+	color: #1AABDD;
+}
+.doctor-v1 .social-icons ul li a {
+	background: #1AABDD;
+}
+.doctor-v1 .item:hover .text {
+	background: #1AABDD;
+}
+.quote-v1 .overlay {
+	background: #1AABDD;
+}
+.quote-v1 .quote-button a {
+	color: #1AABDD;
+}
+.scrollup i {
+	background: #1AABDD;
+}
+.pricing-v1 .pricing-item .price .hexa {
+	background: #1AABDD;
+}
+
+.pricing-v1 .pricing-item .price .hexa:before {
+	border-bottom: 30px solid #1AABDD;
+}
+
+.pricing-v1 .pricing-item .price .hexa:after {
+	border-top: 30px solid #1AABDD;
+}
+.pricing-v1 .pricing-item .button a {
+	background: #1AABDD;
+}
+.pricing-v1 .pricing-item:hover {
+	background: #1AABDD;
+}
+.pricing-v1 .pricing-item:hover .price .hexa .amount {
+	color: #1AABDD;
+}
+.pricing-v1 .pricing-item:hover .price .hexa .time {
+	color: #1AABDD;
+}
+.pricing-v1 .pricing-item:hover .button a {
+	color: #1AABDD;
+}
+.testimonial-v1 .overlay {
+	background: #1AABDD;
+}
+.news-v1 .owl-controls .owl-prev:hover,
+.news-v1 .owl-controls .owl-next:hover {
+	background: #1AABDD;
+}
+.news-v1 .text h3 a:hover {
+	color: #1AABDD;
+}
+.news-v1 .date .day {
+	background: #1AABDD;
+}
+.news-v1 .date .day:before {
+	color: #1AABDD;
+}
+.footer-social {
+	background: #1AABDD;
+}
+.footer-social .item ul li {
+	background: #1AABDD;
+}
+.footer-social .item ul li a {
+	border: 2px solid #1AABDD;
+}
+.footer-col h3:after {
+	background: #1AABDD;
+}
+.about-v1 .panel-default>.panel-heading {
+	background: #1AABDD;
+	border: 1px solid #1AABDD;
+}
+.about-v1 .facility-title {
+	color: #1AABDD;
+}
+.about-v1 .facility-meter-fill {
+	background: #1AABDD;
+}
+.about-v2 p.button a {
+    background: #1AABDD;
+}
+.doctor-v2 .owl-controls .owl-prev:hover,
+.doctor-v2 .owl-controls .owl-next:hover {
+	background: #1AABDD;
+}
+.doctor-v2 .text h3 {
+	color: #1AABDD;
+}
+.doctor-v2 .social-icons ul li a {
+	background: #1AABDD;
+}
+.statistic .icon span {
+	background: #1AABDD;
+}
+.contact-v1 .icon {
+	color: #1AABDD;
+}
+.contact-v1 .item:hover {
+	background: #1AABDD;
+}
+.contact-v1 .cform-1 .btn-success {
+	background-color: #1AABDD;
+	border-color: #1AABDD;
+}
+.contact-v2 .cform-2 .btn-success {
+	background-color: #1AABDD;
+	border-color: #1AABDD;
+}
+.contact-v3 .icon {
+	background: #1AABDD;
+}
+.error-page .title .inner {
+	background: #1AABDD;
+	border: 5px solid #1AABDD;
+}
+.error-page .content .button a {
+    background: #1AABDD;
+}
+ul.gallery-menu li:hover {
+	border: 2px solid #1AABDD;
+	background: #1AABDD;
+}
+ul.gallery-menu li.filter.active {
+	border: 2px solid #1AABDD;
+	background: #1AABDD;
+}
+.gallery .inner .icons-inner a {
+	background: #1AABDD;
+}
+.doctor-v3 .text p.button a:hover {
+	background: #1AABDD;
+}
+.doctor-detail .doctor-single .text p {
+	color: #1AABDD;
+}
+.doctor-detail .doctor-single .social ul li a {
+	background: #1AABDD;
+}
+.doctor-detail .doctor-detail-tab .nav-tabs>li>a {
+	color: #1AABDD;
+}
+.doctor-detail .ask-question .btn-success {
+	background-color: #1AABDD;
+	border-color: #1AABDD;
+}
+.doctor-detail .contact .icon {
+	background: #1AABDD;
+}
+.blog .image-holder .day {
+	background: #1AABDD;
+}
+.blog .image-holder .day:before {
+	color: #1AABDD;
+}
+.blog h3 a:hover {
+	color: #1AABDD;
+}
+.blog .text ul.status li {
+	color: #1AABDD;
+}
+.blog .text ul.status li a {
+	color: #1AABDD;
+}
+.blog h1 {
+	color: #1AABDD;
+}
+.blog h2 {
+	color: #1AABDD;
+}
+.blog h4 {
+	color: #1AABDD;
+}
+.blog h5 {
+	color: #1AABDD;
+}
+.blog h6 {
+	color: #1AABDD;
+}
+.blog p.button a:hover {
+	background: #1AABDD;
+}
+.blog .pagination ul li a {
+	background: #1AABDD;
+}
+.blog .owl-controls .owl-prev:hover,
+.blog .owl-controls .owl-next:hover {
+	background: #1AABDD;
+}
+.widget-search input:focus {
+	border: 2px solid #1AABDD;
+}
+.widget-search button {
+	border: 2px solid #1AABDD;
+	background: #1AABDD;
+}
+.widget h4 {
+	border-bottom: 2px solid #1AABDD;
+}
+.widget ul li a:hover {
+	color: #1AABDD;
+}
+.widget ul.tag-cloud li:hover {
+	background: #1AABDD;
+	border: 2px solid #1AABDD;
+}
+.author-box {
+	background: #1AABDD;
+}
+.author-info ul li a {
+	color: #1AABDD;
+}
+.comment-list .text span.reply a {
+	background: #1AABDD;
+}
+.respond .cform-1 .btn-success {
+	background-color: #1AABDD;
+	border-color: #1AABDD;
+}
+.under-construction-v1 .btn-success {
+	background-color: #1AABDD;
+	border-color: #1AABDD;
+}
+.under-construction-v2 .btn-success {
+	background-color: #1AABDD;
+	border-color: #1AABDD;
+}
+.service-v2 .item {
+	background: #1AABDD;
+}
+.service-v2 .icon span {
+	color: #1AABDD;
+}
+.department-v2 .department-tab .nav-tabs > li > a {
+	color: #1AABDD;
+}
+.department-v2 .department-tab .nav-tabs > li.active > a,
+.department-v2 .department-tab .nav-tabs > li.active > a:hover,
+.department-v2 .department-tab .nav-tabs > li.active > a:focus,
+.department-v2 .department-tab .nav-tabs > li a:hover,
+.department-v2 .department-tab .nav-tabs > li a:focus {
+  	border-left: 1px solid #1AABDD;
+	border-right: 1px solid #1AABDD;
+}
+.department-v2 .department-tab .nav-tabs > li.active > a,
+.department-v2 .department-tab .nav-tabs > li.active > a:hover,
+.department-v2 .department-tab .nav-tabs > li.active > a:focus,
+.department-v2 .department-tab .nav-tabs > li a:hover,
+.department-v2 .department-tab .nav-tabs > li a:focus {
+  	background-color: #1AABDD!important;
+}
+.department-v2 .department-tab .department-content ul li:hover {
+	background: #1AABDD;
+}
+.department-v2 .department-tab .department-content p.button a {
+    background: #1AABDD;
+}
+.pricing-v2 .pricing-item .price .hexa {
+	background: #1AABDD;
+}
+.pricing-v2 .pricing-item .price .hexa:before {
+	border-bottom: 30px solid #1AABDD;
+}
+.pricing-v2 .pricing-item .price .hexa:after {
+	border-top: 30px solid #1AABDD;
+}
+.pricing-v2 .pricing-item .button a {
+	background: #1AABDD;
+}
+.pricing-v2 .pricing-item:hover {
+	background: #1AABDD;	
+}
+.pricing-v2 .pricing-item:hover .price .hexa .amount {
+	color: #1AABDD;
+}
+.pricing-v2 .pricing-item:hover .price .hexa .time {
+	color: #1AABDD;
+}
+.pricing-v2 .pricing-item:hover .button a {
+	color: #1AABDD;
+}
+ul.service-v3-menu li:hover {
+	border: 2px solid #1AABDD;
+	background: #1AABDD;
+}
+ul.service-v3-menu li.filter.active {
+	border: 2px solid #1AABDD;
+	background: #1AABDD;
+}
+.service-v3 .text h3 a:hover {
+	color: #1AABDD;
+}
+.service-v3 .text p.button a:hover {
+	background: #1AABDD;
+}
