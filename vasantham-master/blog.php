@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
 <meta charset="utf-8">
 <title>Medicoz | Health and Medical HTML Template | Blog Checkerboard</title>
@@ -648,7 +647,4 @@
 <!-- Color Setting -->
 <script src="js/color-settings.js"></script>
 </body>
-
 </html>
-
-

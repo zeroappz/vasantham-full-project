@@ -17,7 +17,6 @@ $statement = $pdo->prepare("SELECT
 							t1.publisher,
 							t1.photo,
 							t1.category_id,
-							
 							t2.category_id,
 							t2.category_name,
 							t2.category_slug
