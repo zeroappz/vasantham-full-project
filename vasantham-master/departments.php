@@ -10,15 +10,15 @@ $error_message = '';
 $success_message = '';
 ?>
 <?php
-$BASE_URL = 'http://localhost/vasantham/vasantham-master';
+$BASE_URL = 'http://localhost/vasantham/';
 
 // Check the page slug is valid or not.
-$statement = $pdo->prepare("SELECT * FROM department");
+$statement = $pdo->prepare("SELECT * FROM department ORDER BY dep_id ASC");
 $statement->execute();
-$departmentList = $statement->fetchAll();
+$result = $statement->fetchAll(PDO::FETCH_ASSOC);	
 $total = $statement->rowCount();
 if ($total == 0) {
-    header('location: ' . $BASE_URL);
+    header('location: ' . $BASE_URL . 'vasantham-master');
     //echo 'no rows available';
     exit;
 } else {
@@ -61,9 +61,7 @@ include "header.php"
                     <div class="row">
                         <!-- service Block -->
                         <?php
-                        $statement = $pdo->prepare("SELECT * FROM department ORDER BY dep_id ASC");
-							$statement->execute();
-							$result = $statement->fetchAll(PDO::FETCH_ASSOC);							
+                        						
 							foreach ($result as $row) {
                         ?>
                         <div class="service-block-two col-lg-3 col-md-6 col-sm-12">
@@ -106,7 +104,7 @@ include "header.php"
     <?php
     include "script_includes.php";
     ?>
-    <!-- Clients Section -->
+    <!-- Scripts Section -->
 </body>
 
 </html>

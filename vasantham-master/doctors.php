@@ -98,7 +98,7 @@ include 'header.php';
                         <div class="team-block-two col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
                             <div class="inner-box">
                                 <div class="image-box">
-                                    <figure class="image"><a href="doctor-detail.php"><img src="<?php echo BASE_URL; ?>assets/uploads/<?php echo $row['photo']; ?>" alt=""></a></figure>
+                                    <figure class="image"><a href="doctor-detail.php"><img src="<?php echo BASE_URL; ?>/assets/uploads/<?php echo $row['photo']; ?>" alt=""></a></figure>
                                     <ul class="social-links">
                                         <li><a href="<?php echo $row['facebook']; ?>"><span class="fab fa-facebook-f"></span></a></li>
                                         <li><a href="<?php echo $row['twitter']; ?>"><span class="fab fa-twitter"></span></a></li>
