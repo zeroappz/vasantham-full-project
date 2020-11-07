@@ -97,6 +97,52 @@ include "header.php";
         <?php
         include "header_main.php"
         ?>
+
+<section class="contact-section" id="contact">
+            <div class="small-container">
+                <div class="sec-title text-center">
+                   <span class="sub-title">Contact Now</span>
+                   
+                    <span class="divider"></span>
+                </div>
+               
+                <!-- Contact box -->
+                <div class="contact-box">
+                    <div class="row">
+                        <div class="contact-info-block col-lg-4 col-md-6 col-sm-12">
+                            <div class="inner" style="padding-left: 29px !important;">
+                                
+                                <h5 style="color: #1370B5;">Insurance Officer:</h5>
+                               <p style="font-size: 16px;">E. Anburajaraman</p>
+                                <p style="font-size: 14px;">+91 88707-06620<br><a href="mailto:anburajaraman.vasatham@gmail.com">anburajaraman.vasatham@gmail.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-block col-lg-4 col-md-6 col-sm-12">
+                            <div class="inner" style="padding-left: 29px !important;">
+                                <span class="icon flaticon-car"></span>
+                                <h5 style="color: #1370B5;"><strong>Asst. Admin Officer</strong></h5>
+                                <p style="font-size: 16px;">Mr. Abinesh</p>
+                                <p style="font-size: 14px;">+91 97919 56876<br><a href="mailto:vasanthamhealthcentre@gmail.com">vasanthamhealthcentre@gmail.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-block col-lg-4 col-md-6 col-sm-12">
+                            <div class="inner" style="padding-left: 29px !important;">
+                                <span class="icon flaticon-profile"></span>  
+                               
+                                <h5 style="color: #1370B5;"><strong>Public Relation Officer</strong></h5>
+                                <p style="font-size: 16px;">Mr. Martin</p>
+                                <p style="font-size: 14px;">+91 96293 59594<br>vasanthamhealthcentre@gmail.com</p>
+                                <p style="color: red;font-size: 12px;">Only for Health Check up. Please contact</p>
+                                <!--<p><a href="mailto:support@example.com">support@example.com</a></p>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>                 
+                </div>
+            </div>
+        </section>
         <h3 style="border: black; text-align:center;color:#1370B5"> Our Empanelment</h3><br>
         <center>
             <?php foreach ($result as $row) { ?>
