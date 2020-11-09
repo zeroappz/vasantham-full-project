@@ -16,6 +16,8 @@ $dbpass = '';
 
 // Defining base url
 define("BASE_URL", "http://localhost/vasantham/backend/");
+// $BASE_URL = 'http://localhost/vasantham/';
+// $IMG_URL = 'backend/assets/uploads/';
 
 // Getting Admin url
 define("ADMIN_URL", BASE_URL . "admin" . "/");

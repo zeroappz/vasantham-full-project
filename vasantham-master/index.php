@@ -24,7 +24,7 @@ include "header.php"
                             <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="20" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="images/main-slider/2.jpg">
 
                             <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['750','750','750','650']" data-whitespace="normal" data-hoffset="['0','0','0','0']" data-voffset="['-180','-170','-180','-180']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
-                                <span class="title">Welcome to our Vasantham HealthCare Center </span>
+                                <span class="title">Welcome to our Vasantham Health Centre Center </span>
                             </div>
 
                             <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]" data-paddingright="[15,15,15,15]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['750','750','750','650']" data-whitespace="normal" data-hoffset="['0','0','0','0']" data-voffset="['-100','-95','-100','-115']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
@@ -49,7 +49,7 @@ include "header.php"
                             <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="20" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="images/main-slider/1.jpg">
 
                             <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['750','750','750','650']" data-whitespace="normal" data-hoffset="['0','0','0','0']" data-voffset="['-180','-170','-180','-180']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
-                                <span class="title">Welcome to our Vasantham HealthCare Center </span>
+                                <span class="title">Welcome to our Vasantham Health Centre Center </span>
                             </div>
 
                             <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]" data-paddingright="[15,15,15,15]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['750','750','750','650']" data-whitespace="normal" data-hoffset="['0','0','0','0']" data-voffset="['-100','-95','-100','-115']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
@@ -240,7 +240,7 @@ include "header.php"
                             </ul>
                             <div class="info-box">
                                 <h4 class="name"><a href="doctor-detail.php">Dr. Ajitha Sekar MD(OBG)</a></h4>
-                                <span class="designation">Senior Dr. at Vasantham HealthCare</span>
+                                <span class="designation">Senior Dr. at Vasantham Health Centre</span>
                             </div>
                         </div>
                     </div>
@@ -257,7 +257,7 @@ include "header.php"
                             </ul>
                             <div class="info-box">
                                 <h4 class="name"><a href="doctor-detail.php">Dr. N.B.Venkataraman MD, DM(CARDIO)</a></h4>
-                                <span class="designation">Senior Dr. at Vasantham Healthcare</span>
+                                <span class="designation">Senior Dr. at Vasantham Health Centre</span>
                             </div>
                         </div>
                     </div>
@@ -275,7 +275,7 @@ include "header.php"
                             </ul>
                             <div class="info-box">
                                 <h4 class="name"><a href="doctor-detail.php">Dr. Venkatesh MD, DCH(CARDIO)</a></h4>
-                                <span class="designation">Senior Dr. at Vasantham Healthcare</span>
+                                <span class="designation">Senior Dr. at Vasantham Health Centre</span>
                             </div>
                         </div>
                     </div>
@@ -292,7 +292,7 @@ include "header.php"
                             </ul>
                             <div class="info-box">
                                 <h4 class="name"><a href="doctor-detail.php">Dr. B.V. Selvan MD(DERMATOLOGY)</a></h4>
-                                <span class="designation">Senior Dr. at Vasantham Healthcare</span>
+                                <span class="designation">Senior Dr. at Vasantham Health Centre</span>
                             </div>
                         </div>
                     </div>-->

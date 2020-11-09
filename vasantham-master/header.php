@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Vasantham Healthcare Centre | Health and Medical</title>
+    <title>Vasantham Health Centre Centre | Health and Medical</title>
 
     <!-- Stylesheets -->
     <link href="css/bootstrap.css" rel="stylesheet">

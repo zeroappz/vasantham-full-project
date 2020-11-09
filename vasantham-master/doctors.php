@@ -2,7 +2,7 @@
 ob_start();
 session_start();
 
-include("../backend/admin/config.php");
+require_once("../backend/admin/config.php");
 // include("../backend/admin/functions.php");
 $error_message = '';
 $success_message = '';
@@ -122,7 +122,7 @@ include 'header.php';
         </section>
 
         <?php
-        include "testimonials_section_2.php";
+        include "testimonial_section_2.php";
         ?>
         <!-- Time Table Section -->
         <section class="time-table-section">

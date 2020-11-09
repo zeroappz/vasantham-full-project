@@ -1,13 +1,10 @@
 <!-- DB connection -->
 
 <?php
-ob_start();
-session_start();
-
-include("../backend/admin/config.php");
+require_once("../backend/admin/config.php");
 ?>
 <?php
-$BASE_URL = 'http://localhost/vasantham/';
+$T_BASE_URL = 'http://localhost/vasantham/';
 
 // Check the page slug is valid or not.
 $statement = $pdo->prepare("SELECT * FROM testimonial ORDER BY id DESC");
@@ -38,7 +35,7 @@ if ($total == 0) {
                 <div class="client-thumb-outer">
                     <div class="client-thumbs-carousel owl-carousel owl-theme">
                         <div class="thumb-item">
-                            <figure class="thumb-box"><img src="<?php echo $BASE_URL . 'backend/assets/uploads/' . $row['photo'] ?>" alt=""></figure>
+                            <figure class="thumb-box"><img src="<?php echo $T_BASE_URL . 'backend/assets/uploads/' . $row['photo'] ?>" alt=""></figure>
                             <div class="author-info">
                                 <span class="icon fa fa-quote-left"></span>
                                 <div class="author-name"><?php echo $row['name'] ?></div>

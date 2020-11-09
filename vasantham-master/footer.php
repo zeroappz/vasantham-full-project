@@ -1,3 +1,25 @@
+<!-- DB connection -->
+
+<?php
+require_once("../backend/admin/config.php");
+?>
+<?php
+$F_BASE_URL = 'http://localhost/vasantham/';
+$F_IMG_URL = 'backend/assets/uploads/';
+// Check the page slug is valid or not.
+$statement = $pdo->prepare("SELECT * FROM news ORDER BY news_id DESC LIMIT 3");
+$statement->execute();
+$newsList = $statement->fetchAll(PDO::FETCH_ASSOC);
+$total = $statement->rowCount();
+if ($total == 0) {
+    header('location: ' . $BASE_URL . 'vasantham-master');
+    //echo 'no rows available';
+    exit;
+} else {
+    // echo $newsList[0]['news_title'];
+}
+?>
+
 <!-- Main Footer -->
 <footer class="main-footer">
     <!--Widgets Section-->
@@ -48,41 +70,63 @@
                 </div>
 
 
-
-                <!--Footer Column-->
-                <div class="footer-column col-lg-6 col-md-6 col-sm-12">
-                    <!--Footer Column-->
-                    <div class="footer-widget contact-widget">
-                        <h2 class="widget-title">Contact Us</h2>
+                <div class="big-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                    <div class="row">
                         <!--Footer Column-->
-                        <div class="widget-content">
-                            <ul class="contact-list">
-                                <li>
-                                    <span class="icon flaticon-placeholder"></span>
-                                    <div class="text">Dennison road, Nagercoil-629001 <Br>TN, India</div>
-                                </li>
+                        <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                            <!--Footer Column-->
+                            <div class="footer-widget recent-posts">
+                                <h2 class="widget-title">Latest News</h2>
+                                <!--Footer Column-->
+                                <div class="widget-content">
+                                    <?php foreach ($newsList as $row) { ?>
+                                        <div class="post">
+                                            <div class="thumb"><a href="blog-detail.php?id=<?php echo $row['news_id']; ?>"><img src="<?php echo $F_BASE_URL . $F_IMG_URL . $row['photo']; ?>" alt="<?php echo $row['news_title']; ?>"></a></div>
+                                            <h4><a href="blog-detail.php?id=<?php echo $row['news_id']; ?>"><?php echo $row['news_title']; ?></a></h4>
+                                            <span class="date"><?php echo $row['news_date']; ?></span>
+                                        </div>
+                                    <?php } ?>
+                                </div>
+                            </div>
+                        </div>
 
-                                <li>
-                                    <span class="icon flaticon-call-1"></span>
-                                    <div class="text">Mon to Sat : 06:30 - 20:00</div>
-                                    <a href="tel:+89868679575"><strong>04652-222526</strong></a>
-                                </li>
+                        <!--Footer Column-->
+                        <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                            <!--Footer Column-->
+                            <div class="footer-widget contact-widget">
+                                <h2 class="widget-title">Contact Us</h2>
+                                <!--Footer Column-->
+                                <div class="widget-content">
+                                    <ul class="contact-list">
+                                        <li>
+                                            <span class="icon flaticon-placeholder"></span>
+                                            <div class="text">Dennison road, Nagercoil-629001 <Br>TN, India</div>
+                                        </li>
 
-                                <li>
-                                    <span class="icon flaticon-email"></span>
-                                    <div class="text">Feel free to reach us?<br>
-                                        <a href="mailto:vasanthamhealthcentre@gmail.com"><strong>vasanthamhealthcentre@gmail.com</strong></a></div>
-                                </li>
+                                        <li>
+                                            <span class="icon flaticon-call-1"></span>
+                                            <div class="text">Mon to Sat : 06:30 - 20:00</div>
+                                            <a href="tel:+89868679575"><strong>04652-222526</strong></a>
+                                        </li>
 
-                                <li>
-                                    <span class="icon flaticon-back-in-time"></span>
-                                    <div class="text">Monday - Sunday<br>
-                                        <strong>24*7</strong></div>
-                                </li>
-                            </ul>
+                                        <li>
+                                            <span class="icon flaticon-email"></span>
+                                            <div class="text">Feel free to reach us?<br>
+                                                <a href="mailto:vasanthamhealthcentre@gmail.com">vasanthamhealthcentre@gmail.com</a></div>
+                                        </li>
+
+                                        <li>
+                                            <span class="icon flaticon-back-in-time"></span>
+                                            <div class="text">Monday - Sunday<br>
+                                                <strong>24*7</strong></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <!--Footer Column-->
             </div>
         </div>
     </div>
@@ -95,14 +139,13 @@
             <div class="inner-container clearfix">
                 <div class="footer-nav">
                     <ul class="clearfix">
-                        <li><a href="index.php">Privacy Policy</a></li>
-                        <li><a href="about-us.php">Contact</a></li>
-                        <li><a href="services.php">Supplier</a></li>
+                        <li><a href="contact.php">Contact</a></li>
+                        <li><a href="insurance.php">Supplier</a></li>
                     </ul>
                 </div>
 
                 <div class="copyright-text">
-                    <p>Copyright © 2020 <a href="#"> Vasantham HealthCare </a> All Rights Reserved.</p>
+                    <p>Copyright © 2020 <a href="#"> Vasantham Health Centre </a> All Rights Reserved.</p>
                 </div>
             </div>
         </div>
