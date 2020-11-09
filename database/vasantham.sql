@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 5.0.3
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 13, 2017 at 04:10 PM
--- Server version: 10.1.19-MariaDB
--- PHP Version: 7.0.13
+-- Generation Time: Nov 07, 2020 at 01:58 PM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -109,9 +110,10 @@ CREATE TABLE `category` (
 INSERT INTO `category` (`category_id`, `category_name`, `category_slug`, `meta_title`, `meta_keyword`, `meta_description`) VALUES
 (1, 'Blood / Hematology', 'blood-hematology', 'Category: Blood / Hematology', '', ''),
 (2, 'Hypertension ', 'hypertension-', 'Category: Hypertension ', '', ''),
-(3, 'Men''s Health', 'men-s-health', 'Category: Men''s Health', '', ''),
-(4, 'Women''s Health', 'women-s-health', 'Category: Women''s Health', '', ''),
-(5, 'Nutrition / Diet', 'nutrition-diet', 'Category: Nutrition / Diet', '', '');
+(3, 'Men\'s Health', 'men-s-health', 'Category: Men\'s Health', '', ''),
+(4, 'Women\'s Health', 'women-s-health', 'Category: Women\'s Health', '', ''),
+(5, 'Nutrition / Diet', 'nutrition-diet', 'Category: Nutrition / Diet', '', ''),
+(6, 'Cardiology', 'cardio', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -130,8 +132,18 @@ CREATE TABLE `category_photo` (
 --
 
 INSERT INTO `category_photo` (`p_category_id`, `p_category_name`, `status`) VALUES
-(1, 'Football', 'Active'),
-(2, 'Travel', 'Active');
+(1, 'CATH', 'Active'),
+(2, 'CCU', 'Active'),
+(3, 'CORONA', 'Active'),
+(4, 'DIAYSIS', 'Active'),
+(5, 'ECHO', 'Active'),
+(6, 'ESWL', 'Active'),
+(7, 'ICU', 'Active'),
+(8, 'LAB', 'Active'),
+(9, 'OPERATION THEATRE', 'Active'),
+(10, 'CANTEEN', 'Active'),
+(11, 'X-RAY', 'Active'),
+(12, 'RECEPTION', 'Active');
 
 -- --------------------------------------------------------
 
@@ -170,7 +182,7 @@ CREATE TABLE `comment` (
 --
 
 INSERT INTO `comment` (`id`, `code_body`, `code_main`) VALUES
-(1, '<div id="fb-root"></div>\r\n<script>(function(d, s, id) {\r\n  var js, fjs = d.getElementsByTagName(s)[0];\r\n  if (d.getElementById(id)) return;\r\n  js = d.createElement(s); js.id = id;\r\n  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=323620764400430";\r\n  fjs.parentNode.insertBefore(js, fjs);\r\n}(document, ''script'', ''facebook-jssdk''));</script>', '<div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="5"></div>');
+(1, '<div id=\"fb-root\"></div>\r\n<script>(function(d, s, id) {\r\n  var js, fjs = d.getElementsByTagName(s)[0];\r\n  if (d.getElementById(id)) return;\r\n  js = d.createElement(s); js.id = id;\r\n  js.src = \"//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=323620764400430\";\r\n  fjs.parentNode.insertBefore(js, fjs);\r\n}(document, \'script\', \'facebook-jssdk\'));</script>', '<div class=\"fb-comments\" data-href=\"https://developers.facebook.com/docs/plugins/comments#configurator\" data-numposts=\"5\"></div>');
 
 -- --------------------------------------------------------
 
@@ -182,6 +194,7 @@ CREATE TABLE `department` (
   `dep_id` int(11) NOT NULL,
   `dep_name` varchar(255) NOT NULL,
   `dep_slug` varchar(255) NOT NULL,
+  `dept_tamil` text CHARACTER SET utf8 DEFAULT NULL COMMENT 'in tamil language',
   `dep_detail` text NOT NULL,
   `dep_address` text NOT NULL,
   `dep_phone` varchar(100) NOT NULL,
@@ -198,11 +211,33 @@ CREATE TABLE `department` (
 -- Dumping data for table `department`
 --
 
-INSERT INTO `department` (`dep_id`, `dep_name`, `dep_slug`, `dep_detail`, `dep_address`, `dep_phone`, `dep_fax`, `dep_email`, `dep_photo`, `dep_banner`, `meta_title`, `meta_keyword`, `meta_description`) VALUES
-(1, 'Neurology', 'neurology', '', '111-222-3333', '111-222-4444', 'info@yourwebsite.com', 'department-1.jpg', 'department-banner-1.jpg', 'Neurology Department', 'Neurology Department, Neurology Doctor, Neurology Care, Neurology Consultant', ''),
-(5, 'Dentistry', 'dentistry', '', '111-222-3333', '111-222-4444', 'info@yourwebsite.com', 'department-5.jpg', 'department-banner-5.jpg', 'Neurology Department', 'Neurology Department, Neurology Doctor, Neurology Care, Neurology Consultant', ''),
-(6, 'Radiology', 'radiology', '', '111-222-3333', '111-222-4444', 'info@yourwebsite.com', 'department-6.jpg', 'department-banner-6.jpg', 'Radiology Department', 'Radiology Department Keywords', ''),
-(7, 'Cardiology', 'cardiology', '', '111-222-3333', '111-222-4444', 'info@yourwebsite.com', 'department-7.jpg', 'department-banner-7.jpg', 'Cardiology Department', 'Cardiology Department Keywords', '');
+INSERT INTO `department` (`dep_id`, `dep_name`, `dep_slug`, `dept_tamil`, `dep_detail`, `dep_address`, `dep_phone`, `dep_fax`, `dep_email`, `dep_photo`, `dep_banner`, `meta_title`, `meta_keyword`, `meta_description`) VALUES
+(1, 'Cardiology', 'cardiology', 'இருதய மருத்துவ சிகிச்சை', '<p>Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist</p>\r\n', '', '9047048344', '9047048344', 'vasanthamhealthcare@gmail.com', 'department-1.jpg', 'department-banner-1.jpg', 'Cardiology Department', 'Cardiology Department, Cardiology Doctor, Cardiology Care, Cardiology Consultant', ''),
+(2, 'Urology', '', 'சிறுநீரக மருத்துவ சிகிச்சை', '', '', '', '', '', 'department-1.jpg', 'department-banner-1.jpg', 'Department', 'Department, Doctor, Care, Consultant', ''),
+(3, 'Dermatology', '', 'தோல் நோய் மருத்துவ சிகிச்சை', '', '', '', '', '', 'department-1.jpg', 'department-banner-1.jpg', 'Department', 'Department, Doctor, Care, Consultant', ''),
+(4, 'Paediatrics', '', 'குழந்தை மருத்துவ சிகிச்சை', '', '', '', '', '', 'department-1.jpg', 'department-banner-1.jpg', 'Department', 'Department, Doctor, Care, Consultant', ''),
+(5, 'Neonatology', '', 'பச்சிளம் குழந்தை மருத்துவ சிகிச்சை', '', '', '', '', '', 'department-1.jpg', 'department-banner-1.jpg', 'Department', 'Department, Doctor, Care, Consultant', ''),
+(6, 'ENT Department', '', 'காது,மூக்கு, தொண்டை மருத்துவ சிகிச்சை', '', '', '', '', '', 'department-1.jpg', 'department-banner-1.jpg', 'Department', 'Department, Doctor, Care, Consultant', ''),
+(7, 'Gastroenterology', '', 'இரைப்பை மற்றும் குடல் மருத்துவ சிகிச்சை', '', '', '', '', '', 'department-1.jpg', 'department-banner-1.jpg', 'Department', 'Department, Doctor, Care, Consultant', ''),
+(8, 'Obstetrics & Gynaecology', '', 'மகப்பேறு மருத்துவ சிகிச்சை', '', '', '', '', '', 'department-1.jpg', 'department-banner-1.jpg', 'Department', 'Department, Doctor, Care, Consultant', ''),
+(9, 'Radiology', '', 'கதிரியக்க மருத்துவ சிகிச்சை', '', '', '', '', '', 'department-1.jpg', 'department-banner-1.jpg', 'Department', 'Department, Doctor, Care, Consultant', ''),
+(10, 'Neurology', '', 'நரம்பியல் மருத்துவ சிகிச்சை', '', '', '', '', '', 'department-1.jpg', 'department-banner-1.jpg', 'Department', 'Department, Doctor, Care, Consultant', ''),
+(11, 'Oncology', '', 'புற்று நோய் மருத்துவ சிகிச்சை', '', '', '', '', '', 'department-1.jpg', 'department-banner-1.jpg', 'Department', 'Department, Doctor, Care, Consultant', ''),
+(12, 'Pulmonology', '', 'நுரையீரல் மருத்துவ சிகிச்சை', '', '', '', '', '', 'department-1.jpg', 'department-banner-1.jpg', 'Department', 'Department, Doctor, Care, Consultant', ''),
+(13, 'Ophthalmology', '', 'கண் மருத்துவ சிகிச்சை', '', '', '', '', '', 'department-1.jpg', 'department-banner-1.jpg', 'Department', 'Department, Doctor, Care, Consultant', ''),
+(14, 'Rheumatology', '', 'முடக்கு,வாத மருத்துவ சிகிச்சை', '', '', '', '', '', 'department-1.jpg', 'department-banner-1.jpg', 'Department', 'Department, Doctor, Care, Consultant', ''),
+(15, 'Psychology', '', 'மனவியல் மருத்துவ சிகிச்சை', '', '', '', '', '', 'department-1.jpg', 'department-banner-1.jpg', 'Department', 'Department, Doctor, Care, Consultant', ''),
+(16, 'Orthopaedics', '', 'எலும்பு மருத்துவ சிகிச்சை', '', '', '', '', '', 'department-1.jpg', 'department-banner-1.jpg', 'Department', 'Department, Doctor, Care, Consultant', ''),
+(17, 'Nephrology', '', 'சிறுநீரக மருத்துவ சிகிச்சை', '', '', '', '', '', 'department-1.jpg', 'department-banner-1.jpg', 'Department', 'Department, Doctor, Care, Consultant', ''),
+(18, 'General medicine', '', 'பொது மருத்துவ சிகிச்சை', '', '', '', '', '', 'department-1.jpg', 'department-banner-1.jpg', 'Department', 'Department, Doctor, Care, Consultant', ''),
+(19, 'Diabetology', '', 'நீரிழிவு மருத்துவ சிகிச்சை', '', '', '', '', '', 'department-1.jpg', 'department-banner-1.jpg', 'Department', 'Department, Doctor, Care, Consultant', ''),
+(20, 'Dialysis laparoscopic surgery', '', 'ஊடுபிரித்தல் அறுவை சிகிச்சை', '', '', '', '', '', 'department-1.jpg', 'department-banner-1.jpg', 'Department', 'Department, Doctor, Care, Consultant', ''),
+(21, 'Plastic surgery', '', 'ஒட்டுறுப்பு அறுவை சிகிச்சை', '', '', '', '', '', 'department-1.jpg', 'department-banner-1.jpg', 'Department', 'Department, Doctor, Care, Consultant', ''),
+(22, 'General surgery', '', 'பொது அறுவை சிகிச்சை', '', '', '', '', '', 'department-1.jpg', 'department-banner-1.jpg', 'Department', 'Department, Doctor, Care, Consultant', ''),
+(23, 'Vascular surgery', '', 'இரத்தநாள அறுவை சிகிச்சை', '', '', '', '', '', 'department-1.jpg', 'department-banner-1.jpg', 'Department', 'Department, Doctor, Care, Consultant', ''),
+(24, 'Dental Care', '', 'பல் மருத்துவ சிகிச்சை', '', '', '', '', '', 'department-1.jpg', 'department-banner-1.jpg', 'Department', 'Department, Doctor, Care, Consultant', ''),
+(25, 'Cath lab', '', '\r\nகாத் ஆய்வகம்', '', '', '', '', '', 'department-1.jpg', 'department-banner-1.jpg', 'Department', 'Department, Doctor, Care, Consultant', ''),
+(26, 'Emergency unit', 'emergency', 'அவசர மருத்துவ சிகிச்சை', '', '', '', '', '', 'department-1.jpg', 'department-banner-1.jpg', 'Department', 'Department, Doctor, Care, Consultant', '');
 
 -- --------------------------------------------------------
 
@@ -237,20 +272,11 @@ CREATE TABLE `department_faq` (
 --
 
 INSERT INTO `department_faq` (`fq_id`, `fq_title`, `fq_content`, `dep_id`) VALUES
-(1, 'Where will you get doctors?', 'Khulna, Bangladesh', 1),
-(5, 'Are this team members muslim?', 'Yes', 5),
-(7, 'Do you follow islamic rules?', 'Yes', 5),
+(1, 'Where will you get doctors?', 'Vadaseri, Nagercoil', 1),
 (8, 'Will you need to come to us everyday?', 'No man. It is not needed. But if you want you can visit and come to our office.\r\n\r\nWe arrange some lunch for our visitors who can become a client of us in future.', 1),
 (9, 'How do I book an appointment?', 'You can easily book an appointment going to appointment form in the department details page.', 1),
 (10, 'How do I book an appointment?', 'You can easily book an appointment going to appointment form in the department details page.', 5),
-(11, 'What is a health plan?', 'The group of doctors, hospitals, and other providers who work together to give you the healthcare you need.', 6),
-(12, 'What is a co-pay?', 'A co-pay is the money you pay at the time of services.', 6),
-(13, 'Will I have a co-pay?', 'If you have a co-pay now, you may still have one.', 6),
-(14, 'What if I have more questions?', 'If you have questions or need more information, you can call to our Client Enrollment Services at 123-456-7897', 6),
-(15, 'What is a health plan?', 'The group of doctors, hospitals, and other providers who work together to give you the healthcare you need.', 7),
-(16, 'What is a co-pay?', 'A co-pay is the money you pay at the time of services.', 7),
-(17, 'Will I have a co-pay?', 'If you have a co-pay now, you may still have one.', 7),
-(18, 'What if I have more questions?', 'If you have questions or need more information, you can call to our Client Enrollment Services at 123-456-7897', 7);
+(11, 'What is a health plan?', 'The group of doctors, hospitals, and other providers who work together to give you the healthcare you need.', 6);
 
 -- --------------------------------------------------------
 
@@ -307,19 +333,41 @@ INSERT INTO `department_openning_hour` (`oh_id`, `oh_day`, `oh_time`, `dep_id`) 
 
 CREATE TABLE `designation` (
   `designation_id` int(11) NOT NULL,
-  `designation_name` varchar(100) NOT NULL
+  `designation_name` varchar(100) NOT NULL,
+  `department_tamil` text CHARACTER SET utf8 DEFAULT NULL,
+  `designation_detail` varchar(250) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `designation`
 --
 
-INSERT INTO `designation` (`designation_id`, `designation_name`) VALUES
-(2, 'Dental Surgeon'),
-(3, 'Neurologist'),
-(4, 'Neurosurgeon'),
-(5, 'Cardiologist'),
-(6, 'Gynecologist');
+INSERT INTO `designation` (`designation_id`, `designation_name`, `department_tamil`, `designation_detail`) VALUES
+(1, 'Cardiology', 'இருதய மருத்துவ', '<p>Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist</p>'),
+(2, 'Urology', '0', NULL),
+(3, 'Dermatology', '0', NULL),
+(4, 'Paediatrics', '0', NULL),
+(5, 'Neonatology', '0', NULL),
+(6, 'ENT Department', '0', NULL),
+(7, 'Gastroenterology', '0', NULL),
+(8, 'Obstetrics & Gynaecology', '0', NULL),
+(9, 'Radiology', '0', NULL),
+(10, 'Neurology', '0', NULL),
+(11, 'Oncology', '0', NULL),
+(12, 'Pulmonology', '0', NULL),
+(13, 'Ophthalmology', '0', NULL),
+(14, 'Rheumatology', '0', NULL),
+(15, 'Psychology', '0', NULL),
+(16, 'Orthopaedics', '0', NULL),
+(17, 'Nephrology', '0', NULL),
+(19, 'Diabetology', '0', NULL),
+(20, 'Dental care', '0', NULL),
+(21, 'Dialysis laparoscopic surgery', '0', NULL),
+(22, 'Plastic surgery', '0', NULL),
+(23, 'General Surgery', '0', NULL),
+(24, 'Vascular surgery', '0', NULL),
+(25, 'Emergency unit', '0', NULL),
+(26, 'Cath lab', '0', NULL);
 
 -- --------------------------------------------------------
 
@@ -359,30 +407,29 @@ CREATE TABLE `doctor` (
 --
 
 INSERT INTO `doctor` (`id`, `name`, `slug`, `designation_id`, `photo`, `banner`, `degree`, `detail`, `facebook`, `twitter`, `linkedin`, `youtube`, `google_plus`, `instagram`, `flickr`, `address`, `practice_location`, `phone`, `email`, `website`, `status`, `meta_title`, `meta_keyword`, `meta_description`) VALUES
-(1, 'Dr. Ajitha Sekar - MD', 'dr-ajitha-sekar', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Health Centre Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
-(2, 'Dr. N.B.Venkataraman - MD, DM', 'dr-venkataraman', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Health Centre Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
-(3, 'Dr. Venkatesh - MD, DCH(CARDIO)', 'dr-venkatesh', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Health Centre Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
-(4, 'Dr. B.V Selvan - MD', 'dr-selvan', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Health Centre Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
-(5, 'Dr. Vijayaraj - DLO', 'dr-vijayaraj', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Health Centre Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
-(6, 'Dr. Sivarajan - MS, M.ch', 'dr-sivarajan', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Health Centre Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
-(7, 'Dr. Sethuram - DM', 'dr-sethuram', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Health Centre Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
-(8, 'Dr. Abraham Muthurangam - MS,Mch', 'dr-abraham-muthurangam', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Health Centre Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
-(9, 'Dr. Valluvan - MBBS,MD', 'dr-valluvan', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Health Centre Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
-(10, 'Dr. B. Nagarajan - DNB', 'dr-nagarajan', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Health Centre Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
-(11, 'Dr. T. Muthuretnam - M.ch', 'dr-muthuretnam', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Health Centre Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
-(12, 'Dr. Jerryl Maclean - DTCD,FCCP,DNB', 'dr-jerryl-macleanr', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Health Centre Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
-(13, 'Dr. Vijayaraj - DLO MBBS,DMRD(RADIOLOGIST)', 'dr-vijayaraj', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Health Centre Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
-(14, 'Dr. M.S. Kishore - MBBS,DMRD', 'dr-kishore', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Health Centre Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
-(15, 'Dr. J. Antony Joe - DM', 'dr-kishore', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Health Centre Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
-(16, 'Dr. Rajesh - MS,Mch', 'dr-kishore', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Health Centre Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
-(17, 'Dr. Siva Kumar - MD', 'dr-kishore', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Health Centre Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
-(18, 'Dr. Arun Vargese - MD,DNB,DM', 'dr-kishore', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Health Centre Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
-(19, 'Dr. V.V. Sujith - MBBS', 'dr-kishore', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Health Centre Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
-(20, 'Dr. Sivakami - MBBS', 'dr-kishore', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Health Centre Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
-(21, 'Dr. Subashini - MBBS', 'dr-kishore', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Health Centre Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
-(22, 'Dr. S. Ratheesh - MBBS', 'dr-kishore', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Health Centre Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
-(23, 'Dr. Fredilia - MBBS', 'dr-kishore', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Health Centre Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', '');
-(24, 'Dr. William Ray', 'dr-william-ray', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', '', '', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', '', '', '', '', '', 'Active', '', '', '');
+(1, 'Dr. Ajitha Sekar - MD', 'dr-ajitha-sekar', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Healthcare Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
+(2, 'Dr. N.B.Venkataraman - MD, DM', 'dr-venkataraman', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Healthcare Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
+(3, 'Dr. Venkatesh - MD, DCH(CARDIO)', 'dr-venkatesh', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Healthcare Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
+(4, 'Dr. B.V Selvan - MD', 'dr-selvan', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Healthcare Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
+(5, 'Dr. Vijayaraj - DLO', 'dr-vijayaraj', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Healthcare Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
+(6, 'Dr. Sivarajan - MS, M.ch', 'dr-sivarajan', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Healthcare Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
+(7, 'Dr. Sethuram - DM', 'dr-sethuram', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Healthcare Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
+(8, 'Dr. Abraham Muthurangam - MS,Mch', 'dr-abraham-muthurangam', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Healthcare Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
+(9, 'Dr. Valluvan - MBBS,MD', 'dr-valluvan', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Healthcare Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
+(10, 'Dr. B. Nagarajan - DNB', 'dr-nagarajan', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Healthcare Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
+(11, 'Dr. T. Muthuretnam - M.ch', 'dr-muthuretnam', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Healthcare Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
+(12, 'Dr. Jerryl Maclean - DTCD,FCCP,DNB', 'dr-jerryl-macleanr', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Healthcare Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
+(13, 'Dr. Vijayaraj - DLO MBBS,DMRD(RADIOLOGIST)', 'dr-vijayaraj', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Healthcare Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
+(14, 'Dr. M.S. Kishore - MBBS,DMRD', 'dr-kishore', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Healthcare Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
+(15, 'Dr. J. Antony Joe - DM', 'dr-kishore', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Healthcare Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
+(16, 'Dr. Rajesh - MS,Mch', 'dr-kishore', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Healthcare Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
+(17, 'Dr. Siva Kumar - MD', 'dr-kishore', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Healthcare Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
+(18, 'Dr. Arun Vargese - MD,DNB,DM', 'dr-kishore', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Healthcare Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
+(19, 'Dr. V.V. Sujith - MBBS', 'dr-kishore', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Healthcare Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
+(20, 'Dr. Sivakami - MBBS', 'dr-kishore', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Healthcare Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
+(21, 'Dr. Subashini - MBBS', 'dr-kishore', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Healthcare Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
+(22, 'Dr. S. Ratheesh - MBBS', 'dr-kishore', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Healthcare Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', ''),
+(23, 'Dr. Fredilia - MBBS', 'dr-kishore', 5, 'doctor-8.jpg', 'doctor-banner-8.jpg', ' Doctor of Medicine, University of Madras, Chennai, IN (1990) Medical Orientation Program, St. Louis University (St. Louis, Missouri 1996)', '<p>After graduating from Vinayaka Mission Medical University, Salem Dr. Ajitha Sekar - MD(OBG) completed a two-year fellowship in sports medicine at Tanjore Children’s Hospital. During his training at Tanjore, Dr. Ajitha Sekar - MD(OBG) and Dr. Alex Mathew was team physician for the University of Tanjore and Vinayaka Mission University</p>', 'http://www.facebook.com', 'http://www.twitter.com', 'http://www.linkedin.com', '', '', '', '', ' Suite 27, Medical Centre, Vasantham Healthcare Pvt., LTD, Nagercoil', '', '', '', 'https://zeroappz.com', 'Active', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -491,7 +538,7 @@ CREATE TABLE `menu` (
 --
 
 INSERT INTO `menu` (`menu_id`, `menu_type`, `menu_name`, `category_or_page_slug`, `menu_order`, `menu_parent`, `menu_url`) VALUES
-(17, 'Other', 'Home', '', 1, 0, 'http://www.a3devs.com/xicia/codecanyon/Vasantham Health Centre/'),
+(17, 'Other', 'Home', '', 1, 0, 'http://www.a3devs.com/xicia/codecanyon/yourdoctor/'),
 (18, 'Other', 'Pages', '', 2, 0, '#'),
 (19, 'Page', 'About Us', 'about-us', 3, 18, ''),
 (20, 'Page', 'Contact Us', 'contact-us', 9, 0, ''),
@@ -528,7 +575,7 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`news_id`, `news_title`, `news_slug`, `news_content`, `news_date`, `photo`, `category_id`, `publisher`, `total_view`, `meta_title`, `meta_keyword`, `meta_description`) VALUES
-(1, 'Donating plasma: What are the side effects and risks?', 'donating-plasma-what-are-the-side-effects-and-risks-', '<p>Lorem ipsum dolor sit amet, qui case probo velit no, an postea scaevola partiendo mei. Id mea fuisset perpetua referrentur. Ut everti ceteros mei, alii discere eum no, duo id malis iuvaret. Ad sint everti accusam vel, ea viderer suscipiantur pri. Brute option minimum in cum, ignota iuvaret an pro.</p>\r\n\r\n<p>Solum atqui intellegebat mea an. Ne ius alterum aliquam. Ea nec populo aliquid mentitum, vis in meliore atomorum, sanctus consequat vituperatoribus duo ea. Ad doctus pertinacia ius, virtute fuisset id has, eum ut modo principes. Qui eu labore adversarium, oporteat delicata qui ut, an qui meliore principes. Id aliquid dolorum nam.</p>\r\n\r\n<p>Reque pericula philosophia ut mei, volumus eligendi mandamus has an. In nobis consulatu pri, has at timeam scaevola, has simul quaeque et. Te nec sale accumsan. Dolorem prodesset efficiendi sea ea.</p>\r\n\r\n<p>Et habeo modus debitis pri, vel quis fierent albucius ne. Ea animal meliore usu, nec etiam dolorum atomorum at, nam in audire mandamus omittantur. Cu ius dicam officiis molestiae, mea volumus officiis cotidieque no. Ut vel possim interpretaris, idque probatus antiopam has ad. Facilisi qualisque te sea, no dolorum mnesarchum usu.</p>\r\n\r\n<p>Eum tota graeci impetus an, eirmod invenire rationibus ne mel. Ignota habemus eum ex, vis omnesque delicata perpetua an. Sit id modo invidunt sapientem, ne eum vocibus dolores phaedrum. Case praesent appellantur eu per.</p>\r\n', '05-09-2017', 'news-1.jpg', 1, 'John Doe', 9, 'Donating plasma: What are the side effects and risks?', '', ''),
+(1, 'Donating plasma: What are the side effects and risks?', 'donating-plasma-what-are-the-side-effects-and-risks-', '<p>Lorem ipsum dolor sit amet, qui case probo velit no, an postea scaevola partiendo mei. Id mea fuisset perpetua referrentur. Ut everti ceteros mei, alii discere eum no, duo id malis iuvaret. Ad sint everti accusam vel, ea viderer suscipiantur pri. Brute option minimum in cum, ignota iuvaret an pro.</p>\r\n\r\n<p>Solum atqui intellegebat mea an. Ne ius alterum aliquam. Ea nec populo aliquid mentitum, vis in meliore atomorum, sanctus consequat vituperatoribus duo ea. Ad doctus pertinacia ius, virtute fuisset id has, eum ut modo principes. Qui eu labore adversarium, oporteat delicata qui ut, an qui meliore principes. Id aliquid dolorum nam.</p>\r\n\r\n<p>Reque pericula philosophia ut mei, volumus eligendi mandamus has an. In nobis consulatu pri, has at timeam scaevola, has simul quaeque et. Te nec sale accumsan. Dolorem prodesset efficiendi sea ea.</p>\r\n\r\n<p>Et habeo modus debitis pri, vel quis fierent albucius ne. Ea animal meliore usu, nec etiam dolorum atomorum at, nam in audire mandamus omittantur. Cu ius dicam officiis molestiae, mea volumus officiis cotidieque no. Ut vel possim interpretaris, idque probatus antiopam has ad. Facilisi qualisque te sea, no dolorum mnesarchum usu.</p>\r\n\r\n<p>Eum tota graeci impetus an, eirmod invenire rationibus ne mel. Ignota habemus eum ex, vis omnesque delicata perpetua an. Sit id modo invidunt sapientem, ne eum vocibus dolores phaedrum. Case praesent appellantur eu per.</p>\r\n', '05-09-2017', 'news-1.jpg', 1, 'John Doe', 11, 'Donating plasma: What are the side effects and risks?', '', ''),
 (2, 'Fasting before a blood test: What you need to know', 'fasting-before-a-blood-test-what-you-need-to-know', '<p>Lorem ipsum dolor sit amet, qui case probo velit no, an postea scaevola partiendo mei. Id mea fuisset perpetua referrentur. Ut everti ceteros mei, alii discere eum no, duo id malis iuvaret. Ad sint everti accusam vel, ea viderer suscipiantur pri. Brute option minimum in cum, ignota iuvaret an pro.</p>\r\n\r\n<p>Solum atqui intellegebat mea an. Ne ius alterum aliquam. Ea nec populo aliquid mentitum, vis in meliore atomorum, sanctus consequat vituperatoribus duo ea. Ad doctus pertinacia ius, virtute fuisset id has, eum ut modo principes. Qui eu labore adversarium, oporteat delicata qui ut, an qui meliore principes. Id aliquid dolorum nam.</p>\r\n\r\n<p>Reque pericula philosophia ut mei, volumus eligendi mandamus has an. In nobis consulatu pri, has at timeam scaevola, has simul quaeque et. Te nec sale accumsan. Dolorem prodesset efficiendi sea ea.</p>\r\n\r\n<p>Et habeo modus debitis pri, vel quis fierent albucius ne. Ea animal meliore usu, nec etiam dolorum atomorum at, nam in audire mandamus omittantur. Cu ius dicam officiis molestiae, mea volumus officiis cotidieque no. Ut vel possim interpretaris, idque probatus antiopam has ad. Facilisi qualisque te sea, no dolorum mnesarchum usu.</p>\r\n\r\n<p>Eum tota graeci impetus an, eirmod invenire rationibus ne mel. Ignota habemus eum ex, vis omnesque delicata perpetua an. Sit id modo invidunt sapientem, ne eum vocibus dolores phaedrum. Case praesent appellantur eu per.</p>\r\n', '05-09-2017', 'news-2.jpg', 1, 'John Doe', 0, 'Fasting before a blood test: What you need to know', '', ''),
 (3, 'Diabetes and hypertension: What is the relationship?', 'diabetes-and-hypertension-what-is-the-relationship-', '<p>Lorem ipsum dolor sit amet, qui case probo velit no, an postea scaevola partiendo mei. Id mea fuisset perpetua referrentur. Ut everti ceteros mei, alii discere eum no, duo id malis iuvaret. Ad sint everti accusam vel, ea viderer suscipiantur pri. Brute option minimum in cum, ignota iuvaret an pro.</p>\r\n\r\n<p>Solum atqui intellegebat mea an. Ne ius alterum aliquam. Ea nec populo aliquid mentitum, vis in meliore atomorum, sanctus consequat vituperatoribus duo ea. Ad doctus pertinacia ius, virtute fuisset id has, eum ut modo principes. Qui eu labore adversarium, oporteat delicata qui ut, an qui meliore principes. Id aliquid dolorum nam.</p>\r\n\r\n<p>Reque pericula philosophia ut mei, volumus eligendi mandamus has an. In nobis consulatu pri, has at timeam scaevola, has simul quaeque et. Te nec sale accumsan. Dolorem prodesset efficiendi sea ea.</p>\r\n\r\n<p>Et habeo modus debitis pri, vel quis fierent albucius ne. Ea animal meliore usu, nec etiam dolorum atomorum at, nam in audire mandamus omittantur. Cu ius dicam officiis molestiae, mea volumus officiis cotidieque no. Ut vel possim interpretaris, idque probatus antiopam has ad. Facilisi qualisque te sea, no dolorum mnesarchum usu.</p>\r\n\r\n<p>Eum tota graeci impetus an, eirmod invenire rationibus ne mel. Ignota habemus eum ex, vis omnesque delicata perpetua an. Sit id modo invidunt sapientem, ne eum vocibus dolores phaedrum. Case praesent appellantur eu per.</p>\r\n', '05-09-2017', 'news-3.jpg', 2, 'John Doe', 0, 'Diabetes and hypertension: What is the relationship?', '', ''),
 (4, 'Seven Natural Diuretics to Eat and Drink', 'seven-natural-diuretics-to-eat-and-drink', '<p>Lorem ipsum dolor sit amet, qui case probo velit no, an postea scaevola partiendo mei. Id mea fuisset perpetua referrentur. Ut everti ceteros mei, alii discere eum no, duo id malis iuvaret. Ad sint everti accusam vel, ea viderer suscipiantur pri. Brute option minimum in cum, ignota iuvaret an pro.</p>\r\n\r\n<p>Solum atqui intellegebat mea an. Ne ius alterum aliquam. Ea nec populo aliquid mentitum, vis in meliore atomorum, sanctus consequat vituperatoribus duo ea. Ad doctus pertinacia ius, virtute fuisset id has, eum ut modo principes. Qui eu labore adversarium, oporteat delicata qui ut, an qui meliore principes. Id aliquid dolorum nam.</p>\r\n\r\n<p>Reque pericula philosophia ut mei, volumus eligendi mandamus has an. In nobis consulatu pri, has at timeam scaevola, has simul quaeque et. Te nec sale accumsan. Dolorem prodesset efficiendi sea ea.</p>\r\n\r\n<p>Et habeo modus debitis pri, vel quis fierent albucius ne. Ea animal meliore usu, nec etiam dolorum atomorum at, nam in audire mandamus omittantur. Cu ius dicam officiis molestiae, mea volumus officiis cotidieque no. Ut vel possim interpretaris, idque probatus antiopam has ad. Facilisi qualisque te sea, no dolorum mnesarchum usu.</p>\r\n\r\n<p>Eum tota graeci impetus an, eirmod invenire rationibus ne mel. Ignota habemus eum ex, vis omnesque delicata perpetua an. Sit id modo invidunt sapientem, ne eum vocibus dolores phaedrum. Case praesent appellantur eu per.</p>\r\n', '05-09-2017', 'news-4.jpg', 2, 'John Doe', 0, 'Seven Natural Diuretics to Eat and Drink', '', ''),
@@ -538,7 +585,8 @@ INSERT INTO `news` (`news_id`, `news_title`, `news_slug`, `news_content`, `news_
 (8, 'Insomnia: Like mother, like child?', 'insomnia-like-mother-like-child-', '<p>Lorem ipsum dolor sit amet, qui case probo velit no, an postea scaevola partiendo mei. Id mea fuisset perpetua referrentur. Ut everti ceteros mei, alii discere eum no, duo id malis iuvaret. Ad sint everti accusam vel, ea viderer suscipiantur pri. Brute option minimum in cum, ignota iuvaret an pro.</p>\r\n\r\n<p>Solum atqui intellegebat mea an. Ne ius alterum aliquam. Ea nec populo aliquid mentitum, vis in meliore atomorum, sanctus consequat vituperatoribus duo ea. Ad doctus pertinacia ius, virtute fuisset id has, eum ut modo principes. Qui eu labore adversarium, oporteat delicata qui ut, an qui meliore principes. Id aliquid dolorum nam.</p>\r\n\r\n<p>Reque pericula philosophia ut mei, volumus eligendi mandamus has an. In nobis consulatu pri, has at timeam scaevola, has simul quaeque et. Te nec sale accumsan. Dolorem prodesset efficiendi sea ea.</p>\r\n\r\n<p>Et habeo modus debitis pri, vel quis fierent albucius ne. Ea animal meliore usu, nec etiam dolorum atomorum at, nam in audire mandamus omittantur. Cu ius dicam officiis molestiae, mea volumus officiis cotidieque no. Ut vel possim interpretaris, idque probatus antiopam has ad. Facilisi qualisque te sea, no dolorum mnesarchum usu.</p>\r\n\r\n<p>Eum tota graeci impetus an, eirmod invenire rationibus ne mel. Ignota habemus eum ex, vis omnesque delicata perpetua an. Sit id modo invidunt sapientem, ne eum vocibus dolores phaedrum. Case praesent appellantur eu per.</p>\r\n', '05-09-2017', 'news-8.jpg', 4, 'John Doe', 8, 'Insomnia: Like mother, like child?', '', ''),
 (9, 'How Much Sugar Is In Your Food And Drink?', 'how-much-sugar-is-in-your-food-and-drink', '<p>Lorem ipsum dolor sit amet, qui case probo velit no, an postea scaevola partiendo mei. Id mea fuisset perpetua referrentur. Ut everti ceteros mei, alii discere eum no, duo id malis iuvaret. Ad sint everti accusam vel, ea viderer suscipiantur pri. Brute option minimum in cum, ignota iuvaret an pro.</p>\r\n\r\n<p>Solum atqui intellegebat mea an. Ne ius alterum aliquam. Ea nec populo aliquid mentitum, vis in meliore atomorum, sanctus consequat vituperatoribus duo ea. Ad doctus pertinacia ius, virtute fuisset id has, eum ut modo principes. Qui eu labore adversarium, oporteat delicata qui ut, an qui meliore principes. Id aliquid dolorum nam.</p>\r\n\r\n<p>Reque pericula philosophia ut mei, volumus eligendi mandamus has an. In nobis consulatu pri, has at timeam scaevola, has simul quaeque et. Te nec sale accumsan. Dolorem prodesset efficiendi sea ea.</p>\r\n\r\n<p>Et habeo modus debitis pri, vel quis fierent albucius ne. Ea animal meliore usu, nec etiam dolorum atomorum at, nam in audire mandamus omittantur. Cu ius dicam officiis molestiae, mea volumus officiis cotidieque no. Ut vel possim interpretaris, idque probatus antiopam has ad. Facilisi qualisque te sea, no dolorum mnesarchum usu.</p>\r\n\r\n<p>Eum tota graeci impetus an, eirmod invenire rationibus ne mel. Ignota habemus eum ex, vis omnesque delicata perpetua an. Sit id modo invidunt sapientem, ne eum vocibus dolores phaedrum. Case praesent appellantur eu per.</p>\r\n', '05-09-2017', 'news-9.jpg', 5, 'John Doe', 4, 'How Much Sugar Is In Your Food And Drink?', '', ''),
 (10, 'Vitamin D: Health Benefits, Facts and Research', 'vitamin-d-health-benefits-facts-and-research', '<p>Lorem ipsum dolor sit amet, qui case probo velit no, an postea scaevola partiendo mei. Id mea fuisset perpetua referrentur. Ut everti ceteros mei, alii discere eum no, duo id malis iuvaret. Ad sint everti accusam vel, ea viderer suscipiantur pri. Brute option minimum in cum, ignota iuvaret an pro.</p>\r\n\r\n<p>Solum atqui intellegebat mea an. Ne ius alterum aliquam. Ea nec populo aliquid mentitum, vis in meliore atomorum, sanctus consequat vituperatoribus duo ea. Ad doctus pertinacia ius, virtute fuisset id has, eum ut modo principes. Qui eu labore adversarium, oporteat delicata qui ut, an qui meliore principes. Id aliquid dolorum nam.</p>\r\n\r\n<p>Reque pericula philosophia ut mei, volumus eligendi mandamus has an. In nobis consulatu pri, has at timeam scaevola, has simul quaeque et. Te nec sale accumsan. Dolorem prodesset efficiendi sea ea.</p>\r\n\r\n<p>Et habeo modus debitis pri, vel quis fierent albucius ne. Ea animal meliore usu, nec etiam dolorum atomorum at, nam in audire mandamus omittantur. Cu ius dicam officiis molestiae, mea volumus officiis cotidieque no. Ut vel possim interpretaris, idque probatus antiopam has ad. Facilisi qualisque te sea, no dolorum mnesarchum usu.</p>\r\n\r\n<p>Eum tota graeci impetus an, eirmod invenire rationibus ne mel. Ignota habemus eum ex, vis omnesque delicata perpetua an. Sit id modo invidunt sapientem, ne eum vocibus dolores phaedrum. Case praesent appellantur eu per.</p>\r\n', '05-09-2017', 'news-10.jpg', 5, 'John Doe', 3, 'Vitamin D: Health Benefits, Facts and Research', '', ''),
-(11, 'Protein shake diet for weight loss', 'protein-shake-diet-for-weight-loss', '<p>Lorem ipsum dolor sit amet, qui case probo velit no, an postea scaevola partiendo mei. Id mea fuisset perpetua referrentur. Ut everti ceteros mei, alii discere eum no, duo id malis iuvaret. Ad sint everti accusam vel, ea viderer suscipiantur pri. Brute option minimum in cum, ignota iuvaret an pro.</p>\r\n\r\n<p>Solum atqui intellegebat mea an. Ne ius alterum aliquam. Ea nec populo aliquid mentitum, vis in meliore atomorum, sanctus consequat vituperatoribus duo ea. Ad doctus pertinacia ius, virtute fuisset id has, eum ut modo principes. Qui eu labore adversarium, oporteat delicata qui ut, an qui meliore principes. Id aliquid dolorum nam.</p>\r\n\r\n<p>Reque pericula philosophia ut mei, volumus eligendi mandamus has an. In nobis consulatu pri, has at timeam scaevola, has simul quaeque et. Te nec sale accumsan. Dolorem prodesset efficiendi sea ea.</p>\r\n\r\n<p>Et habeo modus debitis pri, vel quis fierent albucius ne. Ea animal meliore usu, nec etiam dolorum atomorum at, nam in audire mandamus omittantur. Cu ius dicam officiis molestiae, mea volumus officiis cotidieque no. Ut vel possim interpretaris, idque probatus antiopam has ad. Facilisi qualisque te sea, no dolorum mnesarchum usu.</p>\r\n\r\n<p>Eum tota graeci impetus an, eirmod invenire rationibus ne mel. Ignota habemus eum ex, vis omnesque delicata perpetua an. Sit id modo invidunt sapientem, ne eum vocibus dolores phaedrum. Case praesent appellantur eu per.</p>\r\n', '05-09-2017', 'news-11.jpg', 5, 'John Doe', 16, 'Protein shake diet for weight loss', '', '');
+(11, 'Protein shake diet for weight loss', 'protein-shake-diet-for-weight-loss', '<p>Lorem ipsum dolor sit amet, qui case probo velit no, an postea scaevola partiendo mei. Id mea fuisset perpetua referrentur. Ut everti ceteros mei, alii discere eum no, duo id malis iuvaret. Ad sint everti accusam vel, ea viderer suscipiantur pri. Brute option minimum in cum, ignota iuvaret an pro.</p>\r\n\r\n<p>Solum atqui intellegebat mea an. Ne ius alterum aliquam. Ea nec populo aliquid mentitum, vis in meliore atomorum, sanctus consequat vituperatoribus duo ea. Ad doctus pertinacia ius, virtute fuisset id has, eum ut modo principes. Qui eu labore adversarium, oporteat delicata qui ut, an qui meliore principes. Id aliquid dolorum nam.</p>\r\n\r\n<p>Reque pericula philosophia ut mei, volumus eligendi mandamus has an. In nobis consulatu pri, has at timeam scaevola, has simul quaeque et. Te nec sale accumsan. Dolorem prodesset efficiendi sea ea.</p>\r\n\r\n<p>Et habeo modus debitis pri, vel quis fierent albucius ne. Ea animal meliore usu, nec etiam dolorum atomorum at, nam in audire mandamus omittantur. Cu ius dicam officiis molestiae, mea volumus officiis cotidieque no. Ut vel possim interpretaris, idque probatus antiopam has ad. Facilisi qualisque te sea, no dolorum mnesarchum usu.</p>\r\n\r\n<p>Eum tota graeci impetus an, eirmod invenire rationibus ne mel. Ignota habemus eum ex, vis omnesque delicata perpetua an. Sit id modo invidunt sapientem, ne eum vocibus dolores phaedrum. Case praesent appellantur eu per.</p>\r\n', '05-09-2017', 'news-11.jpg', 5, 'John Doe', 16, 'Protein shake diet for weight loss', '', ''),
+(12, 'What is The Success rate of a root canel?', 'root-canel-success', '<p>Over the river and through the woods was more dangerous back when cars had crummy bias-ply tires, rear-wheel drive. Kevin tail capicola bresaola, prosciutto swine cupim trip boudin shoulder frankfurter. This process repeats many times per second until the vehicle stops or you lift your foot off the brake pedal ordinary brakes. Kevin tail capicola bresaola, prosciutto swine cupim tri-tip boudin shoulder frank furte.</p>\r\n', '07-11-2020', 'news-12.png', 6, 'Praveen Kumar', 4, '', '', '');
 
 -- --------------------------------------------------------
 
@@ -590,13 +638,51 @@ CREATE TABLE `partner` (
 --
 
 INSERT INTO `partner` (`id`, `name`, `url`, `photo`) VALUES
-(1, 'Company 1', '', 'partner-1.png'),
-(2, 'Company 2', '', 'partner-2.png'),
-(3, 'Company 3', '', 'partner-3.png'),
-(4, 'Company 4', '', 'partner-4.png'),
-(5, 'Company 5', '', 'partner-5.png'),
-(6, 'Company 6', '', 'partner-6.png'),
-(7, 'Company 7', '', 'partner-7.png');
+(1, 'Chief Ministers Comprehensive Health Insurance Scheme', 'https://www.cmchistn.com', 'partner-1.png'),
+(2, 'TNNHIS MidInida Health Service', 'http://www.tnnhis2016.com', 'partner-2.png'),
+(3, 'Rashtriya Swasthya Bima Yojana', 'http://www.rsby.gov.in/how_works.html', 'partner-3.jpg'),
+(4, 'Employee State Insurance Act', 'https://www.esic.nic.in', 'partner-4.png'),
+(5, 'ESI Pension and Employees', 'https://www.esic.in/web/esic/esic-pensioner-s-medical-scheme', ''),
+(6, 'Nuclear power corporation of India LTD', 'http://www.npcil.nic.in/index.aspx', ''),
+(7, 'Indin Rare Earth Limited(IREL)', 'https://www.irel.co.in', ''),
+(8, 'Indian Space Research Organization(ISRO)', 'https://www.isro.gov.in', ''),
+(9, 'Vidal Health Insurance TPA', 'https://www.vidalhealthtpa.com', ''),
+(10, 'Dedicated Health Insurance Services Tpa', '', ''),
+(11, 'E-Meditek Soultion Limited', 'https://www.medindia.net/patients/insurance/health-insurance/tpa/e-meditek-insurance-tpa-limited-5.htm', ''),
+(12, 'Family Health Plan Limited', 'https://www.fhpl.net', ''),
+(13, 'ICICI Lombard General Insurance Co.LTD', 'https://www.icicilombard.com', ''),
+(14, 'Life Insurance Corporation of India', 'https://www.icicilombard.com', ''),
+(15, 'Max New York Life Insurance', 'https://www.maxlifeinsurance.com', ''),
+(16, 'MEDI Assist India LTD', 'https://m.medibuddy.in', ''),
+(17, 'National Insurance Company', 'https://nationalinsurance.nic.co.in', ''),
+(18, 'Paramound Health Group', 'https://www.paramounttpa.com', ''),
+(19, 'Reliance Health Insurance Limited', 'https://www.reliancegeneral.co.in/Insurance/Health-Insurance/Health-Gain-Insurance.aspx', ''),
+(20, 'Star Health and Allied Insurance Limited', 'https://www.starhealth.in', ''),
+(21, 'United HealthCare', '', ''),
+(22, 'United India Insurance', 'https://uiic.co.in', ''),
+(23, 'Religare Health Insurance', 'https://www.careinsurance.com', ''),
+(24, 'Bajaj Allianz Health Insurance', 'https://www.bajajallianz.com/health-insurance-plans.html', ''),
+(25, 'Cignattk health Insurance', '', ''),
+(26, 'HDFC ERGO Health Insurance', 'https://www.hdfcergo.com/health-insurance', ''),
+(27, 'Chola MS Health Insurance', 'https://www.cholainsurance.com/health-insurance', ''),
+(28, 'Ericson TPA Serices PVT', 'https://www.ericsontpa.com', ''),
+(29, 'SBI General Insurance', 'https://www.sbigeneral.in/portal', ''),
+(30, 'MAX BUPA Health Insurance', 'https://www.maxbupa.com/', ''),
+(31, 'Health India Insurance', 'https://www.healthindiatpa.com', ''),
+(32, 'Medsava Health Care LTD', 'https://www.medsave.in', ''),
+(33, 'Apollo Munich Health Insurance', 'https://www.apollomunichinsurance.com', ''),
+(34, 'IFFCO-Tokio Health Insurance', 'https://www.iffcotokio.co.in/health-insurance', ''),
+(35, 'Vipul Medcorp TPA PVT LTD', 'https://www.vipulmedcorp.com', ''),
+(36, 'Raksha TPA PVT LTD', 'https://www.rakshatpa.com', ''),
+(37, 'Universal Sampo General Insurance Co.LTD', 'https://www.universalsompo.com', ''),
+(38, 'Good Health Service TPA Services LTD', 'http://ghpltpa.com', ''),
+(39, 'Future General Insurance', 'https://general.futuregenerali.in', ''),
+(40, 'Medicare TPA Services PVT LTD', 'https://medicareinsurancetpa.com', ''),
+(41, 'Heritage', 'http://223.31.103.204/HeritageHealthTPA/HOME/Home.aspx', ''),
+(42, 'Aditya Birla Health Insurance', 'https://www.adityabirlacapital.com/healthinsurance', ''),
+(43, 'Liberty Health Insurance', '', ''),
+(44, 'Ericson Insurance', 'https://www.ericsontpa.com', ''),
+(45, 'Safeway TPA', 'http://www.safewaytpa', '');
 
 -- --------------------------------------------------------
 
@@ -621,7 +707,8 @@ INSERT INTO `photo` (`photo_id`, `photo_caption`, `photo_name`, `p_category_id`)
 (10, 'Photo 3', 'photo-10.jpg', 1),
 (11, 'Photo 4', 'photo-11.jpg', 2),
 (12, 'Photo 5', 'photo-12.jpg', 2),
-(13, 'Photo 6', 'photo-13.jpg', 2);
+(13, 'Photo 6', 'photo-13.jpg', 2),
+(14, 'Cardio Operation', 'photo-14.jpg', 3);
 
 -- --------------------------------------------------------
 
@@ -767,7 +854,7 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`id`, `logo`, `favicon`, `footer_about`, `footer_copyright`, `contact_address`, `contact_email`, `contact_phone`, `contact_fax`, `contact_map_iframe`, `receive_email`, `receive_email_subject`, `receive_email_thank_you_message`, `total_recent_news_footer`, `total_popular_news_footer`, `total_recent_news_sidebar`, `total_popular_news_sidebar`, `total_recent_news_home_page`, `meta_title_home`, `meta_keyword_home`, `meta_description_home`, `home_title_service`, `home_subtitle_service`, `home_status_service`, `home_title_department`, `home_subtitle_department`, `home_status_department`, `home_title_doctor`, `home_subtitle_doctor`, `home_status_doctor`, `home_title_pricing`, `home_subtitle_pricing`, `home_status_pricing`, `home_title_testimonial`, `home_subtitle_testimonial`, `home_status_testimonial`, `home_title_news`, `home_subtitle_news`, `home_status_news`, `home_title_partner`, `home_subtitle_partner`, `home_status_partner`, `color`) VALUES
-(1, 'logo.png', 'favicon.png', '<p>Lorem ipsum dolor sit amet, omnis signiferumque in mei, mei ex enim concludaturque. Senserit salutandi euripidis no per, modus maiestatis scribentur est an.&nbsp;Ea suas pertinax has, solet officiis pericula cu pro, possit inermis qui ad. An mea tale perfecto sententiae, eos inani epicuri concludaturque ex.</p>\r\n', 'Copyright Â© 2017. All Rights Reserved.', 'ABC Steet, NewYork.', 'info@yourwebsite.com', '123-456-7878', '123-456-7890', '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387142.84040262736!2d-74.25819605476612!3d40.70583158628177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbd!4v1485712851643" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>', 'jbbr.1990@gmail.com', 'Visitor Email Message', 'Thank you for sending email. We will contact you shortly.', 3, 3, 4, 4, 7, 'Vasantham Health Centre - Medical and Doctor Website CMS', 'doctor, department, health, fitness, medical, news, dental, neurologist, orthopedist, dental surgeon, medical equipment ', 'Vasantham Health Centre is a nice and clean responsive cms on online medical and doctor management system.', 'Our Services', 'We Are Here to Provide You Awesome Service Always', 1, 'Our Departments', 'We have All Major Departments to Serve Patients', 1, 'Our Expert Doctors', 'Meet with All Our Qualified Doctors', 1, 'Pricing', 'We are Offering Special Discounts Now', 1, 'Testimonial', 'Our Happy Clients Tell About Us', 1, 'Latest News', 'See All Our Updated and Latest News', 1, 'Our Partners', 'All Our Company Partners are Listed Below', 1, '0E617D');
+(1, 'logo.png', 'favicon.png', '<p>Lorem ipsum dolor sit amet, omnis signiferumque in mei, mei ex enim concludaturque. Senserit salutandi euripidis no per, modus maiestatis scribentur est an.&nbsp;Ea suas pertinax has, solet officiis pericula cu pro, possit inermis qui ad. An mea tale perfecto sententiae, eos inani epicuri concludaturque ex.</p>\r\n', 'Copyright Â© 2017. All Rights Reserved.', 'ABC Steet, NewYork.', 'info@yourwebsite.com', '123-456-7878', '123-456-7890', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387142.84040262736!2d-74.25819605476612!3d40.70583158628177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbd!4v1485712851643\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>', 'vasanthamhealthcare@gmail.com', 'Visitor Email Message', 'Thank you for sending email. We will contact you shortly.', 3, 3, 4, 4, 7, 'Vasantham Healthcare', 'doctor, department, health, fitness, medical, news, dental, neurologist, orthopedist, dental surgeon, medical equipment ', 'Vasantham Healthcare holds your reliable medical solution and provides best treatment in our area', 'Our Services', 'We Are Here to Provide You Awesome Service Always', 1, 'Our Departments', 'We have All Major Departments to Serve Patients', 1, 'Our Expert Doctors', 'Meet with All Our Qualified Doctors', 1, 'Pricing', 'We are Offering Special Discounts Now', 1, 'Testimonial', 'Our Happy Clients Tell About Us', 1, 'Latest News', 'See All Our Updated and Latest News', 1, 'Our Partners', 'All Our Company Partners are Listed Below', 1, '0E617D');
 
 -- --------------------------------------------------------
 
@@ -819,7 +906,7 @@ INSERT INTO `social` (`social_id`, `social_name`, `social_url`, `social_icon`) V
 (4, 'Google Plus', '#', 'fa fa-google-plus'),
 (5, 'Pinterest', '#', 'fa fa-pinterest'),
 (6, 'YouTube', '#', 'fa fa-youtube'),
-(7, 'Instagram', '', 'fa fa-instagram'),
+(7, 'Instagram', '#', 'fa fa-instagram'),
 (8, 'Tumblr', '', 'fa fa-tumblr'),
 (9, 'Flickr', '', 'fa fa-flickr'),
 (10, 'Reddit', '', 'fa fa-reddit'),
@@ -872,8 +959,8 @@ CREATE TABLE `testimonial` (
 --
 
 INSERT INTO `testimonial` (`id`, `name`, `designation`, `company`, `photo`, `comment`) VALUES
-(1, 'John Doe', 'Managing Director', 'ABC Inc.', 'testimonial-1.jpg', 'Nice and awesome service always. I wish their good and best luck always.'),
-(2, 'Asif Ikbal', 'CEO', 'Typhon Multimedia', 'testimonial-2.jpg', 'We worked with a lot of other service providers in previous years. But this organization is an exceptional one. Their services are really fantastic. ');
+(1, 'Praveen Kumar', 'Managing Director', 'ABC Inc.', 'testimonial-1.jpg', 'Nice and awesome service always. I wish their good and best luck always.'),
+(2, 'Viswanathan', 'CEO', 'Typhon Multimedia', 'testimonial-2.jpg', 'We worked with a lot of other service providers in previous years. But this organization is an exceptional one. Their services are really fantastic. ');
 
 -- --------------------------------------------------------
 
@@ -897,9 +984,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `full_name`, `email`, `phone`, `password`, `photo`, `role`, `status`) VALUES
-(1, 'John Doe', 'sadmin@gmail.com', '0177777777', '81dc9bdb52d04dc20036dbd8313ed055', 'user-1.jpg', 'Super Admin', 'Active'),
-(13, 'Kakon Asif', 'admin@gmail.com', '', '81dc9bdb52d04dc20036dbd8313ed055', '', 'Admin', 'Active'),
-(14, 'Sabbir Ahmed', 'publisher@gmail.com', '', '81dc9bdb52d04dc20036dbd8313ed055', '', 'Publisher', 'Active');
+(1, 'Super Admin', 'superadmin@vasantham.com', '04592-222662', '0137d1004923c773ce3cddd2bc0c0267', 'user-1.jpg', 'Super Admin', 'Active'),
+(13, 'Admin', 'admin@vasantham.com', '04592-222692', '0137d1004923c773ce3cddd2bc0c0267', 'user-1.jpg', 'Admin', 'Active'),
+(14, 'Publisher', 'publisher@vasantham.com', '04592-222692', '0137d1004923c773ce3cddd2bc0c0267', 'user-1.jpg', 'Publisher', 'Active');
 
 -- --------------------------------------------------------
 
@@ -919,12 +1006,12 @@ CREATE TABLE `video` (
 --
 
 INSERT INTO `video` (`video_id`, `video_title`, `video_iframe`, `v_category_id`) VALUES
-(3, 'Video 1', '<iframe width="560" height="315" src="https://www.youtube.com/embed/RY2OEpAf5oY" frameborder="0" allowfullscreen></iframe>', 1),
-(4, 'Video 2', '<iframe width="560" height="315" src="https://www.youtube.com/embed/F1CW0MjD1T0" frameborder="0" allowfullscreen></iframe>', 1),
-(5, 'Video 3', '<iframe width="560" height="315" src="https://www.youtube.com/embed/LPF1MSkGgRM" frameborder="0" allowfullscreen></iframe>', 1),
-(6, 'Video 4', '<iframe width="560" height="315" src="https://www.youtube.com/embed/RcmrbNRK-jY" frameborder="0" allowfullscreen></iframe>', 2),
-(7, 'Video 5', '<iframe width="560" height="315" src="https://www.youtube.com/embed/ka-ZgwCXKho" frameborder="0" allowfullscreen></iframe>', 2),
-(8, 'Video 6', '<iframe width="560" height="315" src="https://www.youtube.com/embed/fP582Ro62hQ" frameborder="0" allowfullscreen></iframe>', 2);
+(3, 'Video 1', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/RY2OEpAf5oY\" frameborder=\"0\" allowfullscreen></iframe>', 1),
+(4, 'Video 2', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/F1CW0MjD1T0\" frameborder=\"0\" allowfullscreen></iframe>', 1),
+(5, 'Video 3', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/LPF1MSkGgRM\" frameborder=\"0\" allowfullscreen></iframe>', 1),
+(6, 'Video 4', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/RcmrbNRK-jY\" frameborder=\"0\" allowfullscreen></iframe>', 2),
+(7, 'Video 5', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/ka-ZgwCXKho\" frameborder=\"0\" allowfullscreen></iframe>', 2),
+(8, 'Video 6', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/fP582Ro62hQ\" frameborder=\"0\" allowfullscreen></iframe>', 2);
 
 --
 -- Indexes for dumped tables
@@ -1131,161 +1218,194 @@ ALTER TABLE `video`
 --
 ALTER TABLE `advertisement_category`
   MODIFY `adv_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT for table `advertisement_home`
 --
 ALTER TABLE `advertisement_home`
   MODIFY `adv_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `advertisement_sidebar`
 --
 ALTER TABLE `advertisement_sidebar`
   MODIFY `adv_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 --
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT for table `category_photo`
 --
 ALTER TABLE `category_photo`
-  MODIFY `p_category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `p_category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
 --
 -- AUTO_INCREMENT for table `category_video`
 --
 ALTER TABLE `category_video`
   MODIFY `v_category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `department`
 --
 ALTER TABLE `department`
-  MODIFY `dep_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `dep_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+
 --
 -- AUTO_INCREMENT for table `department_appointment`
 --
 ALTER TABLE `department_appointment`
   MODIFY `app_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `department_faq`
 --
 ALTER TABLE `department_faq`
   MODIFY `fq_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
 --
 -- AUTO_INCREMENT for table `department_openning_hour`
 --
 ALTER TABLE `department_openning_hour`
   MODIFY `oh_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+
 --
 -- AUTO_INCREMENT for table `designation`
 --
 ALTER TABLE `designation`
-  MODIFY `designation_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `designation_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+
 --
 -- AUTO_INCREMENT for table `doctor`
 --
 ALTER TABLE `doctor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
 --
 -- AUTO_INCREMENT for table `faq`
 --
 ALTER TABLE `faq`
   MODIFY `faq_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
 --
 -- AUTO_INCREMENT for table `faq_category`
 --
 ALTER TABLE `faq_category`
   MODIFY `faq_category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `file`
 --
 ALTER TABLE `file`
   MODIFY `file_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `home_category`
 --
 ALTER TABLE `home_category`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
 --
 -- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
   MODIFY `menu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+
 --
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `news_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `news_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
 --
 -- AUTO_INCREMENT for table `page`
 --
 ALTER TABLE `page`
   MODIFY `page_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
 --
 -- AUTO_INCREMENT for table `partner`
 --
 ALTER TABLE `partner`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+
 --
 -- AUTO_INCREMENT for table `photo`
 --
 ALTER TABLE `photo`
-  MODIFY `photo_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `photo_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
 --
 -- AUTO_INCREMENT for table `pricing_item`
 --
 ALTER TABLE `pricing_item`
   MODIFY `pricing_item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
 --
 -- AUTO_INCREMENT for table `pricing_plan`
 --
 ALTER TABLE `pricing_plan`
   MODIFY `pricing_plan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `service`
 --
 ALTER TABLE `service`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
 --
 -- AUTO_INCREMENT for table `settings`
 --
 ALTER TABLE `settings`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `slider`
 --
 ALTER TABLE `slider`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `social`
 --
 ALTER TABLE `social`
   MODIFY `social_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
 --
 -- AUTO_INCREMENT for table `subscriber`
 --
 ALTER TABLE `subscriber`
   MODIFY `subs_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT for table `testimonial`
 --
 ALTER TABLE `testimonial`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
 --
 -- AUTO_INCREMENT for table `video`
 --
 ALTER TABLE `video`
   MODIFY `video_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

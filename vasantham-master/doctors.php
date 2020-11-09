@@ -122,7 +122,7 @@ include 'header.php';
         </section>
 
         <?php
-        include "testimonals_section_2.php";
+        include "testimonials_section_2.php";
         ?>
         <!-- Time Table Section -->
         <section class="time-table-section">
@@ -437,7 +437,7 @@ include 'header.php';
         <!-- Clients Section -->
 
         <?php
-        include "testimonal_section.php";
+        include "testimonial_section.php";
         ?>
         <!--End Clients Section -->
 

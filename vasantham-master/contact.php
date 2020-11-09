@@ -14,13 +14,13 @@ include "header.php"
         <!--End Main Header -->
 
         <!--Page Title-->
-        <section class="page-title" style="background-image: url(images/background/8.jpg);">
+        <section class="page-title" style="background-image: url(images/background/a.jpg);">
             <div class="auto-container">
                 <div class="title-outer">
-                    <h1>Contact Us</h1>
-                    <ul class="page-breadcrumb">
-                        <li><a href="index.php">Home</a></li>
-                        <li>Contact</li>
+                    <h1 style="color: #ffffff !important;">Contact Us</h1>
+                    <ul class="page-breadcrumb" >
+                        <li style="color: #ffffff !important;"><a href="index.php" style="color: #ffffff !important;">Home</a></li>
+                        <li style="color: #ffffff !important;">Contact</li>
                     </ul>
                 </div>
             </div>
@@ -118,10 +118,7 @@ include "header.php"
         </section>
         <!--End Contact Section -->
 
-        <!-- Clients Section -->
-        <?php
-        include "clients_section.php"
-        ?>
+       
         <!--End Clients Section -->
 
         <!-- Main Footer -->

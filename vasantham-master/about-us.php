@@ -263,7 +263,7 @@ include "header.php"
         <!--End Skill Section -->
 
         <?php
-        include "testimonals_section_2.php";
+        include "testimonials_section_2.php";
         // include "clients_section.php";
         ?>
 
