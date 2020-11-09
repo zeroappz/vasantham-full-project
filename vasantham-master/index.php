@@ -368,7 +368,7 @@ include "header.php"
         <!-- Testimonial Section -->
         <?php
 
-        include "testimonial_section.php"
+        include "testimonial_section_2.php"
         ?>
         <!-- End Testimonial Section -->
 

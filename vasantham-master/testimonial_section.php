@@ -29,11 +29,11 @@ if ($total == 0) {
             <h2>What Our Patients Says!</h2>
             <span class="divider"></span>
         </div>
-        <?php foreach ($testimonials as $row) { ?>
+        
             <div class="testimonial-outer">
                 <!-- Client Testimonial Carousel -->
                 <div class="client-testimonial-carousel owl-carousel owl-theme">
-
+                <?php foreach ($testimonials as $row) { ?>
                     <!--Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="inner-box">

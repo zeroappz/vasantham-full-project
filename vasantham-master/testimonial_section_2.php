@@ -1,7 +1,7 @@
 <!-- DB connection -->
 
 <?php
-require_once("../backend/admin/config.php");
+include_once("../backend/admin/config.php");
 ?>
 <?php
 $T_BASE_URL = 'http://localhost/vasantham/';
