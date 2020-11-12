@@ -37,13 +37,13 @@ include "header.php"
         ?>
         <!--End Main Header -->
         <!--Page Title -->
-        <section class="page-title" style="background-image: url(images/background/8.jpg);">
+        <section class="page-title" style="background-image: url(images/background/gallery.jpg);">
             <div class="auto-container">
                 <div class="title-outer">
-                    <h1>Gallery</h1>
+                    <h1 style="color:white">Gallery</h1>
                     <ul class="page-breadcrumb">
-                        <li><a href="index-2.php">Home</a></li>
-                        <li>Gallery</li>
+                        <li><a href="index-2.php" style="color:white">Home</a></li>
+                        <li style="color:white">Gallery</li>
                     </ul>
                 </div>
             </div>

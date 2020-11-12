@@ -10,7 +10,7 @@ $error_message = '';
 $success_message = '';
 ?>
 <?php
-$BASE_URL = 'http://localhost/vasantham/';
+$BASE_URL = 'http://localhost/vasantham-full-project/';
 $IMG_URL = 'backend/assets/uploads/';
 // Check the page slug is valid or not.
 $statement = $pdo->prepare("SELECT * FROM news ORDER BY news_id DESC");
@@ -41,13 +41,13 @@ include "header.php"
         <!--End Main Header -->
 
         <!--Page Title-->
-        <section class="page-title" style="background-image: url(images/background/8.jpg);">
+        <section class="page-title" style="background-image: url(images/background/news.jpg);">
             <div class="auto-container">
                 <div class="title-outer">
-                    <h1>News & Events</h1>
+                    <h1 style="color:white">News & Events</h1>
                     <ul class="page-breadcrumb">
-                        <li><a href="index.php">Home</a></li>
-                        <li>Blog</li>
+                        <li><a href="index.php" style="color:white">Home</a></li>
+                        <li style="color:white">Blog</li>
                     </ul>
                 </div>
             </div>
@@ -68,12 +68,12 @@ include "header.php"
                     <div class="news-block-three">
                         <div class="inner-box">
                             <div class="image-box">
-                                <figure class="image"><a href="blog-detail.php"><img src="<?php echo $BASE_URL . $IMG_URL . $row['photo'];  ?>" alt="<?php echo $row['news_title']; ?>"></a></figure>
+                                <figure class="image"><a href="blog-detail.php?id=<?php echo $row['news_id']; ?>"><img src="<?php echo $BASE_URL . $IMG_URL . $row['photo'];  ?>" alt="<?php echo $row['news_title']; ?>"></a></figure>
                                 <a href="#" class="date"> <?php echo $row['news_date']; ?> </a>
                             </div>
                             <div class="content-box">
                                 <h4><a href="blog-detail.php"><?php echo $row['news_title']; ?></a></h4>
-                                <div class="text"><?php echo substr($row['news_content'], 0, 200,) . ' ...'; ?> </div>
+                                <div class="text"><?php echo substr($row['news_content'], 0, 200) . ' ...'; ?> </div>
                                 <a href="blog-detail.php?id=<?php echo $row['news_id']; ?>" class="theme-btn btn-style-one read-more"><span class="btn-title">Read More</span></a>
                                 <div class="post-info">
                                     <div class="post-author">By <a href="#"><?php echo $row['publisher']; ?></a></div>

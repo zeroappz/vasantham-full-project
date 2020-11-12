@@ -97,6 +97,19 @@ include "header.php";
         <?php
         include "header_main.php"
         ?>
+        <!--Page Title -->
+        <section class="page-title" style="background-image: url(images/background/c.jpg);">
+            <div class="auto-container">
+                <div class="title-outer">
+                    <h1 style="color:white">Insurance</h1>
+                    <ul class="page-breadcrumb">
+                        <li><a href="index-2.php" style="color:white">Home</a></li>
+                        <li style="color:white">Insurance</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--End Page Title-->
 
         <section class="contact-section" id="contact">
             <div class="small-container">

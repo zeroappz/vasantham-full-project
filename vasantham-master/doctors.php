@@ -54,13 +54,13 @@ include 'header.php';
         <!--End Main Header -->
 
         <!--Page Title-->
-        <section class="page-title" style="background-image: url(images/background/8.jpg);">
+        <section class="page-title" style="background-image: url(images/background/8a.jpg);">
             <div class="auto-container">
                 <div class="title-outer">
-                    <h1>Dedicated Doctors</h1>
+                    <h1 style="color:white">Dedicated Doctors</h1>
                     <ul class="page-breadcrumb">
-                        <li><a href="index.php">Home</a></li>
-                        <li>Doctors</li>
+                        <li><a href="index.php" style="color:white">Home</a></li>
+                        <li style="color:white">Doctors</li>
                     </ul>
                 </div>
             </div>

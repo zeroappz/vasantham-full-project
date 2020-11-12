@@ -15,7 +15,7 @@ $dbuser = 'root';
 $dbpass = '';
 
 // Defining base url
-define("BASE_URL", "http://localhost/vasantham/backend/");
+define("BASE_URL", "http://localhost/vasantham-full-project/backend/");
 // $BASE_URL = 'http://localhost/vasantham/';
 // $IMG_URL = 'backend/assets/uploads/';
 

@@ -41,7 +41,7 @@ include "header.php"
         ?>
         <!--End Main Header -->
         <!--Page Title-->
-        <section class="page-title" style="background-image: url(images/background/8.jpg);">
+        <section class="page-title" style="background-image: url(images/background/b1.jpg);">
             <div class="auto-container">
                 <div class="title-outer">
                     <h1>Departments</h1>
