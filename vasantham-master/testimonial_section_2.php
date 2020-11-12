@@ -1,13 +1,13 @@
 <!-- DB connection -->
 
 <?php
-include_once("../backend/admin/config.php");
+require_once("../backend/admin/config.php");
 ?>
 <?php
 $T_BASE_URL = 'http://localhost/vasantham/';
 
 // Check the page slug is valid or not.
-$statement = $pdo->prepare("SELECT * FROM testimonial ORDER BY id DESC");
+$statement = $pdo->prepare("SELECT * FROM testimonial ORDER BY id DESC LIMIT 5");
 $statement->execute();
 $testimonials = $statement->fetchAll(PDO::FETCH_ASSOC);
 $total = $statement->rowCount();
@@ -16,9 +16,8 @@ if ($total == 0) {
     //echo 'no rows available';
     exit;
 } else {
-    // echo $testimonials[2]['name'];
+    // echo $testimonials[3]['name'];
 }
-
 ?>
 <!--End Team Section -->
 <section class="testimonial-section-two">

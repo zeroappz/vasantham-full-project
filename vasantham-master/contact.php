@@ -1,5 +1,9 @@
+
+
 <?php
-include "header.php"
+include "submit.php";
+include "header.php";
+//require_once "submit.php"
 ?>
 
 <body>
@@ -18,7 +22,7 @@ include "header.php"
             <div class="auto-container">
                 <div class="title-outer">
                     <h1 style="color: #ffffff !important;">Contact Us</h1>
-                    <ul class="page-breadcrumb" >
+                    <ul class="page-breadcrumb">
                         <li style="color: #ffffff !important;"><a href="index.php" style="color: #ffffff !important;">Home</a></li>
                         <li style="color: #ffffff !important;">Contact</li>
                     </ul>
@@ -61,8 +65,8 @@ include "header.php"
                             <div class="inner">
                                 <span class="icon flaticon-phone"></span>
                                 <h4><strong>Phone</strong></h4>
-                                <p><a href="#">(04652) - 222526</a></p>
-                                <p><a href="#">(04652) - 222626</a></p>
+                                <p><a href="tel:04652222526">(04652) - 222526</a></p>
+                                <p><a href="tel:04652222626">(04652) - 222626</a></p>
                             </div>
                         </div>
 
@@ -70,7 +74,7 @@ include "header.php"
                             <div class="inner">
                                 <span class="icon flaticon-email"></span>
                                 <h4><strong>Email</strong></h4>
-                                <p><a href="mailto:vasanthamhealthcentre@gmail.com">vasanthamhealthcentre@gmail.com</a></p>
+                                <p><a style="font-size: 13px;" href="mailto:vasanthamhealthcentre@gmail.com">vasanthamhealthcentre@gmail.com</a></p>
                                 <!--<p><a href="mailto:support@example.com">support@example.com</a></p>-->
                             </div>
                         </div>
@@ -80,35 +84,31 @@ include "header.php"
                 <!-- Form box -->
                 <div class="form-box">
                     <div class="contact-form">
-                        <form action="#" method="post" id="email-form">
+                        <?php echo $error; ?>
+                        <form method="post">
                             <div class="row">
-                                <div class="form-group col-lg-12">
-                                    <div class="response"></div>
-                                </div>
-
                                 <div class="col-lg-6 col-md-12">
                                     <div class="form-group">
-                                        <input type="text" name="username" class="username" placeholder="Full Name *">
+                                        <label>Enter Name</label>
+                                        <input type="text" name="name" placeholder="Enter Name" class="form-control" value="<?php echo $name; ?>" />
                                     </div>
-
                                     <div class="form-group">
-                                        <input type="email" name="email" class="email" placeholder="Email Address *">
+                                        <label>Enter Email</label>
+                                        <input type="text" name="email" class="form-control" placeholder="Enter Email" value="<?php echo $email; ?>" />
                                     </div>
-
                                     <div class="form-group">
-                                        <input type="text" name="username" class="username" placeholder="Your Phone">
+                                        <label>Enter Phone Number</label>
+                                        <input type="text" name="phone" class="form-control" placeholder="Enter Mobile Number" value="<?php echo $phone; ?>" />
                                     </div>
                                 </div>
-
                                 <div class="col-lg-6 col-md-12">
                                     <div class="form-group">
-                                        <textarea name="contact_message" class="message" placeholder="Message"></textarea>
+                                        <label>Enter Message</label>
+                                        <textarea name="message" cols="40" rows="10" class="form-control wpcf7-textarea" placeholder="Enter your message here"><?php echo $message; ?></textarea>
                                     </div>
-
-                                </div>
-
-                                <div class="form-group col-lg-12 text-center pt-3">
-                                    <button class="theme-btn btn-style-one" type="button" id="submit" name="submit-form"><span class="btn-title">Send Message</span></button>
+                                    <div class="form-group" align="center">
+                                        <button class="theme-btn btn-style-one submit" type="submit" name="submit" value="SEND US"><span class="btn-title text-center">Send Message</span></button>
+                                    </div>
                                 </div>
                             </div>
                         </form>
@@ -118,7 +118,7 @@ include "header.php"
         </section>
         <!--End Contact Section -->
 
-       
+
         <!--End Clients Section -->
 
         <!-- Main Footer -->

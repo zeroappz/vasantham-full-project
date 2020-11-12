@@ -99,45 +99,6 @@ include "header.php"
                                         </div>
                                     </div>
                                 </div>-->
-
-                                <!--Product Info Tabs-->
-                                <div class="product-info-tabs">
-                                    <!--Product Tabs-->
-                                    <div class="prod-tabs tabs-box">
-                                        <!--Tab Btns-->
-                                        <ul class="tab-btns tab-buttons clearfix">
-                                            <li data-tab="#prod-details" class="tab-btn active-btn">Precautions</li>
-                                            <li data-tab="#prod-spec" class="tab-btn">Intelligence</li>
-                                            <li data-tab="#prod-reviews" class="tab-btn">Specializations</li>
-                                        </ul>
-
-                                        <!--Tabs Container-->
-                                        <div class="tabs-content">
-
-                                            <!--Tab / Active Tab-->
-                                            <div class="tab active-tab" id="prod-details">
-                                                <div class="content">
-                                                    <p>Sample Content to be included here!</p>
-                                                </div>
-                                            </div>
-
-                                            <!--Tab -->
-                                            <div class="tab" id="prod-spec">
-                                                <div class="content">
-                                                    <p>Sample Content to be included here!</p>
-                                                </div>
-                                            </div>
-
-                                            <!--Tab-->
-                                            <div class="tab" id="prod-reviews">
-                                                <div class="content">
-                                                    <p>Sample Content to be included here!</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
                     </div>
@@ -176,13 +137,13 @@ include "header.php"
                                     <a class="theme-btn btn-style-one" href="#"><span class="btn-title"><i class="fa fa-file-pdf"></i> Brochure Updated</span></a>
                                 </div>
                             </div>
-
+                            <!--
                             <div class="help-box">
                                 <span>Quick Contact</span>
                                 <h4>Get Solution</h4>
                                 <p>Contact us at the Medicoz office nearest to you or submit a business inquiry online.</p>
                                 <a href="contact.php" class="theme-btn btn-style-one"><span class="btn-title">Contact</span></a>
-                            </div>
+                            </div>-->
                         </aside>
                     </div>
 

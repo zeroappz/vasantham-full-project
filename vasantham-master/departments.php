@@ -10,7 +10,7 @@ $error_message = '';
 $success_message = '';
 ?>
 <?php
-$BASE_URL = 'http://localhost/vasantham/';
+$IMG_URL = 'assets/uploads/';
 
 // Check the page slug is valid or not.
 $statement = $pdo->prepare("SELECT * FROM department ORDER BY dep_id ASC");
@@ -68,7 +68,7 @@ include "header.php"
                                 <div class="inner-box">
                                     <div class="image-box">
                                         <figure class="image"><a href="department-detail.php?id=<?php echo $row['dep_id']; ?>">
-                                        <img src="images/resource/Cardiology.jpg" alt="" style="height:200px;"></a></figure>
+                                        <img src="<?php echo BASE_URL . $IMG_URL . $row['dep_photo']; ?>" alt="<?php echo $row['dep_name']; ?>" style="height:200px;"></a></figure>
                                     </div>
                                     <div class="lower-content">
                                         <div class="title-box">

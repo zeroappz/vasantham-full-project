@@ -1,4 +1,5 @@
 <?php
+include "submit.php";
 include "header.php"
 ?>
 
@@ -141,32 +142,33 @@ include "header.php"
                     <div class="form-column col-lg-6 col-md-12 col-sm-12">
                         <div class="inner-column">
                             <div class="appointment-form default-form">
-                                <!--Comment Form-->
-                                <form action="#" method="post" id="email-form">
+                            <form method="post">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12">
                                     <div class="form-group">
-                                        <div class="response"></div>
+                                        <label>Enter Name</label>
+                                        <input type="text" name="name" placeholder="Enter Name" class="form-control" value="<?php echo $name; ?>" />
                                     </div>
-
                                     <div class="form-group">
-                                        <input type="text" name="username" placeholder="Your Name">
+                                        <label>Enter Email</label>
+                                        <input type="text" name="email" class="form-control" placeholder="Enter Email" value="<?php echo $email; ?>" />
                                     </div>
-
                                     <div class="form-group">
-                                        <input type="email" name="email" placeholder="Your Email *">
+                                        <label>Enter Phone Number</label>
+                                        <input type="text" name="phone" class="form-control" placeholder="Enter Mobile Number" value="<?php echo $phone; ?>" />
                                     </div>
-
+                                </div>
+                                <div class="col-lg-6 col-md-12">
                                     <div class="form-group">
-                                        <input type="text" name="phone" placeholder="Your Phone">
+                                        <label>Enter Message</label>
+                                        <textarea name="message" style="height: 200px;" cols="40" rows="10" class="form-control wpcf7-textarea" placeholder="Enter your message here"><?php echo $message; ?></textarea>
                                     </div>
-
-                                    <div class="form-group">
-                                        <textarea name="contact_message" placeholder="Tell us about patient"></textarea>
+                                    <div class="form-group" align="center">
+                                        <button class="theme-btn btn-style-one submit" type="submit" name="submit" value="SEND US"><span class="btn-title text-center">Send Message</span></button>
                                     </div>
-
-                                    <div class="form-group">
-                                        <button class="theme-btn btn-style-one" type="button" name="submit-form"><span class="btn-title">Submit Query</span></button>
-                                    </div>
-                                </form>
+                                </div>
+                            </div>
+                            </form>
                             </div>
                         </div>
                     </div>
