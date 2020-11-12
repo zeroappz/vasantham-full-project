@@ -89,12 +89,6 @@ include "header.php"
             </div>
         </section>
         <!--End Blog Section -->
-
-        <!-- Clients Section -->
-
-        <?php include "clients_section.php"; ?>
-        <!--End Clients Section -->
-
         <!-- Main Footer -->
         <?php include "footer.php"; ?>
         <!--End Main Footer -->

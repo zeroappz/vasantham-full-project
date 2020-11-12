@@ -1,3 +1,25 @@
+<!-- DB connection -->
+
+<?php
+
+require_once("../backend/admin/config.php");
+?>
+<?php
+
+// Check the page slug is valid or not.
+// $statement = $pdo->prepare("SELECT * FROM photo");
+// $statement->execute();
+// $galleryList = $statement->fetchAll(PDO::FETCH_ASSOC);	
+// $total = $statement->rowCount();
+// if ($total == 0) {
+//     header('location: ' . BASE_URL . 'vasantham-master');
+//     //echo 'no rows available';
+//     exit;
+// } else {
+//     // echo $galleryList[0]['photo_caption'];
+// }
+
+?>
 <?php
 include "header.php"
 ?>
@@ -14,7 +36,7 @@ include "header.php"
         include "header_main.php"
         ?>
         <!--End Main Header -->
-        <!--Page Title
+        <!--Page Title -->
         <section class="page-title" style="background-image: url(images/background/8.jpg);">
             <div class="auto-container">
                 <div class="title-outer">
@@ -26,7 +48,7 @@ include "header.php"
                 </div>
             </div>
         </section>
-        End Page Title-->
+        <!--End Page Title-->
 
         <!-- Portfolio Section -->
         <section class="portfolio-section alternate">
@@ -37,478 +59,70 @@ include "header.php"
                     <div class="btns-outer">
                         <!--Filter-->
                         <ul class="filter-tabs filter-btns clearfix">
-                        <!--    <li class="filter active" data-role="button" data-filter="all">All</li>
-                            <li class="filter" data-role="button" data-filter=".cancer">Cancer</li>
-                            <li class="filter" data-role="button" data-filter=".detal-care">Dental Care</li>
-                            <li class="filter" data-role="button" data-filter=".cardiology">Cardiology</li>
-                            <li class="filter" data-role="button" data-filter=".dental">Dental</li>
-                            <li class="filter" data-role="button" data-filter=".eye-care">Eye Care</li>-->
-                            
-                            <li class=" filter" data-role="button" data-filter=".cath">CATH</li>
-                            <li class="filter" data-role="button" data-filter=".ccu">CCU</li>
-                            <li class="filter" data-role="button" data-filter=".corona">CORONA </li>
-                            <li class="filter" data-role="button" data-filter=".dia">DIALYSIS</li>
-                            <li class="filter" data-role="button" data-filter=".echo">ECHO</li>
-                            <li class="filter" data-role="button" data-filter=".eswl">ESWL</li>
-                            <li class="filter" data-role="button" data-filter=".icu">ICU</li>
-                            <li class="filter" data-role="button" data-filter=".lab">LAB</li>
-                            <li class="filter" data-role="button" data-filter=".ot">OPERATION THEATRE</li>
                             <li class="filter active " data-role="button" data-filter="all">All</li>
+                            <?php
+                            $statement = $pdo->prepare("SELECT * FROM category_photo WHERE status=?");
+                            $statement->execute(array('Active'));
+                            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+                            foreach ($result as $row) {
+                                $temp_string = strtolower($row['p_category_name']);
+                                $temp_slug = preg_replace('/[^A-Za-z0-9-]+/', '-', $temp_string);
+                            ?>
+                                <li class="filter" data-filter=".<?php echo $temp_slug; ?>" data-role="button"><?php echo $row['p_category_name']; ?></li>
+                            <?php
+                            }
+                            ?>
                         </ul>
                     </div>
 
                     <div class="filter-list row mid-spacing">
-                   
+
                         <!--cath--------------->
                         <!-- Portfolio Block -->
-                        <div class="portfolio-block all mix cath col-lg-3 col-md-4 col-sm-8">
-                            <div class="image-box">
-                                <figure class="image"><img src="images\1-Nov-20\cath\1.jpg" alt="" width="50px" height="50px"></figure>
-                                
-                                <div class="overlay">
-                                    <a href="images\1-Nov-20\cath\1.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                    <div class="title-box">
-                                        <h5>Cath</h5>
-                                     
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <?php
+                        $i = 0;
+                        $statement = $pdo->prepare("SELECT
+					                           	t1.photo_id,
+												t1.photo_caption,
+												t1.photo_name,
+												t1.p_category_id,
+												t2.p_category_id,
+												t2.p_category_name,
+												t2.status
+					                            FROM photo t1
+					                            JOIN category_photo t2
+					                            ON t1.p_category_id = t2.p_category_id 
+					                            ");
+                        $statement->execute();
+                        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+                        foreach ($result as $row) {
+                            $i++;
+                            $temp_string = strtolower($row['p_category_name']);
+                            $temp_slug = preg_replace('/[^A-Za-z0-9-]+/', '-', $temp_string);
+                        ?>
 
-                        <!-- Portfolio Block-->
-                        <div class="portfolio-block all mix cath  col-lg-3 col-md-4 col-sm-8">
-                            <div class="image-box">
-                                <figure class="image"><img src="images\1-Nov-20\cath\2.jpg" alt=""  width="50px" height="50px"></figure>
-                                <div class="overlay">
-                                    <a href="images\1-Nov-20\cath\1.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                    <div class="title-box">
-                                        <h5>Cath</h5>
-                                      <!--  <div class="cat">
-                                            <a href="#">Orthopedics</a>,
-                                            <a href="#">Pharmacy</a>,
-                                        </div>-->
-                                    </div>
-                                </div>
-                            </div>
-                        </div> 
+                            <div class="portfolio-block all mix cath col-lg-3 col-md-4 col-sm-8">
+                                <div class="image-box">
+                                    <figure class="image"><img src="<?php echo BASE_URL; ?>assets/uploads/<?php echo $row['photo_name']; ?>" alt="" width="50px" height="50px"></figure>
 
-                        <!-- Portfolio Block -->
-                        <div class="portfolio-block all mix cath col-lg-3 col-md-4 col-sm-8">
-                            <div class="image-box">
-                                <figure class="image"><img src="images\1-Nov-20\cath\3.jpg" alt=""  width="50px" height="50px"></figure>
-                                <div class="overlay">
-                                    <a href="images\1-Nov-20\cath\3.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                    <div class="title-box">
-                                        <h5>cath</h5>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                    <div class="overlay">
+                                        <a href="<?php echo BASE_URL; ?>assets/uploads/<?php echo $row['photo_name']; ?>" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
+                                        <div class="title-box">
+                                            <h5><?php echo $temp_string; ?></h5>
 
-                        <!-- Portfolio Block -->
-                        <div class="portfolio-block all mix cath col-lg-3 col-md-4 col-sm-12">
-                            <div class="image-box">
-                                <figure class="image"><img src="images\1-Nov-20\cath\4.jpg" alt="" width="50px" height="50px"></figure>
-                                <div class="overlay">
-                                    <a href="images\1-Nov-20\cath\4.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                    <div class="title-box">
-                                        <h5>Cath</h5>
-                                        
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <!-- Portfolio Block -->
-                        <div class="portfolio-block all mix cath col-lg-3 col-md-4 col-sm-12">
-                            <div class="image-box">
-                                <figure class="image"><img src="images\1-Nov-20\cath\5.JPG" alt="" width="50px" height="50px"></figure>
-                                <div class="overlay">
-                                    <a href="images\1-Nov-20\cath\5.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                    <div class="title-box">
-                                        <h5>Cath</h5>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        
-                        <!----CCU------------->
-                        <!-- Portfolio Block -->
-                        <div class="portfolio-block all mix ccu col-lg-3 col-md-4 col-sm-12">
-                            <div class="image-box">
-                                <figure class="image"><img src="images\1-Nov-20\ccu\1.jpg" alt="" width="50px" height="50px"></figure>
-                                <div class="overlay">
-                                    <a href="images\1-Nov-20\ccu\1.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                    <div class="title-box">
-                                        <h5>CCU</h5>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Portfolio Block -->
-                        <div class="portfolio-block all mix ccu col-lg-3 col-md-4 col-sm-12">
-                            <div class="image-box">
-                                <figure class="image"><img src="images\1-Nov-20\ccu\2.jpg" alt="" width="50px" height="50px"></figure>
-                                <div class="overlay">
-                                    <a href="images\1-Nov-20\ccu\2.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                    <div class="title-box">
-                                        <h5>CCU</h5>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Portfolio Block -->
-                        <div class="portfolio-block all mix ccu col-lg-3 col-md-4 col-sm-12">
-                            <div class="image-box">
-                                <figure class="image"><img src="images\1-Nov-20\ccu\3.jpg" alt="" width="50px" height="50px"></figure>
-                                <div class="overlay">
-                                    <a href="images\1-Nov-20\ccu\3.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                    <div class="title-box">
-                                        <h5>CCU</h5>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Portfolio Block -->
-                        <div class="portfolio-block all mix ccu col-lg-3 col-md-4 col-sm-12">
-                            <div class="image-box">
-                                <figure class="image"><img src="images\1-Nov-20\ccu\4.jpg" alt="" width="50px" height="50px"></figure>
-                                <div class="overlay">
-                                    <a href="images\1-Nov-20\ccu\4.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                    <div class="title-box">
-                                        <h5>CCU</h5>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!---corona------------>
-                        
-                       
-                        <!-- Portfolio Block -->
-                        <div class="portfolio-block all mix corona col-lg-3 col-md-4 col-sm-12">
-                            <div class="image-box">
-                                <figure class="image"><img src="images\1-Nov-20\Corona\3.jpg" alt="" width="50px" height="25px"></figure>
-                                <div class="overlay">
-                                    <a href="images\1-Nov-20\Corona\3.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                    <div class="title-box">
-                                    <h5>Corona Care</h5>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Portfolio Block -->
-                        <div class="portfolio-block all mix corona col-lg-3 col-md-4 col-sm-12">
-                            <div class="image-box">
-                                <figure class="image"><img src="images\1-Nov-20\Corona\5.jpg" alt="" width="50px" height="25px"></figure>
-                                <div class="overlay">
-                                    <a href="images\1-Nov-20\Corona\5.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                    <div class="title-box">
-                                        <h5>Corona Care</h5>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-                        <!---Dialysis------------>
-                        <!-- Portfolio Block -->
-                        <div class="portfolio-block all mix dia col-lg-3 col-md-4 col-sm-12">
-                            <div class="image-box">
-                                <figure class="image"><img src="images\1-Nov-20\Dialysis\1.JPG" alt="" width="50px" height="10px"></figure>
-                                <div class="overlay">
-                                    <a href="images\1-Nov-20\Corona\1.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                    <div class="title-box">
-                                    <h5>Dialysis Care</h5>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Portfolio Block -->
-                        <div class="portfolio-block all mix dia col-lg-3 col-md-4 col-sm-12">
-                            <div class="image-box">
-                                <figure class="image"><img src="images\1-Nov-20\Dialysis\2.JPG" alt="" width="50px" height="25px"></figure>
-                                <div class="overlay">
-                                    <a href="images\1-Nov-20\Corona\2.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                    <div class="title-box">
-                                    <h5>Dialysis Care</h5>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Portfolio Block -->
-                        <div class="portfolio-block all mix dia col-lg-3 col-md-4 col-sm-12">
-                            <div class="image-box">
-                                <figure class="image"><img src="images\1-Nov-20\Dialysis\3.JPG" alt="" width="50px" height="25px"></figure>
-                                <div class="overlay">
-                                    <a href="images\1-Nov-20\Corona\3.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                    <div class="title-box">
-                                    <h5>Dialysis Care</h5>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-
-
-                        
-                        <!---Echo------------>
-                        <!-- Portfolio Block -->
-                        <div class="portfolio-block all mix echo col-lg-3 col-md-4 col-sm-12">
-                            <div class="image-box">
-                                <figure class="image"><img src="images\1-Nov-20\Echo\1.jpg" alt="" width="50px" height="10px"></figure>
-                                <div class="overlay">
-                                    <a href="images\1-Nov-20\Corona\1.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                    <div class="title-box">
-                                    <h5>Echo</h5>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Portfolio Block -->
-                        <div class="portfolio-block all mix echo col-lg-3 col-md-4 col-sm-12">
-                            <div class="image-box">
-                                <figure class="image"><img src="images\1-Nov-20\Echo\2.jpg" alt="" width="50px" height="25px"></figure>
-                                <div class="overlay">
-                                    <a href="images\1-Nov-20\Corona\2.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                    <div class="title-box">
-                                    <h5>Echo</h5>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Portfolio Block -->
-                        <div class="portfolio-block all mix echo col-lg-3 col-md-4 col-sm-12">
-                            <div class="image-box">
-                                <figure class="image"><img src="images\1-Nov-20\Echo\3.JPG" alt="" width="50px" height="25px"></figure>
-                                <div class="overlay">
-                                    <a href="images\1-Nov-20\Corona\3.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                    <div class="title-box">
-                                    <h5>Echo</h5>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-
-                        <!---ESWL------------>
-                        <!-- Portfolio Block -->
-                        <div class="portfolio-block all mix eswl col-lg-3 col-md-4 col-sm-12">
-                            <div class="image-box">
-                                <figure class="image"><img src="images\1-Nov-20\kidney stone\1.jpg" alt="" width="50px" height="10px"></figure>
-                                <div class="overlay">
-                                    <a href="images\1-Nov-20\Corona\1.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                    <div class="title-box">
-                                    <h5>kidney Care</h5>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Portfolio Block -->
-                        <div class="portfolio-block all mix eswl col-lg-3 col-md-4 col-sm-12">
-                            <div class="image-box">
-                                <figure class="image"><img src="images\1-Nov-20\kidney stone\2.jpg" alt="" width="50px" height="25px"></figure>
-                                <div class="overlay">
-                                    <a href="images\1-Nov-20\Corona\2.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                    <div class="title-box">
-                                        <h5>kidney Care</h5>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                         <!---icu------------>
-                        <!-- Portfolio Block -->
-                        <div class="portfolio-block all mix icu col-lg-3 col-md-4 col-sm-12">
-                            <div class="image-box">
-                                <figure class="image"><img src="images\1-Nov-20\icu\1.JPG" alt="" width="50px" height="10px"></figure>
-                                <div class="overlay">
-                                    <a href="images\1-Nov-20\icu\1.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                    <div class="title-box">
-                                    <h5>ICU</h5>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Portfolio Block -->
-                        <div class="portfolio-block all mix icu col-lg-3 col-md-4 col-sm-12">
-                            <div class="image-box">
-                                <figure class="image"><img src="images\1-Nov-20\icu\2.jpg" alt="" width="50px" height="25px"></figure>
-                                <div class="overlay">
-                                    <a href="images\1-Nov-20\icu\2.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                    <div class="title-box">
-                                        <h5>ICU</h5>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!---Lap------------>
-                        <!-- Portfolio Block -->
-                        <div class="portfolio-block all mix lab col-lg-3 col-md-4 col-sm-12">
-                            <div class="image-box">
-                                <figure class="image"><img src="images\1-Nov-20\Lab\1.jpg" alt="" width="50px" height="10px"></figure>
-                                <div class="overlay">
-                                    <a href="images\1-Nov-20\Lab\1.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                    <div class="title-box">
-                                    <h5>Lab</h5>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Portfolio Block -->
-                        <div class="portfolio-block all mix lab col-lg-3 col-md-4 col-sm-12">
-                            <div class="image-box">
-                                <figure class="image"><img src="images\1-Nov-20\Lab\2.jpg" alt="" width="50px" height="25px"></figure>
-                                <div class="overlay">
-                                    <a href="images\1-Nov-20\Lab\2.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                    <div class="title-box">
-                                        <h5>Lab</h5>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <!---operation------------>
-                        <!-- Portfolio Block -->
-                        <div class="portfolio-block all mix ot col-lg-3 col-md-4 col-sm-12">
-                            <div class="image-box">
-                                <figure class="image"><img src="images\1-Nov-20\Operation theatre\1.jpg" alt="" width="50px" height="10px"></figure>
-                                <div class="overlay">
-                                    <a href="images\1-Nov-20\Operation theatre\1.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                    <div class="title-box">
-                                    <h5>operation theatre</h5>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="portfolio-block all mix ot col-lg-3 col-md-4 col-sm-12">
-                            <div class="image-box">
-                                <figure class="image"><img src="images\1-Nov-20\Operation theatre\3.jpg" alt="" width="50px" height="10px"></figure>
-                                <div class="overlay">
-                                    <a href="images\1-Nov-20\Operation theatre\3.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                    <div class="title-box">
-                                    <h5>operation theatre</h5>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Portfolio Block -->
-                        <div class="portfolio-block all mix ot col-lg-3 col-md-4 col-sm-12">
-                            <div class="image-box">
-                                <figure class="image"><img src="images\1-Nov-20\Operation theatre\4.jpg" alt="" width="50px" height="25px"></figure>
-                                <div class="overlay">
-                                    <a href="images\1-Nov-20\Operation theatre\4.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                    <div class="title-box">
-                                    <h5>operation theatre</h5>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Portfolio Block -->
-                        <div class="portfolio-block all mix corona col-lg-3 col-md-4 col-sm-12">
-                            <div class="image-box">
-                                <figure class="image"><img src="images\1-Nov-20\Corona\1.jpg" alt="" width="50px" height="10px"></figure>
-                                <div class="overlay">
-                                    <a href="images\1-Nov-20\Corona\1.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                    <div class="title-box">
-                                    <h5>Corona Care</h5>>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Portfolio Block -->
-                        <div class="portfolio-block all mix corona col-lg-3 col-md-4 col-sm-12">
-                            <div class="image-box">
-                                <figure class="image"><img src="images\1-Nov-20\Corona\4.jpg" alt="" width="50px" height="25px"></figure>
-                                <div class="overlay">
-                                    <a href="images\1-Nov-20\Corona\4.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                    <div class="title-box">
-                                    <h5>Corona Care</h5>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Portfolio Block -->
-                        <div class="portfolio-block all mix ot col-lg-3 col-md-4 col-sm-12">
-                            <div class="image-box">
-                                <figure class="image"><img src="images\1-Nov-20\Operation theatre\5.jpg" alt="" width="50px" height="25px"></figure>
-                                <div class="overlay">
-                                    <a href="images\1-Nov-20\Operation theatre\5.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                    <div class="title-box">
-                                        <h5>operation theatre</h5>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Portfolio Block -->
-                        <div class="portfolio-block all mix ot col-lg-3 col-md-4 col-sm-12">
-                            <div class="image-box">
-                                <figure class="image"><img src="images\1-Nov-20\Operation theatre\2.jpg" alt="" width="50px" height="25px"></figure>
-                                <div class="overlay">
-                                    <a href="images\1-Nov-20\Operation theatre\2.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                    <div class="title-box">
-                                    <h5>operation theatre</h5>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                         <!-- Portfolio Block -->
-                        <div class="portfolio-block all mix corona col-lg-3 col-md-4 col-sm-12">
-                            <div class="image-box">
-                                <figure class="image"><img src="images\1-Nov-20\Corona\2.jpg" alt="" width="50px" height="15px"></figure>
-                                <div class="overlay">
-                                    <a href="images\1-Nov-20\Corona\2.jpg" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                    <div class="title-box">
-                                    <h5>Corona Care</h5>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                        <?php
+                        }
+                        ?>
                     </div>
                 </div>
 
-                <div class="btn-box">
+                <!--<div class="btn-box">
                     <a href="#" class="theme-btn btn-style-three load-more"><span class="btn-title">Load More</span></a>
-                </div>
+                </div>-->
             </div>
         </section>
         <!-- End Portfolio Section ---------------------------------------->
@@ -516,27 +130,6 @@ include "header.php"
 
 
 
-
-
-
-        Clients Section 
-        <section class="clients-section alternate">
-            <div class="auto-container">
-
-                 Sponsors Outer 
-                <div class="sponsors-outer">
-                    clients carousel
-                    <ul class="clients-carousel owl-carousel owl-theme">
-                        <li class="slide-item"> <a href="#"><img src="images/clients/1.png" alt=""></a> </li>
-                        <li class="slide-item"> <a href="#"><img src="images/clients/2.png" alt=""></a> </li>
-                        <li class="slide-item"> <a href="#"><img src="images/clients/3.png" alt=""></a> </li>
-                        <li class="slide-item"> <a href="#"><img src="images/clients/4.png" alt=""></a> </li>
-                        <li class="slide-item"> <a href="#"><img src="images/clients/5.png" alt=""></a> </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <End Clients Section -->
 
         <!-- Main Footer -->
         <?php

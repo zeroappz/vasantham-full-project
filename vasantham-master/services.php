@@ -55,13 +55,13 @@ include "header.php"
         <!--End Main Header -->
 
         <!--Page Title-->
-        <section class="page-title" style="background-image: url(images/background/8.jpg);">
+        <section class="page-title" style="background-image: url(images/background/f1.jpg); padding:100px;">
             <div class="auto-container" style="height:40px;">
-                <div class="title-outer">
-                    <h1>Services</h1>
+                <div class="title-outer" >
+                    <h1 style="color:#ffffff !important;">Services</h1>
                     <ul class="page-breadcrumb" style="padding: 10px;">
-                        <li><a href="index.php">Home</a></li>
-                        <li>Services</li>
+                        <li><a href="index.php" style="color:#ffffff !important;">Home</a></li>
+                        <li  style="color:#ffffff !important;">Services</li>
                     </ul>
                 </div>
             </div>
@@ -74,112 +74,118 @@ include "header.php"
             <div class="auto-container">
                 <div class="row">
                     <!-- Service Block -->
-                    <div class="service-block col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box">
+                    <div class="service-block col-lg-3 col-md-4 col-sm-12">
+                        <div class="inner-box" style="background:linear-gradient(to bottom, #ffffff 26%, #1370B5 134%)">
                             <span class="icon flaticon-heartbeat"></span>
-                            <h5><a href="#">Health Check</a></h5>
-                            <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>
+                            <h5><a href="#">ICU</a></h5>
+                       <img src="images\1-Nov-20\icu\a.jpg" style="background:linear-gradient(to top, #ffffff 26%, #1370B5 134%)">
+                     
                         </div>
                     </div>
 
                     <!-- Service Block -->
-                    <div class="service-block col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box">
+                    <div class="service-block col-lg-3 col-md-4 col-sm-12">
+                        <div class="inner-box" style="background:linear-gradient(to bottom, #ffffff 26%, #1370B5 134%)">
                             <span class="icon flaticon-surgery-room"></span>
-                            <h5><a href="#">Operation Theater</a></h5>
-                            <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>
+                            <h5><a href="#">CCU</a></h5>
+                            <img src="images\1-Nov-20\ccu\2.jpg" style="width: 150px; height:150px;border-radius: 18px;">
                         </div>
                     </div>
 
                     <!-- Service Block -->
-                    <div class="service-block col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box">
+                    <div class="service-block col-lg-3 col-md-4 col-sm-12">
+                        <div class="inner-box" style="background:linear-gradient(to bottom, #ffffff 26%, #1370B5 134%)">
                             <span class="icon flaticon-pharmacy"></span>
-                            <h5><a href="#">Pharmacy Support</a></h5>
-                            <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>
+                            <h5><a href="#">ECHO</a></h5> 
+                            <img src=" images\1-Nov-20\Echo\2.jpg" style="width: 150px; height:150px;border-radius: 18px;">
                         </div>
                     </div>
 
                     <!-- Service Block -->
-                    <div class="service-block col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <span class="icon flaticon-transport"></span>
-                            <h5><a href="#">Ambulance Car</a></h5>
-                            <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>
+                    <div class="service-block col-lg-3 col-md-4 col-sm-12">
+                        <div class="inner-box" style="background:linear-gradient(to bottom, #ffffff 26%, #1370B5 134%)">
+                        <span class="icon flaticon-pharmacy"></span>
+                            <h5><a href="#">STRESS ECHO</a></h5>
+                            <img src=" images\1-Nov-20\Echo\a.jpg" style="width: 150px; height:150px;border-radius: 18px;">
                         </div>
                     </div>
 
                     <!-- Service Block -->
-                    <div class="service-block col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box">
+                    <div class="service-block col-lg-3 col-md-4 col-sm-12">
+                        <div class="inner-box" style="background:linear-gradient(to bottom, #ffffff 26%, #1370B5 134%)">
                             <span class="icon flaticon-lab"></span>
-                            <h5><a href="#">Lab Tests</a></h5>
-                            <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>
+                            <h5><a href="#">FETAL ECHO</a></h5>
+                            <img src=" images\1-Nov-20\fatalecho.jpg" style="width: 150px; height:150px">
+                        </div>
+                    </div>
+                    <!-- Service Block -->
+                    <div class="service-block col-lg-3 col-md-4 col-sm-12">
+                        <div class="inner-box" style="background:linear-gradient(to bottom, #ffffff 26%, #1370B5 134%)">
+                            <span class="icon flaticon-lab"></span>
+                            <h5><a href="#">STRAIN IMAGINE</a></h5>
+                            <img src=" images\1-Nov-20\stain.jpeg" style="width: 150px; height:150px">
+                        </div>
+                    </div>
+                    <!-- Service Block -->
+                    <div class="service-block col-lg-3 col-md-4 col-sm-12">
+                        <div class="inner-box" style="background:linear-gradient(to bottom, #ffffff 26%, #1370B5 134%)">
+                            <span class="icon flaticon-lab"></span>
+                            <h5><a href="#">HOLTER MONITORING</a></h5>
+                            <img src=" images\1-Nov-20\holter.jpg" style="width: 150px; height:150px">
+                       
+                        </div>
+                    </div>
+                    
+                    <!-- Service Block -->
+                    <div class="service-block col-lg-3 col-md-4 col-sm-12">
+                        <div class="inner-box" style="background:linear-gradient(to bottom, #ffffff 26%, #1370B5 134%)">
+                            <span class="icon flaticon-lab"></span>
+                            <h5><a href="#">ENDOSCOPY</a></h5>
+                            <img src=" images\1-Nov-20\endoscopy.webp" style="width: 150px; height:150px">
+                        </div>
+                    </div>
+                    <!-- Service Block -->
+                    <div class="service-block col-lg-3 col-md-4 col-sm-12">
+                        <div class="inner-box" style="background:linear-gradient(to bottom, #ffffff 26%, #1370B5 134%)">
+                            <span class="icon flaticon-lab"></span>
+                            <h5><a href="#">CAROTID DOPPLER</a></h5>
+                            <img src=" images\1-Nov-20\CAROTID DOPPLER.gif" style="width: 150px; height:150px">
+                        </div>
+                    </div>
+                    <!-- Service Block -->
+                    <div class="service-block col-lg-3 col-md-4 col-sm-12">
+                        <div class="inner-box" style="background:linear-gradient(to bottom, #ffffff 26%, #1370B5 134%)">
+                            <span class="icon flaticon-lab"></span>
+                            <h5><a href="#">C - ARM </a></h5>
+                            <img src=" images\1-Nov-20\carm.jpg" style="width: 150px; height:150px;border-radius: 18px;">
                         </div>
                     </div>
 
                     <!-- Service Block -->
-                    <div class="service-block col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box">
+                    <div class="service-block col-lg-3 col-md-4 col-sm-12">
+                        <div class="inner-box" style="background:linear-gradient(to bottom, #ffffff 26%, #1370B5 134%)">
                             <span class="icon flaticon-first-aid"></span>
-                            <h5><a href="#">Intensive Care</a></h5>
-                            <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>
+                            <h5><a href="#">EEG</a></h5>
+                            <img src=" images\1-Nov-20\eeg.webp" style="width: 150px; height:150px;border-radius: 18px;">
                         </div>
                     </div>
+                   
                 </div>
             </div>
         </section>
         <!--End Services Section -->
         <br><br><br>
 
-       <!------------------------------------------------------------------------------------------------>
-        <!------------------------------------------------------------------------------------------------>
-        <!------------------------------------TABLE----------------------------------------------------->
-       
-        <h3 style="border: black; text-align:center;color:#1370B5"> Our Services</h3><br>
-        <center>
-            <table id="customers" style="align-self: center;">
+      <!-- Service Block -->
+      <div class="service-block col-lg-3 col-md-4 col-sm-12" style="padding-left : 80px;">
+                        <div class="inner-box" style="background:linear-gradient(to bottom, #ffffff 26%, #1370B5 134%)">
+                            <span class="icon flaticon-lab"></span>
+                            <h5><a href="#">CATH LAB</a></h5>
+                            <img src="  images\1-Nov-20\cath\1.jpg" style="width: 250px; height:250px;border-radius: 18px;">
+                        </div>
+                    </div>
+                   
 
-                <tr>
-                    <td>ICU</td>
-                    <td>CCU</td>
-
-                </tr>
-                <tr>
-                    <td>ECHO</td>
-                    <td>STRESS ECHO</td>
-
-                </tr>
-                <tr>
-                    <td>FETAL ECHO</td>
-                    <td>STRAIN IMAGING</td>
-
-                </tr>
-                <tr>
-                    <td>HOLTER MONITORING </td>
-                    <td>CATH LAB</td>
-
-                </tr>
-                <tr>
-                    <td>ENDOSCOPY</td>
-                    <td>CAROTID DOPPLER</td>
-
-                </tr>
-                <tr>
-                    <td>C-ARM</td>
-                    <td>EEG</td>
-
-                </tr>
-
-
-            </table>
-        </center>
-        <br>  <br>
-        </div>
-      
-        <!------------------------------------------------------------------------------------------------>
-        <!------------------------------------------------------------------------------------------------>
-        <!------------------------------------------------------------------------------------------------>
 
 
 
@@ -192,8 +198,8 @@ include "header.php"
         <section class="appointment-section alternate">
             <div class="image-layer" style="background-image: url(images/background/2.jpg);"></div>
             <div class="auto-container">
-                <div class="row">
-                    <!-- Content Column -->
+              <!--  <div class="row">
+                     Content Column
                     <div class="content-column col-lg-6 col-md-12 col-sm-12">
                         <div class="inner-column">
                             <span class="title">Need a Doctor for Check-up?</span>
@@ -205,7 +211,7 @@ include "header.php"
                     <div class="image-column col-lg-6 col-md-12 col-sm-12">
                         <figure class="image"><img src="images/resource/image-4.png" alt=""></figure>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="fun-fact-section">
                     <div class="row">

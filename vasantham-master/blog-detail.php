@@ -12,16 +12,16 @@ $success_message = '';
 ?>
 <?php
 
-$IMG_URL = 'backend/assets/uploads/';
+$IMG_URL = 'assets/uploads/';
 $ID = $_GET['id'];
 // Check the page slug is valid or not.
 $statement = $pdo->prepare("SELECT * FROM news WHERE news_id=$ID");
 $statement->execute();
-$result = $statement->fetchAll(PDO::FETCH_ASSOC);
+$newsList = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 $total = $statement->rowCount();
 if ($total == 0) {
-    header('location: ' . $BASE_URL . 'vasantham-master');
+    header('location: ' . BASE_URL . 'vasantham-master');
     //echo 'no rows available';
     exit;
 } else {
@@ -47,10 +47,11 @@ include "header.php"
         <section class="page-title" style="background-image: url(images/background/8.jpg);">
             <div class="auto-container">
                 <div class="title-outer">
-                    <h1>News & Event Details</h1>
+                    <h2 style="color: #1370b5;"><?php echo $newsList[0]['news_title']; ?></h2>
                     <ul class="page-breadcrumb">
                         <li><a href="index.php">Home</a></li>
-                        <li>News & Events</li>
+                        <li><a href="blog.php">News & Events</a></li>
+                        <li><?php echo $newsList[0]['news_title']; ?></li>
                     </ul>
                 </div>
             </div>
@@ -64,13 +65,13 @@ include "header.php"
                 <div class="row clearfix">
                     <!--Content Side-->
 
-                    <?php foreach ($result as $row) { ?>
+                    <?php foreach ($newsList as $row) { ?>
                         <div class="content-side col-lg-8 col-md-12 col-sm-12">
                             <div class="blog-post">
                                 <!-- News Block -->
                                 <div class="news-block">
                                     <div class="inner-box">
-                                        <div class="image"><img src="<?php echo $BASE_URL . $IMG_URL . $row['photo'];  ?>" alt="<?php echo $row['news_title']; ?>" /></div>
+                                        <div class="image"><img src="<?php echo BASE_URL . $IMG_URL . $row['photo'];  ?>" alt="<?php echo $row['news_title']; ?>" /></div>
                                         <div class="lower-content">
                                             <ul class="post-info">
                                                 <li><span class="far fa-user"></span><?php echo $row['publisher']; ?></li>

@@ -122,7 +122,7 @@ include 'header.php';
         </section>
 
         <?php
-        include "testimonial_section_2.php";
+            // include "testimonial_section_2.php";
         ?>
         <!-- Time Table Section -->
         <section class="time-table-section">
@@ -150,41 +150,41 @@ include 'header.php';
                                 <td>
                                     <strong>Dental Care</strong>
                                     <p> 8:00 am - 9:00 am <br> Room: 303</p>
-                                    <div class="doctor-info">
+                                    <!--<div class="doctor-info">
                                         <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
                                         <h4 class="name">Dr. Ajitha Sekar MD(OBG)</h4>
                                         <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                    </div>
+                                    </div>-->
                                 </td>
                                 <td class="empty"></td>
                                 <td>
                                     <strong>Orthopaedics</strong>
                                     <p> 8:00 am - 9:00 am <br> Room: 303</p>
-                                    <div class="doctor-info">
+                                    <!--<div class="doctor-info">
                                         <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
                                         <h4 class="name">Dr. Ajitha Sekar MD(OBG)</h4>
                                         <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                    </div>
+                                    </div>-->
                                 </td>
                                 <td class="empty"></td>
                                 <td>
                                     <strong>Medicine</strong>
                                     <p> 8:00 am - 9:00 am <br> Room: 303</p>
-                                    <div class="doctor-info">
+                                    <!--<div class="doctor-info">
                                         <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
                                         <h4 class="name">Dr. Ajitha Sekar MD(OBG)</h4>
                                         <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                    </div>
+                                    </div>-->
                                 </td>
                                 <td class="empty"></td>
                                 <td>
                                     <strong>Orthopaedics</strong>
                                     <p> 8:00 am - 9:00 am <br> Room: 303</p>
-                                    <div class="doctor-info">
+                                    <!--<div class="doctor-info">
                                         <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
                                         <h4 class="name">Dr. Ajitha Sekar MD(OBG)</h4>
                                         <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                    </div>
+                                    </div>-->
                                 </td>
                             </tr>
 
@@ -195,31 +195,31 @@ include 'header.php';
                                 <td>
                                     <strong>Gynecology</strong>
                                     <p> 9:00 am - 10:00 am <br> Room: 301</p>
-                                    <div class="doctor-info">
+                                    <!--<div class="doctor-info">
                                         <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
                                         <h4 class="name">Dr. Ajitha Sekar MD(OBG)</h4>
                                         <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                    </div>
+                                    </div>-->
                                 </td>
                                 <td class="empty"></td>
                                 <td>
                                     <strong>Cardiology</strong>
                                     <p> 9:00 am - 10:00 am <br> Room: 301</p>
-                                    <div class="doctor-info">
+                                    <!--<div class="doctor-info">
                                         <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
                                         <h4 class="name">Dr. Ajitha Sekar MD(OBG)</h4>
                                         <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                    </div>
+                                    </div>-->
                                 </td>
                                 <td class="empty"></td>
                                 <td>
                                     <strong>Dental Care</strong>
                                     <p> 9:00 am - 10:00 am <br> Room: 301</p>
-                                    <div class="doctor-info">
+                                    <!--<div class="doctor-info">
                                         <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
                                         <h4 class="name">Dr. Ajitha Sekar MD(OBG)</h4>
                                         <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                    </div>
+                                    </div>-->
                                 </td>
                                 <td class="empty"></td>
                             </tr>
@@ -230,41 +230,41 @@ include 'header.php';
                                 <td>
                                     <strong>Dental Care</strong>
                                     <p> 8:00 am - 9:00 am <br> Room: 303</p>
-                                    <div class="doctor-info">
+                                    <!--<div class="doctor-info">
                                         <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
                                         <h4 class="name">Dr. Ajitha Sekar MD(OBG)</h4>
                                         <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                    </div>
+                                    </div>-->
                                 </td>
                                 <td class="empty"></td>
                                 <td>
                                     <strong>Orthopaedics</strong>
                                     <p> 8:00 am - 9:00 am <br> Room: 303</p>
-                                    <div class="doctor-info">
+                                    <!--<div class="doctor-info">
                                         <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
                                         <h4 class="name">Dr. Ajitha Sekar MD(OBG)</h4>
                                         <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                    </div>
+                                    </div>-->
                                 </td>
                                 <td class="empty"></td>
                                 <td>
                                     <strong>Medicine</strong>
                                     <p> 8:00 am - 9:00 am <br> Room: 303</p>
-                                    <div class="doctor-info">
+                                    <!--<div class="doctor-info">
                                         <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
                                         <h4 class="name">Dr. Ajitha Sekar MD(OBG)</h4>
                                         <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                    </div>
+                                    </div>-->
                                 </td>
                                 <td class="empty"></td>
                                 <td>
                                     <strong>Orthopaedics</strong>
                                     <p> 8:00 am - 9:00 am <br> Room: 303</p>
-                                    <div class="doctor-info">
+                                    <!--<div class="doctor-info">
                                         <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
                                         <h4 class="name">Dr. Ajitha Sekar MD(OBG)</h4>
                                         <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                    </div>
+                                    </div>-->
                                 </td>
                             </tr>
 
@@ -275,31 +275,31 @@ include 'header.php';
                                 <td>
                                     <strong>Gynecology</strong>
                                     <p> 9:00 am - 10:00 am <br> Room: 301</p>
-                                    <div class="doctor-info">
+                                    <!--<div class="doctor-info">
                                         <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
                                         <h4 class="name">Dr. Ajitha Sekar MD(OBG)</h4>
                                         <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                    </div>
+                                    </div>-->
                                 </td>
                                 <td class="empty"></td>
                                 <td>
                                     <strong>Cardiology</strong>
                                     <p> 9:00 am - 10:00 am <br> Room: 301</p>
-                                    <div class="doctor-info">
+                                    <!--<div class="doctor-info">
                                         <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
                                         <h4 class="name">Dr. Ajitha Sekar MD(OBG)</h4>
                                         <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                    </div>
+                                    </div>-->
                                 </td>
                                 <td class="empty"></td>
                                 <td>
                                     <strong>Dental Care</strong>
                                     <p> 9:00 am - 10:00 am <br> Room: 301</p>
-                                    <div class="doctor-info">
+                                    <!--<div class="doctor-info">
                                         <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
                                         <h4 class="name">Dr. Ajitha Sekar MD(OBG)</h4>
                                         <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                    </div>
+                                    </div>-->
                                 </td>
                                 <td class="empty"></td>
                             </tr>
@@ -310,41 +310,41 @@ include 'header.php';
                                 <td>
                                     <strong>Dental Care</strong>
                                     <p> 8:00 am - 9:00 am <br> Room: 303</p>
-                                    <div class="doctor-info">
+                                    <!--<div class="doctor-info">
                                         <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
                                         <h4 class="name">Dr. Ajitha Sekar MD(OBG)</h4>
                                         <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                    </div>
+                                    </div>-->
                                 </td>
                                 <td class="empty"></td>
                                 <td>
                                     <strong>Orthopaedics</strong>
                                     <p> 8:00 am - 9:00 am <br> Room: 303</p>
-                                    <div class="doctor-info">
+                                    <!--<div class="doctor-info">
                                         <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
                                         <h4 class="name">Dr. Ajitha Sekar MD(OBG)</h4>
                                         <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                    </div>
+                                    </div>-->
                                 </td>
                                 <td class="empty"></td>
                                 <td>
                                     <strong>Medicine</strong>
                                     <p> 8:00 am - 9:00 am <br> Room: 303</p>
-                                    <div class="doctor-info">
+                                    <!--<div class="doctor-info">
                                         <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
                                         <h4 class="name">Dr. Ajitha Sekar MD(OBG)</h4>
                                         <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                    </div>
+                                    </div>-->
                                 </td>
                                 <td class="empty"></td>
                                 <td>
                                     <strong>Orthopaedics</strong>
                                     <p> 8:00 am - 9:00 am <br> Room: 303</p>
-                                    <div class="doctor-info">
+                                    <!--<div class="doctor-info">
                                         <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
                                         <h4 class="name">Dr. Ajitha Sekar MD(OBG)</h4>
                                         <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                    </div>
+                                    </div>-->
                                 </td>
                             </tr>
 
@@ -355,31 +355,31 @@ include 'header.php';
                                 <td>
                                     <strong>Gynaecology</strong>
                                     <p> 9:00 am - 10:00 am <br> Room: 301</p>
-                                    <div class="doctor-info">
+                                    <!--<div class="doctor-info">
                                         <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
                                         <h4 class="name">Dr. Ajitha Sekar MD(OBG)</h4>
                                         <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                    </div>
+                                    </div>-->
                                 </td>
                                 <td class="empty"></td>
                                 <td>
                                     <strong>Cardiology</strong>
                                     <p> 9:00 am - 10:00 am <br> Room: 301</p>
-                                    <div class="doctor-info">
+                                    <!--<div class="doctor-info">
                                         <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
                                         <h4 class="name">Dr. Ajitha Sekar MD(OBG)</h4>
                                         <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                    </div>
+                                    </div>-->
                                 </td>
                                 <td class="empty"></td>
                                 <td>
                                     <strong>Dental Care</strong>
                                     <p> 9:00 am - 10:00 am <br> Room: 301</p>
-                                    <div class="doctor-info">
+                                    <!--<div class="doctor-info">
                                         <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
                                         <h4 class="name">Dr. Ajitha Sekar MD(OBG)</h4>
                                         <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                    </div>
+                                    </div>-->
                                 </td>
                                 <td class="empty"></td>
                             </tr>
@@ -390,41 +390,41 @@ include 'header.php';
                                 <td>
                                     <strong>Dental Care</strong>
                                     <p> 8:00 am - 9:00 am <br> Room: 303</p>
-                                    <div class="doctor-info">
+                                    <!--<div class="doctor-info">
                                         <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
                                         <h4 class="name">Dr. Ajitha Sekar MD(OBG)</h4>
                                         <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                    </div>
+                                    </div>-->
                                 </td>
                                 <td class="empty"></td>
                                 <td>
                                     <strong>Orthopaedics</strong>
                                     <p> 8:00 am - 9:00 am <br> Room: 303</p>
-                                    <div class="doctor-info">
+                                    <!--<div class="doctor-info">
                                         <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
                                         <h4 class="name">Dr. Ajitha Sekar MD(OBG)</h4>
                                         <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                    </div>
+                                    </div>-->
                                 </td>
                                 <td class="empty"></td>
                                 <td>
                                     <strong>Medicine</strong>
                                     <p> 8:00 am - 9:00 am <br> Room: 303</p>
-                                    <div class="doctor-info">
+                                    <!--<div class="doctor-info">
                                         <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
                                         <h4 class="name">Dr. Ajitha Sekar MD(OBG)</h4>
                                         <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                    </div>
+                                    </div>-->
                                 </td>
                                 <td class="empty"></td>
                                 <td>
                                     <strong>Orthopaedics</strong>
                                     <p> 8:00 am - 9:00 am <br> Room: 303</p>
-                                    <div class="doctor-info">
+                                    <!--<div class="doctor-info">
                                         <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
                                         <h4 class="name">Dr. Ajitha Sekar MD(OBG)</h4>
                                         <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                    </div>
+                                    </div>-->
                                 </td>
                             </tr>
                         </tbody>

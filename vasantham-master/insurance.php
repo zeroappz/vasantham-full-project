@@ -98,22 +98,22 @@ include "header.php";
         include "header_main.php"
         ?>
 
-<section class="contact-section" id="contact">
+        <section class="contact-section" id="contact">
             <div class="small-container">
                 <div class="sec-title text-center">
-                   <span class="sub-title">Contact Now</span>
-                   
+                    <span class="sub-title">Contact Now</span>
+
                     <span class="divider"></span>
                 </div>
-               
+
                 <!-- Contact box -->
                 <div class="contact-box">
                     <div class="row">
                         <div class="contact-info-block col-lg-4 col-md-6 col-sm-12">
                             <div class="inner" style="padding-left: 29px !important;">
-                                
+
                                 <h5 style="color: #1370B5;">Insurance Officer:</h5>
-                               <p style="font-size: 16px;">E. Anburajaraman</p>
+                                <p style="font-size: 16px;">E. Anburajaraman</p>
                                 <p style="font-size: 14px;">+91 88707-06620<br><a href="mailto:anburajaraman.vasatham@gmail.com">anburajaraman.vasatham@gmail.com</a></p>
                             </div>
                         </div>
@@ -129,8 +129,8 @@ include "header.php";
 
                         <div class="contact-info-block col-lg-4 col-md-6 col-sm-12">
                             <div class="inner" style="padding-left: 29px !important;">
-                                <span class="icon flaticon-profile"></span>  
-                               
+                                <span class="icon flaticon-profile"></span>
+
                                 <h5 style="color: #1370B5;"><strong>Public Relation Officer</strong></h5>
                                 <p style="font-size: 16px;">Mr. Martin</p>
                                 <p style="font-size: 14px;">+91 96293 59594<br>vasanthamhealthcentre@gmail.com</p>
@@ -139,29 +139,48 @@ include "header.php";
                             </div>
                         </div>
                     </div>
-                </div>                 
                 </div>
             </div>
-        </section>
-        <h3 style="border: black; text-align:center;color:#1370B5"> Our Empanelment</h3><br>
-        <center>
+    </div>
+    </section>
+    <h3 style="border: black; text-align:center;color:#1370B5"> Our Empanelment</h3><br>
+
+
+    <!--<table id="customers" style="align-self: center;">
+                <tr>
+                    <td style="width: 9%;"><?php echo $row['id']; ?></td>
+                    <td style="text-align: left; width: 71%;">
+                        <img src="<?php echo $BASE_URL . $IMG_URL . $row['photo'] ?>" style="width: 100px;height: 70px;' ">&nbsp;&nbsp;&nbsp;<?php echo $row['name']; ?>
+                    </td>
+                    <td style="width: 20%;"><a class="visit-btn" href="<?php echo $row['url']; ?>">Visit page</a></td>
+                </tr>
+            </table>-->
+    <section class="contact-section" id="contact">
+        <div class="row" style="margin-left: 0px;margin-right: 0px;">
             <?php foreach ($result as $row) { ?>
-                <table id="customers" style="align-self: center;">
-                    <tr>
-                        <td style="width: 9%;"><?php echo $row['id']; ?></td>
-                        <td style="text-align: left; width: 71%;">
-                            <img src="<?php echo $BASE_URL . $IMG_URL . $row['photo'] ?>" style="width: 100px;height: 70px;' ">&nbsp;&nbsp;&nbsp;<?php echo $row['name']; ?>
-                        </td>
-                        <td style="width: 20%;"><a class="visit-btn" href="<?php echo $row['url']; ?>">Visit page</a></td>
-                    </tr>
-                </table>
+                <!-- Feature BLock -->
+                <div class="feature-block-two col-lg-3 col-md-6 col-sm-9">
+                    <a class="ins" href="<?php echo $row['url']; ?>" target="_blank">
+                        <div class="inner-box">
+                            <figure class="thumb-box">
+                                <img style="width: 50%;left: 25%;position: relative;" src="<?php echo $BASE_URL . $IMG_URL . $row['photo'] ?>" alt="">
+                            </figure>
+                            <div class="insurance-list">
+                                <?php echo $row['name']; ?>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
             <?php } ?>
-        </center>
-        <!-- Main Footer------------------------------------------------------------------------------ -->
-        <?php
-        include "footer.php";
-        ?>
-        <!--End Main Footer -->
+        </div>
+    </section>
+
+    <!-- Main Footer------------------------------------------------------------------------------ -->
+    <?php
+    include "footer.php";
+    ?>
+    <!--End Main Footer -->
 
     </div><!-- End Page Wrapper -->
     <?php

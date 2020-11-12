@@ -9,11 +9,13 @@ $success_message = '';
 ?>
 <?php
 $BASE_URL = 'http://localhost/vasantham/vasantham-master';
-
+$IMG_URL = 'assets/uploads/';
+$ID = $_GET['id'];
 // Check the page slug is valid or not.
-$statement = $pdo->prepare("SELECT * FROM department");
+$statement = $pdo->prepare("SELECT * FROM department WHERE dep_id=$ID");
 $statement->execute();
 $departmentList = $statement->fetchAll();
+
 $total = $statement->rowCount();
 if ($total == 0) {
     header('location: ' . $BASE_URL);
@@ -44,13 +46,14 @@ include "header.php"
         <!--End Main Header -->
 
         <!--Page Title-->
-        <section class="page-title" style="background-image: url(images/background/8.jpg);">
+        <section class="page-title" style="background-image: url(<?php echo BASE_URL . $IMG_URL . $departmentList[0]['dep_banner'] ?>);">
             <div class="auto-container">
                 <div class="title-outer">
-                    <h1>Departments</h1>
+                    <h1><?php echo $departmentList[0]['dep_name'] ?> </h1>
                     <ul class="page-breadcrumb">
                         <li><a href="index.php">Home</a></li>
                         <li>Departments</li>
+                        <li><?php echo $departmentList[0]['dep_name'] ?></li>
                     </ul>
                 </div>
             </div>
@@ -66,18 +69,19 @@ include "header.php"
                     <div class="content-side col-xl-9 col-lg-8 col-md-12 col-sm-12 order-2">
                         <div class="service-detail">
                             <div class="images-box">
-                                <figure class="image wow fadeIn"><a href="images/resource/service-single.jpg" class="lightbox-image" data-fancybox="services"><img src="images/resource/service-single.jpg" alt=""></a></figure>
+                                <figure class="image wow fadeIn">
+                                    <a href="<?php echo BASE_URL . $IMG_URL . $departmentList[0]['dep_photo'] ?>" class="lightbox-image" data-fancybox="services">
+                                        <img src="<?php echo BASE_URL . $IMG_URL . $departmentList[0]['dep_photo'] ?>" alt=""></a></figure>
                             </div>
 
                             <div class="content-box">
                                 <div class="title-box">
-                                    <h2>Departments Of Neurology</h2>
+                                    <h2>Departments Of <?php echo $departmentList[0]['dep_name'] ?></h2>
 
-                                    <span class="theme_color">ResoFus Alomar Treatment for Essential Tremor and Parkinson's Disease</span>
+                                    <span class="theme_color">Why choose our Service?</span>
                                 </div>
-                                <p>Resofus combines MR imaging and focused ultrasound into MR guided Focused Ultrasound technology, and provides a transcranial, non-invasive image-guided personalized treatment modality with no incisions and with no ionizing radiation.</p>
-                                <p>This combination of continuous MR imaging and very highly focused acoustic sound waves provides the ability to provide pinpoint precision treatment at the planned target, without causing damage to any of the normal surrounding tissue. This precise local lesioning stops the improper transfer of electrical signals that induce the tremor, and it stops.</p>
-                                <!-- Two Column -->
+                                <?php echo $departmentList[0]['dep_detail'] ?></p>
+                                <!--
                                 <div class="two-column">
                                     <div class="row">
                                         <div class="image-column col-xl-6 col-lg-12 col-md-12">
@@ -94,11 +98,7 @@ include "header.php"
                                             </ul>
                                         </div>
                                     </div>
-                                </div>
-
-                                <h3>Why Choose This Service</h3>
-
-                                <p>Complete account of the systems and expound the actually teachings of the great explorer of the truth, the master-builder of human uts happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful anyone who loves or pursues.</p>
+                                </div>-->
 
                                 <!--Product Info Tabs-->
                                 <div class="product-info-tabs">
@@ -158,7 +158,7 @@ include "header.php"
                                         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
                                         foreach ($result as $row) {
                                         ?>
-                                            <li><a href="departments.php"><?php echo $row['dep_name']; ?></a></li>
+                                            <li><a href="department-detail.php?id=<?php echo $row['dep_id']; ?>"><?php echo $row['dep_name']; ?></a></li>
                                         <?php
                                         }
                                         ?>
@@ -173,7 +173,6 @@ include "header.php"
                                 <div class="inner">
                                     <h4>Download Brochures</h4>
                                     <div class="text">Download the brouchure regarding the neurology department and success history from <strong>Vasantham Health Centre</strong></div>
-                                    <a class="theme-btn btn-style-one" href="#"><span class="btn-title"><i class="fa fa-file-pdf"></i> About Neurology</span></a>
                                     <a class="theme-btn btn-style-one" href="#"><span class="btn-title"><i class="fa fa-file-pdf"></i> Brochure Updated</span></a>
                                 </div>
                             </div>
@@ -192,135 +191,7 @@ include "header.php"
         </div>
         <!-- End Sidebar Page Container -->
 
-        <!-- Services Section -->
-        <section class="services-section-two">
-            <div class="auto-container">
-                <div class="carousel-outer">
-                    <!-- Services Carousel -->
-                    <div class="services-carousel owl-carousel owl-theme default-dots">
-                        <!-- service Block -->
-                        <div class="service-block-two">
-                            <div class="inner-box">
-                                <div class="image-box">
-                                    <figure class="image"><a href="department-detail.php"><img src="images/resource/service-1.jpg" alt=""></a></figure>
-                                </div>
-                                <div class="lower-content">
-                                    <div class="title-box">
-                                        <span class="icon flaticon-heart-2"></span>
-                                        <h4><a href="department-detail.php">Cardiology Department</a></h4>
-                                    </div>
-                                    <div class="text">Introduction. Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist.</div>
-                                    <span class="icon-right flaticon-heart-2"></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- service Block -->
-                        <div class="service-block-two">
-                            <div class="inner-box">
-                                <div class="image-box">
-                                    <figure class="image"><a href="department-detail.php"><img src="images/resource/service-2.jpg" alt=""></a></figure>
-                                </div>
-                                <div class="lower-content">
-                                    <div class="title-box">
-                                        <span class="icon flaticon-brain"></span>
-                                        <h4><a href="department-detail.php">Neurology Department</a></h4>
-                                    </div>
-                                    <div class="text">Introduction. Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist.</div>
-                                    <span class="icon-right flaticon-brain"></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- service Block -->
-                        <div class="service-block-two">
-                            <div class="inner-box">
-                                <div class="image-box">
-                                    <figure class="image"><a href="department-detail.php"><img src="images/resource/service-3.jpg" alt=""></a></figure>
-                                </div>
-                                <div class="lower-content">
-                                    <div class="title-box">
-                                        <span class="icon flaticon-kidney"></span>
-                                        <h4><a href="department-detail.php">Urology Department</a></h4>
-                                    </div>
-                                    <div class="text">Introduction. Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist.</div>
-                                    <span class="icon-right flaticon-kidney"></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- service Block -->
-                        <div class="service-block-two">
-                            <div class="inner-box">
-                                <div class="image-box">
-                                    <figure class="image"><a href="department-detail.php"><img src="images/resource/service-12.jpg" alt=""></a></figure>
-                                </div>
-                                <div class="lower-content">
-                                    <div class="title-box">
-                                        <span class="icon flaticon-ovum"></span>
-                                        <h4><a href="department-detail.php">Gynecological</a></h4>
-                                    </div>
-                                    <div class="text">Introduction. Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist.</div>
-                                    <span class="icon-right flaticon-ovum"></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- service Block -->
-                        <div class="service-block-two">
-                            <div class="inner-box">
-                                <div class="image-box">
-                                    <figure class="image"><a href="department-detail.php"><img src="images/resource/service-10.jpg" alt=""></a></figure>
-                                </div>
-                                <div class="lower-content">
-                                    <div class="title-box">
-                                        <span class="icon flaticon-parents"></span>
-                                        <h4><a href="department-detail.php">Pediatrical</a></h4>
-                                    </div>
-                                    <div class="text">Introduction. Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist.</div>
-                                    <span class="icon-right flaticon-parents"></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- service Block -->
-                        <div class="service-block-two">
-                            <div class="inner-box">
-                                <div class="image-box">
-                                    <figure class="image"><a href="department-detail.php"><img src="images/resource/service-11.jpg" alt=""></a></figure>
-                                </div>
-                                <div class="lower-content">
-                                    <div class="title-box">
-                                        <span class="icon flaticon-science"></span>
-                                        <h4><a href="department-detail.php">Laboratory</a></h4>
-                                    </div>
-                                    <div class="text">Introduction. Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist.</div>
-                                    <span class="icon-right flaticon-science"></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- service Block -->
-                        <div class="service-block-two">
-                            <div class="inner-box">
-                                <div class="image-box">
-                                    <figure class="image"><a href="department-detail.php"><img src="images/resource/service-10.jpg" alt=""></a></figure>
-                                </div>
-                                <div class="lower-content">
-                                    <div class="title-box">
-                                        <span class="icon flaticon-parents"></span>
-                                        <h4><a href="department-detail.php">Pediatrical</a></h4>
-                                    </div>
-                                    <div class="text">Introduction. Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist.</div>
-                                    <span class="icon-right flaticon-parents"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End service Section -->
+        
         <!-- Main Footer -->
 
         <?php

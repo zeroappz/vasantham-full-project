@@ -15,7 +15,7 @@ $BASE_URL = 'http://localhost/vasantham/';
 // Check the page slug is valid or not.
 $statement = $pdo->prepare("SELECT * FROM department ORDER BY dep_id ASC");
 $statement->execute();
-$result = $statement->fetchAll(PDO::FETCH_ASSOC);	
+$result = $statement->fetchAll(PDO::FETCH_ASSOC);
 $total = $statement->rowCount();
 if ($total == 0) {
     header('location: ' . $BASE_URL . 'vasantham-master');
@@ -61,28 +61,32 @@ include "header.php"
                     <div class="row">
                         <!-- service Block -->
                         <?php
-                        						
-							foreach ($result as $row) {
+
+                        foreach ($result as $row) {
                         ?>
-                        <div class="service-block-two col-lg-3 col-md-6 col-sm-12">
-                            <div class="inner-box">
-                                <div class="image-box">
-                                    <figure class="image"><a href="department-detail.php"><img src="images/resource/Cardiology.jpg" alt="" style="height:200px;"></a></figure>
-                                </div>
-                                <div class="lower-content">
-                                    <div class="title-box">
-                                        <span class="icon flaticon-heart-2"></span>
-                                        <h4><a href="department-detail.php"><?php echo $row['dep_name']; ?></a>
-                                            <p style="font-size:16px;"><a href="department-detail.php"><?php echo $row['dept_tamil']; ?></a></p>
-                                        </h4>
+                            <div class="service-block-two col-lg-3 col-md-6 col-sm-12">
+                                <div class="inner-box">
+                                    <div class="image-box">
+                                        <figure class="image"><a href="department-detail.php?id=<?php echo $row['dep_id']; ?>">
+                                        <img src="images/resource/Cardiology.jpg" alt="" style="height:200px;"></a></figure>
                                     </div>
-                                    <!--<div class="text"><?php echo $row['dep_detail']; ?></div>-->
-                                    <span class="icon-right flaticon-heart-2"></span>
+                                    <div class="lower-content">
+                                        <div class="title-box">
+                                            <span class="icon flaticon-heart-2"></span>
+                                            <h4><a href="department-detail.php?id=<?php echo $row['dep_id']; ?>"><?php echo $row['dep_name']; ?></a>
+                                                <p style="font-size:16px;"><a href="department-detail.php?id=<?php echo $row['dep_id']; ?>">
+                                                        <?php echo $row['dept_tamil']; ?>
+                                                    </a>
+                                                </p>
+                                            </h4>
+                                        </div>
+                                        <!--<div class="text"><?php echo $row['dep_detail']; ?></div>-->
+                                        <span class="icon-right flaticon-heart-2"></span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         <?php
-                             }
+                        }
                         ?>
                     </div>
                 </div>

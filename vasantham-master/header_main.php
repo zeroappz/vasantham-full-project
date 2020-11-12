@@ -51,7 +51,7 @@
                             </li>
 
                             <li class="dropdown">
-                                <span>About Us</span>
+                                <span>About</span>
                                 <ul>
                                     <li><a href="about-us.php">About Us</a></li>
                                     <li><a href="services.php">Services</a></li>
@@ -63,7 +63,7 @@
                                     <li><a href="terms-and-condition.php">Terms and Condition</a></li>-->
                                 </ul>
                             </li>
-                           
+
                             <li class="dropdown">
                                 <a href="doctors.php">Doctors</a>
                                 <!--<ul>
@@ -72,22 +72,20 @@
                                     </ul>-->
                             </li>
                             <li>
-                                <a style="color: #222222;" href="departments.php">Departments</a></
-                            </li>
-                         <!--      <li class="dropdown">
+                                <a style="color: #222222;" href="departments.php">Departments</a></ </li> <!-- <li class="dropdown">
                                 <spanspan>
-                              <ul>
-                                         <li><a href="departments.php">Departments</a></li>
-                                    <li><a href="department-detail.php">Cardiology</a></li>
-                                    <li><a href="department-detail.php">Neurology</a></li>
-                                    <li><a href="department-detail.php">Urology</a></li>
-                                    <li><a href="department-detail.php">Obstetrics & Gynaecology</a></li>
-                                    <li><a href="department-detail.php">Gynecological</a></li>
-                                    <li><a href="department-detail.php">Dermatology</a></li>
-                                    <li><a href="department-detail.php">Pediatrical</a></li>
-                                    <li><a href="department-detail.php">Laboratory</a></li>
-                                    <li><a href="departments.php">More</a></li>
-                                </ul>-->
+                                    <ul>
+                                        <li><a href="departments.php">Departments</a></li>
+                                        <li><a href="department-detail.php">Cardiology</a></li>
+                                        <li><a href="department-detail.php">Neurology</a></li>
+                                        <li><a href="department-detail.php">Urology</a></li>
+                                        <li><a href="department-detail.php">Obstetrics & Gynaecology</a></li>
+                                        <li><a href="department-detail.php">Gynecological</a></li>
+                                        <li><a href="department-detail.php">Dermatology</a></li>
+                                        <li><a href="department-detail.php">Pediatrical</a></li>
+                                        <li><a href="department-detail.php">Laboratory</a></li>
+                                        <li><a href="departments.php">More</a></li>
+                                    </ul>-->
                             </li>
 
                             <!--<li class="dropdown">
@@ -121,7 +119,10 @@
                                         <li><a href="login.php">Login</a></li>
                                     </ul>
                                 </li>-->
-                                <li>
+                            <li>
+                                <a href="blog.php">NEWS</a>
+                            </li>
+                            <li>
                                 <a href="insurance.php">INSURANCE</a>
                             </li>
                             <li>
@@ -144,10 +145,9 @@
     <!-- Sticky Header  -->
     <div class="sticky-header">
         <div class="auto-container">
-
             <div class="main-box">
                 <div class="logo-box">
-                    <div class="logo"><a href="index.php"><img style="height: 92px;" src="images/logo_f.png" alt="" title=""></a></div>
+                    <div class="logo"><a href="index.php"><img style="height: 92px;" src="images/vlogo.png" alt="" title=""></a></div>
                 </div>
 
                 <!--Keep This Empty / Menu will come through Javascript-->
@@ -157,7 +157,7 @@
 
     <!-- Mobile Header -->
     <div class="mobile-header">
-        <div class="logo"><a href="index.php"><img style="max-height: 72px;" src="images/logo_f.png" alt="" title=""></a></div>
+        <div class="logo"><a href="index.php"><img style="max-height: 72px;" src="images/vlogo.png" alt="" title=""></a></div>
 
         <!--Nav Box-->
         <div class="nav-outer clearfix">

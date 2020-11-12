@@ -21,7 +21,7 @@ include "header.php"
                         <li data-index="rs-1" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 
                             <!-- MAIN IMAGE -->
-                            <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="20" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="images/main-slider/2.jpg">
+                            <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="20" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="images/main-slider/a.jpg">
 
                             <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['750','750','750','650']" data-whitespace="normal" data-hoffset="['0','0','0','0']" data-voffset="['-180','-170','-180','-180']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
                                 <span class="title">Welcome to our Vasantham Health Centre Center </span>
@@ -46,7 +46,7 @@ include "header.php"
                         <li data-index="rs-2" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 
                             <!-- MAIN IMAGE -->
-                            <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="20" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="images/main-slider/1.jpg">
+                            <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="20" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="images/main-slider/b.jpg">
 
                             <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['750','750','750','650']" data-whitespace="normal" data-hoffset="['0','0','0','0']" data-voffset="['-180','-170','-180','-180']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
                                 <span class="title">Welcome to our Vasantham Health Centre Center </span>
@@ -124,7 +124,7 @@ include "header.php"
                                 <p>We are committed to the growth development and welfare of our people and creation of value for our stakeholders upon whom we rely to make the mission to our patient happen.</p>
                                 <p>Reduction in infection rates to 015 from the present 0.5%.</p>
                             </div>
-                         <!--   <div class="link-box">
+                            <!--   <div class="link-box">
                                 <figure class="signature"><img src="images/resource/signature.png" alt=""></figure>
                                 <a href="#" class="theme-btn btn-style-one"><span class="btn-title">More About</span></a>
                             </div>-->
@@ -165,7 +165,7 @@ include "header.php"
                         <div class="inner-box">
                             <span class="icon flaticon-heartbeat"></span>
                             <h5><a href="#">Health Check</a></h5>
-                            <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>
+                            <!--   <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>-->
                         </div>
                     </div>
 
@@ -174,7 +174,7 @@ include "header.php"
                         <div class="inner-box">
                             <span class="icon flaticon-surgery-room"></span>
                             <h5><a href="#">Operation Theater</a></h5>
-                            <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>
+                            <!--    <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>-->
                         </div>
                     </div>
 
@@ -183,7 +183,7 @@ include "header.php"
                         <div class="inner-box">
                             <span class="icon flaticon-pharmacy"></span>
                             <h5><a href="#">Pharmacy Support</a></h5>
-                            <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>
+                            <!--   <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>-->
                         </div>
                     </div>
 
@@ -192,7 +192,7 @@ include "header.php"
                         <div class="inner-box">
                             <span class="icon flaticon-transport"></span>
                             <h5><a href="#">Ambulance Facilities</a></h5>
-                            <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>
+                            <!--    <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>-->
                         </div>
                     </div>
 
@@ -201,7 +201,7 @@ include "header.php"
                         <div class="inner-box">
                             <span class="icon flaticon-lab"></span>
                             <h5><a href="#">Lab Tests</a></h5>
-                            <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>
+                            <!--   <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>-->
                         </div>
                     </div>
 
@@ -210,7 +210,7 @@ include "header.php"
                         <div class="inner-box">
                             <span class="icon flaticon-first-aid"></span>
                             <h5><a href="#">Intensive Care</a></h5>
-                            <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>
+                            <!--   <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>-->
                         </div>
                     </div>
                 </div>
@@ -218,69 +218,70 @@ include "header.php"
         </section>
         <!--End Services Section -->
 
-        <!-- Team Section --><center>
-        <section class="team-section">
-            <div class="auto-container">
-                <div class="sec-title text-center">
-                    <span class="sub-title">Our Doctors</span>
-                    <h2>Our Dedicated Doctors Team</h2>
-                    <span class="divider"></span>
-                </div>
-
-                <div class="row">
-                    <!-- Team Block -->
-                    <div class="team-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-                        <div class="inner-box">
-                            <figure class="image"><img src="images/resource/team-1.jpg" alt=""></figure>
-                            <ul class="social-links">
-                                <li><a href="#"><span class="fab fa-facebook"></span></a></li>
-                                <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
-                                <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-                                <li><a href="#"><span class="fab fa-pinterest"></span></a></li>
-                            </ul>
-                            <div class="info-box">
-                                <h4 class="name"><a href="doctor-detail.php">Dr. Ajitha Sekar MD(OBG)</a></h4>
-                                <span class="designation">Senior Dr. at Vasantham Health Centre</span>
-                            </div>
-                        </div>
+        <!-- Team Section -->
+        <center>
+            <section class="team-section">
+                <div class="auto-container">
+                    <div class="sec-title text-center">
+                        <span class="sub-title">Our Doctors</span>
+                        <h2>Our Dedicated Doctors Team</h2>
+                        <span class="divider"></span>
                     </div>
 
-                    <!-- Team Block -->
-                    <div class="team-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-                        <div class="inner-box">
-                            <figure class="image"><img src="images/resource/team-2.jpg" alt=""></figure>
-                            <ul class="social-links">
-                                <li><a href="#"><span class="fab fa-facebook"></span></a></li>
-                                <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
-                                <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-                                <li><a href="#"><span class="fab fa-pinterest"></span></a></li>
-                            </ul>
-                            <div class="info-box">
-                                <h4 class="name"><a href="doctor-detail.php">Dr. N.B.Venkataraman MD, DM(CARDIO)</a></h4>
-                                <span class="designation">Senior Dr. at Vasantham Health Centre</span>
+                    <div class="row">
+                        <!-- Team Block -->
+                        <div class="team-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+                            <div class="inner-box">
+                                <figure class="image"><img src="images/resource/team-1.jpg" alt=""></figure>
+                                <ul class="social-links">
+                                    <li><a href="#"><span class="fab fa-facebook"></span></a></li>
+                                    <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
+                                    <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                                    <li><a href="#"><span class="fab fa-pinterest"></span></a></li>
+                                </ul>
+                                <div class="info-box">
+                                    <h4 class="name"><a href="doctor-detail.php">Dr. Ajitha Sekar MD(OBG)</a></h4>
+                                    <span class="designation">Senior Dr. at Vasantham Health Centre</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Team Block -->
-                  
-                    <div class="team-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-                        <div class="inner-box">
-                            <figure class="image"><img src="images/resource/team-3.jpg" alt=""></figure>
-                            <ul class="social-links">
-                                <li><a href="#"><span class="fab fa-facebook"></span></a></li>
-                                <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
-                                <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-                                <li><a href="#"><span class="fab fa-pinterest"></span></a></li>
-                            </ul>
-                            <div class="info-box">
-                                <h4 class="name"><a href="doctor-detail.php">Dr. Venkatesh MD, DCH(CARDIO)</a></h4>
-                                <span class="designation">Senior Dr. at Vasantham Health Centre</span>
+                        <!-- Team Block -->
+                        <div class="team-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+                            <div class="inner-box">
+                                <figure class="image"><img src="images/resource/team-2.jpg" alt=""></figure>
+                                <ul class="social-links">
+                                    <li><a href="#"><span class="fab fa-facebook"></span></a></li>
+                                    <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
+                                    <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                                    <li><a href="#"><span class="fab fa-pinterest"></span></a></li>
+                                </ul>
+                                <div class="info-box">
+                                    <h4 class="name"><a href="doctor-detail.php">Dr. N.B.Venkataraman MD, DM(CARDIO)</a></h4>
+                                    <span class="designation">Senior Dr. at Vasantham Health Centre</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Team Block 
+                        <!-- Team Block -->
+
+                        <div class="team-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+                            <div class="inner-box">
+                                <figure class="image"><img src="images/resource/team-3.jpg" alt=""></figure>
+                                <ul class="social-links">
+                                    <li><a href="#"><span class="fab fa-facebook"></span></a></li>
+                                    <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
+                                    <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                                    <li><a href="#"><span class="fab fa-pinterest"></span></a></li>
+                                </ul>
+                                <div class="info-box">
+                                    <h4 class="name"><a href="doctor-detail.php">Dr. Venkatesh MD, DCH(CARDIO)</a></h4>
+                                    <span class="designation">Senior Dr. at Vasantham Health Centre</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Team Block 
                     <div class="team-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
                         <div class="inner-box">
                             <figure class="image"><img src="images/resource/team-4.jpg" alt=""></figure>
@@ -296,11 +297,12 @@ include "header.php"
                             </div>
                         </div>
                     </div>-->
-                </div>
+                    </div>
 
-                <div class="sec-bottom-text">Don’t hesitate, contact us for better help and services <a href="doctor-detail.php">Explore all Dr. Team</a></div>
-            </div>
-        </section></center>
+                    <div class="sec-bottom-text">Don’t hesitate, contact us for better help and services <a href="doctor-detail.php">Explore all Dr. Team</a></div>
+                </div>
+            </section>
+        </center>
         <!-- End Team Section -->
 
         <!-- Appointment Section -->

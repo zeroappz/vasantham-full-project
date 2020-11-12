@@ -55,15 +55,21 @@ if ($total == 0) {
                             <div class="footer-widget">
                                 <h2 class="widget-title">Departments</h2>
                                 <ul class="user-links">
-                                    <li><a href="#">Surgery & Radiology</a></li>
-                                    <li><a href="#">Obstetrics & Gynaecology</a></li>
-                                    <li><a href="#">Neurology & Nephrology</a></li>
-                                    <li><a href="#">Plastic surgery</a></li>
-                                    <li><a href="#">Pediatrics</a></li>
-                                    <li><a href="#">Cardiology</a></li>
-                                    <li><a href="#">Dermatology</a></li>
-                                    <li><a href="#">and more...</a></li>
+                                    <?php
+                                        $statement = $pdo->prepare("SELECT * FROM department ORDER BY dep_id ASC LIMIT 7");
+                                        $statement->execute();
+                                        $departmentList = $statement->fetchAll(PDO::FETCH_ASSOC);
+                                        foreach ($departmentList as $row) {
+                                    ?>
+                                    <li>
+                                        <a href="department-detail.php?id=<?php echo $row['dep_id']; ?>">
+                                            <?php echo $row['dep_name']; ?>
+                                        </a>
+                                    </li>
+                                    <?php } ?>
+                                    <li><a href="departments.php">and more...</a></li>
                                 </ul>
+                                
                             </div>
                         </div>
                     </div>
