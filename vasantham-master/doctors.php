@@ -85,7 +85,8 @@ include 'header.php';
 												t1.linkedin,
 												t1.instagram,
 												t2.designation_id,
-												t2.designation_name
+												t2.designation_name,
+                                                t2.department_tamil
 					                            FROM doctor t1
 					                            JOIN designation t2
 					                            ON t1.designation_id = t2.designation_id
@@ -98,7 +99,7 @@ include 'header.php';
                         <div class="team-block-two col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
                             <div class="inner-box">
                                 <div class="image-box">
-                                    <figure class="image"><a href="doctor-detail.php"><img src="<?php echo BASE_URL; ?>/assets/uploads/<?php echo $row['photo']; ?>" alt=""></a></figure>
+                                    <figure class="image"><a href="doctor-detail.php?id=<?php echo $row['id']; ?>"><img src="<?php echo BASE_URL; ?>/assets/uploads/<?php echo $row['photo']; ?>" alt=""></a></figure>
                                     <ul class="social-links">
                                         <li><a href="<?php echo $row['facebook']; ?>"><span class="fab fa-facebook-f"></span></a></li>
                                         <li><a href="<?php echo $row['twitter']; ?>"><span class="fab fa-twitter"></span></a></li>
@@ -107,8 +108,8 @@ include 'header.php';
                                     </ul>
                                 </div>
                                 <div class="info-box">
-                                    <h5 class="name"><a href="doctor-detail.php"><?php echo $row['name']; ?></a></h5>
-                                    <span class="designation"><?php echo $row['designation_name']; ?></span>
+                                    <h5 class="name" style="font-size: 18px"><a href="doctor-detail.php?id=<?php echo $row['id']; ?>"><?php echo $row['name']; ?></a></h5>
+                                    <span class="designation"><?php echo $row['designation_name']; ?></span> | <span class="designation"><?php echo $row['department_tamil']; ?></span>
                                 </div>
                             </div>
                         </div>

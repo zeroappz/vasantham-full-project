@@ -15,7 +15,6 @@ $ID = $_GET['id'];
 $statement = $pdo->prepare("SELECT * FROM department WHERE dep_id=$ID");
 $statement->execute();
 $departmentList = $statement->fetchAll();
-
 $total = $statement->rowCount();
 if ($total == 0) {
     header('location: ' . $BASE_URL);
@@ -30,6 +29,11 @@ if ($total == 0) {
 <?php
 include "header.php"
 ?>
+<style>
+    .page-breadcrumb li::after {
+        color: white;
+    }
+</style>
 
 <body>
 
@@ -49,11 +53,11 @@ include "header.php"
         <section class="page-title" style="background-image: url(<?php echo BASE_URL . $IMG_URL . $departmentList[0]['dep_banner'] ?>);">
             <div class="auto-container">
                 <div class="title-outer">
-                    <h1><?php echo $departmentList[0]['dep_name'] ?> </h1>
+                    <h1 style="color: white;"><?php echo $departmentList[0]['dep_name'] ?> </h1>
                     <ul class="page-breadcrumb">
-                        <li><a href="index.php">Home</a></li>
-                        <li>Departments</li>
-                        <li><?php echo $departmentList[0]['dep_name'] ?></li>
+                        <li><a style="color: white;" href="index.php">Home</a></li>
+                        <li style="color: white;">Departments</li>
+                        <li style="color: white;"><?php echo $departmentList[0]['dep_name'] ?></li>
                     </ul>
                 </div>
             </div>
@@ -152,7 +156,7 @@ include "header.php"
         </div>
         <!-- End Sidebar Page Container -->
 
-        
+
         <!-- Main Footer -->
 
         <?php
