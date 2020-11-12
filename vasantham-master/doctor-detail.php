@@ -63,9 +63,7 @@ foreach ($result as $row) {
 
 ?>
 
-<?php
-include "header.php"
-?>
+<?php include "header.php" ?>
 
 <body>
 
@@ -76,9 +74,7 @@ include "header.php"
 
         <!-- Main Header-->
 
-        <?php
-        include "header_main.php"
-        ?>
+        <?php include "header_main.php" ?>
         </header>
         <!--End Main Header -->
 
@@ -105,7 +101,7 @@ include "header.php"
                     <div class="content-side col-lg-8 col-md-12 col-sm-12 order-2">
                         <div class="docter-detail">
                             <h3 class="name"><?php echo $name; ?> <?php echo $designation_name; ?></h3>
-                            <span class="designation"><?php echo $designation_name. ' ('. $practice_location. ')'; ?></span>
+                            <span class="designation"><?php echo $designation_name . ' (' . $practice_location . ')'; ?></span>
                             <div class="text"><?php echo $detail; ?></div>
                             <ul class="doctor-info-list">
                                 <li>
@@ -179,16 +175,13 @@ include "header.php"
         </section>
         <!-- End Doctor Detail Section -->
         <!-- Clients Section -->
-        <?php
+        <?php 
         //include "clients_section.php";
-        include "footer.php";
-        ?>
+        include "footer.php"; ?>
         <!--End Main Footer -->
 
     </div><!-- End Page Wrapper -->
-    <?php
-    include "script_includes.php";
-    ?>
+    <?php include "script_includes.php"; ?>
 
 
 </body>
