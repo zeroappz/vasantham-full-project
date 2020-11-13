@@ -8,7 +8,7 @@ $error_message = '';
 $success_message = '';
 ?>
 <?php
-$BASE_URL = 'http://localhost/vasantham/vasantham-master';
+$BASE_URL = 'http://localhost/vasantham-full-project/vasantham-master';
 
 // Check the page slug is valid or not.
 $statement = $pdo->prepare("SELECT * FROM doctor");

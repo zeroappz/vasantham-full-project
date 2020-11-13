@@ -4,7 +4,7 @@
 require_once("../backend/admin/config.php");
 ?>
 <?php
-$T_BASE_URL = 'http://localhost/vasantham/';
+$T_BASE_URL = 'http://localhost/vasantham-full-project/';
 
 // Check the page slug is valid or not.
 $statement = $pdo->prepare("SELECT * FROM testimonial ORDER BY id DESC LIMIT 5");

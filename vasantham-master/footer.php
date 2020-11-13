@@ -4,7 +4,7 @@
 require_once("../backend/admin/config.php");
 ?>
 <?php
-$F_BASE_URL = 'http://localhost/vasantham/';
+$F_BASE_URL = 'http://localhost/vasantham-full-project/';
 $F_IMG_URL = 'backend/assets/uploads/';
 // Check the page slug is valid or not.
 $statement = $pdo->prepare("SELECT * FROM news ORDER BY news_id DESC LIMIT 3");

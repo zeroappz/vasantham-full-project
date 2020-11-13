@@ -10,7 +10,7 @@ $error_message = '';
 $success_message = '';
 ?>
 <?php
-$BASE_URL = 'http://localhost/vasantham/';
+$BASE_URL = 'http://localhost/vasantham-full-project/';
 $IMG_URL = 'backend/assets/uploads/';
 // Check the page slug is valid or not.
 $statement = $pdo->prepare("SELECT * FROM partner ORDER BY id ASC");
