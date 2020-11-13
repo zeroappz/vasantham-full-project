@@ -95,11 +95,14 @@ include 'header.php';
                     $statement->execute(array('Active'));
                     $result = $statement->fetchAll(PDO::FETCH_ASSOC);
                     foreach ($result as $row) {
+                        $string = $row['name'];
+                        $name = substr($string, 0, strpos($string, "-"));
+
                     ?>
                         <div class="team-block-two col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
                             <div class="inner-box">
                                 <div class="image-box">
-                                    <figure class="image"><a href="doctor-detail.php?id=<?php echo $row['id']; ?>"><img src="<?php echo BASE_URL; ?>/assets/uploads/<?php echo $row['photo']; ?>" alt=""></a></figure>
+                                    <figure class="image"><a href="doctor-detail.php?id=<?php echo $row['id']; ?>"><img src="<?php echo BASE_URL . $IMG_URL; ?><?php echo $row['photo']; ?>" alt=""></a></figure>
                                     <ul class="social-links">
                                         <li><a href="<?php echo $row['facebook']; ?>"><span class="fab fa-facebook-f"></span></a></li>
                                         <li><a href="<?php echo $row['twitter']; ?>"><span class="fab fa-twitter"></span></a></li>
@@ -108,8 +111,10 @@ include 'header.php';
                                     </ul>
                                 </div>
                                 <div class="info-box">
-                                    <h5 class="name" style="font-size: 18px"><a href="doctor-detail.php?id=<?php echo $row['id']; ?>"><?php echo $row['name']; ?></a></h5>
-                                    <span class="designation"><?php echo $row['designation_name']; ?></span><br> <span class="designation"><?php echo $row['department_tamil']; ?></span>
+                                    <h5 class="name" style="font-size: 18px"><a href="doctor-detail.php?id=<?php echo $row['id']; ?>"><?php echo $name; ?></a></h5>
+                                    <span class="designation"><?php echo $row['designation_name']; ?></span>
+                                    <br /> 
+                                    <span style="color: #333" class="designation"><?php echo $row['department_tamil']; ?></span>
                                 </div>
                             </div>
                         </div>
@@ -123,7 +128,7 @@ include 'header.php';
         </section>
 
         <?php
-            // include "testimonial_section_2.php";
+        // include "testimonial_section_2.php";
         ?>
         <!-- Time Table Section -->
         <section class="time-table-section">
