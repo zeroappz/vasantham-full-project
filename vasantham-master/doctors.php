@@ -109,7 +109,7 @@ include 'header.php';
                                 </div>
                                 <div class="info-box">
                                     <h5 class="name" style="font-size: 18px"><a href="doctor-detail.php?id=<?php echo $row['id']; ?>"><?php echo $row['name']; ?></a></h5>
-                                    <span class="designation"><?php echo $row['designation_name']; ?></span> | <span class="designation"><?php echo $row['department_tamil']; ?></span>
+                                    <span class="designation"><?php echo $row['designation_name']; ?></span><br> <span class="designation"><?php echo $row['department_tamil']; ?></span>
                                 </div>
                             </div>
                         </div>

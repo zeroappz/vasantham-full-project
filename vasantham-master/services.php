@@ -78,7 +78,7 @@ include "header.php"
                         <div class="inner-box" style="background:linear-gradient(to bottom, #ffffff 26%, #1370B5 134%)">
                             <span class="icon flaticon-heartbeat"></span>
                             <h5><a href="#">ICU</a></h5>
-                       <img src="images\1-Nov-20\icu\a.jpg" style="background:linear-gradient(to top, #ffffff 26%, #1370B5 134%)">
+                       <img src="images\1-Nov-20\icu\a.jpg" style="width: 150px; height:150px;border-radius: 18px;">
                      
                         </div>
                     </div>
@@ -115,7 +115,7 @@ include "header.php"
                         <div class="inner-box" style="background:linear-gradient(to bottom, #ffffff 26%, #1370B5 134%)">
                             <span class="icon flaticon-lab"></span>
                             <h5><a href="#">FETAL ECHO</a></h5>
-                            <img src=" images\1-Nov-20\fatalecho.jpg" style="width: 150px; height:150px">
+                            <img src=" images\1-Nov-20\fatalecho.jpg" style="width: 150px; height:150px;border-radius: 18px;">
                         </div>
                     </div>
                     <!-- Service Block -->
@@ -123,15 +123,15 @@ include "header.php"
                         <div class="inner-box" style="background:linear-gradient(to bottom, #ffffff 26%, #1370B5 134%)">
                             <span class="icon flaticon-lab"></span>
                             <h5><a href="#">STRAIN IMAGINE</a></h5>
-                            <img src=" images\1-Nov-20\stain.jpeg" style="width: 150px; height:150px">
+                            <img src=" images\1-Nov-20\stain.jpeg" style="width: 150px; height:150px;border-radius: 18px;">
                         </div>
                     </div>
                     <!-- Service Block -->
                     <div class="service-block col-lg-3 col-md-4 col-sm-12">
                         <div class="inner-box" style="background:linear-gradient(to bottom, #ffffff 26%, #1370B5 134%)">
                             <span class="icon flaticon-lab"></span>
-                            <h5><a href="#">HOLTER MONITORING</a></h5>
-                            <img src=" images\1-Nov-20\holter.jpg" style="width: 150px; height:150px">
+                            <h5 style="font-size:19px !important;"><a href="#">HOLTER MONITORING</a></h6>
+                            <img src=" images\1-Nov-20\holter.jpg" style="width: 150px; height:150px;border-radius: 18px;">
                        
                         </div>
                     </div>
@@ -141,15 +141,15 @@ include "header.php"
                         <div class="inner-box" style="background:linear-gradient(to bottom, #ffffff 26%, #1370B5 134%)">
                             <span class="icon flaticon-lab"></span>
                             <h5><a href="#">ENDOSCOPY</a></h5>
-                            <img src=" images\1-Nov-20\endoscopy.webp" style="width: 150px; height:150px">
+                            <img src=" images\1-Nov-20\endoscopy.webp" style="width: 150px; height:150px;border-radius: 18px;">
                         </div>
                     </div>
                     <!-- Service Block -->
                     <div class="service-block col-lg-3 col-md-4 col-sm-12">
                         <div class="inner-box" style="background:linear-gradient(to bottom, #ffffff 26%, #1370B5 134%)">
                             <span class="icon flaticon-lab"></span>
-                            <h5><a href="#">CAROTID DOPPLER</a></h5>
-                            <img src=" images\1-Nov-20\CAROTID DOPPLER.gif" style="width: 150px; height:150px">
+                            <h5 ><a href="#">CAROTID DOPPLER</a></h5>
+                            <img src=" images\1-Nov-20\CAROTID DOPPLER.gif" style="width: 150px; height:150px;border-radius: 18px;">
                         </div>
                     </div>
                     <!-- Service Block -->
