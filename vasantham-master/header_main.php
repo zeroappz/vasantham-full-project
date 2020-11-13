@@ -134,7 +134,7 @@
                     <!-- Main Menu End-->
 
                     <div class="outer-box">
-                        <button class="search-btn"><span class="fa fa-search"></span></button>
+                        <!--<button class="search-btn"><span class="fa fa-search"></span></button>-->
                         <a href="appointment.php" id="appointment-btn" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
                     </div>
                 </div>
@@ -176,20 +176,20 @@
     <!-- Mobile Nav -->
     <div id="nav-mobile"></div>
 
-    <!-- Header Search -->
+    <!-- Header Search
     <div class="search-popup">
         <span class="search-back-drop"></span>
         <button class="close-search"><span class="fa fa-times"></span></button>
 
         <div class="search-inner">
-            <form method="post" action="http://ary-themes.com/html/bold_touch/medicoz/blog-showcase.php">
+            <form method="post" action="#">
                 <div class="form-group">
                     <input type="search" name="search-field" value="" placeholder="Search..." required="">
                     <button type="submit"><i class="flaticon-magnifying-glass"></i></button>
                 </div>
             </form>
         </div>
-    </div>
+    </div> -->
     <!-- End Header Search -->
 </header>
 <!--End Main Header -->

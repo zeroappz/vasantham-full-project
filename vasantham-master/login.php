@@ -23,7 +23,7 @@ include "header.php"
                         <div class="login-form">
                             <h2>Login</h2>
                             <!--Login Form-->
-                            <form method="post" action="http://ary-themes.com/html/bold_touch/medicoz/contact.html">
+                            <form method="post" action="#">
                                 <div class="form-group">
                                     <label>Username or Email</label>
                                     <input type="text" name="username" placeholder="Name or Email " required>
@@ -56,7 +56,7 @@ include "header.php"
                         <div class="login-form register-form">
                             <h2>Register</h2>
                             <!--Login Form-->
-                            <form method="post" action="http://ary-themes.com/html/bold_touch/medicoz/contact.html">
+                            <form method="post" action="#">
                                 <div class="form-group">
                                     <label>User Name</label>
                                     <input type="text" name="username" placeholder="Your Name" required>

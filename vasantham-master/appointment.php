@@ -5,7 +5,7 @@
             <h4>Make an Appointment</h4>
             <div class="text">We provide the most full medical services, so every person could have the <br>oportunity to receive qualitative medical help.</div>
         </div>
-        <form method="post" action="http://ary-themes.com/html/bold_touch/medicoz/setappointment.php" id="contact-form">
+        <form method="post" action="#" id="contact-form">
             <div class="row clearfix">
                 <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                     <input type="text" name="username" placeholder="Your Name" required="">
