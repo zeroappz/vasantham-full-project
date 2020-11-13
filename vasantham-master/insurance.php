@@ -155,14 +155,14 @@ include "header.php";
                 </div>
             </div>
     </div>
-    </section>
+    </section><br>
     <h3 style="border: black; text-align:center;color:#1370B5"> Our Empanelment</h3><br>
 
 
     <!--<table id="customers" style="align-self: center;">
                 <tr>
                     <td style="width: 9%;"><?php echo $row['id']; ?></td>
-                    <td style="text-align: left; width: 71%;">
+                    <td style="text-align: left; width: 71%; >
                         <img src="<?php echo $BASE_URL . $IMG_URL . $row['photo'] ?>" style="width: 100px;height: 70px;' ">&nbsp;&nbsp;&nbsp;<?php echo $row['name']; ?>
                     </td>
                     <td style="width: 20%;"><a class="visit-btn" href="<?php echo $row['url']; ?>">Visit page</a></td>
@@ -176,7 +176,7 @@ include "header.php";
                     <a class="ins" href="<?php echo $row['url']; ?>" target="_blank">
                         <div class="inner-box">
                             <figure class="thumb-box">
-                                <img style="width: 50%;left: 25%;position: relative;" src="<?php echo $BASE_URL . $IMG_URL . $row['photo'] ?>" alt="">
+                                <img style="width: 70%;left: 15%;position: relative; height:144px;" src="<?php echo $BASE_URL . $IMG_URL . $row['photo'] ?>" alt="">
                             </figure>
                             <div class="insurance-list">
                                 <?php echo $row['name']; ?>
