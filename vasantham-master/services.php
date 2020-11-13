@@ -97,7 +97,7 @@ include "header.php"
                         <div class="inner-box" style="background:linear-gradient(to bottom, #ffffff 26%, #1370B5 134%)">
                             <span class="icon flaticon-pharmacy"></span>
                             <h5><a href="#">ECHO</a></h5> 
-                            <img src=" images\1-Nov-20\Echo\2.jpg" style="width: 150px; height:150px;border-radius: 18px;">
+                            <img src="images\1-Nov-20\Echo\2.jpg" style="width: 150px; height:150px;border-radius: 18px;">
                         </div>
                     </div>
 
