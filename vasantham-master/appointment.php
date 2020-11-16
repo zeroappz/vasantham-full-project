@@ -1,32 +1,3 @@
-<!-- DB connection -->
-
-<?php
-// ob_start();
-// session_start();
-
-include("../backend/admin/config.php");
-// include("../backend/admin/functions.php");
-$error_message = '';
-$success_message = '';
-?>
-<?php
-$IMG_URL = 'assets/uploads/';
-
-// Check the page slug is valid or not.
-$statement = $pdo->prepare("SELECT * FROM department ORDER BY dep_id ASC");
-$statement->execute();
-$result = $statement->fetchAll(PDO::FETCH_ASSOC);
-$total = $statement->rowCount();
-if ($total == 0) {
-    header('location: ' . $BASE_URL . 'vasantham-master');
-    //echo 'no rows available';
-    exit;
-} else {
-    //echo $departmentList[0]['dep_name'];
-}
-
-?>
-
 <div class="model">
     <!-- Contact Form -->
     <div class="contact-form-two">
@@ -51,7 +22,7 @@ if ($total == 0) {
                 <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                     <select name="departments" id="departments" onchange="appointment();" required>
                         <option value="default" selected disabled>Select Departments</option>
-                        <option value="Cardiology">Cardiology</option>
+                        <option value="Cardiology"><?php echo $row['dep_name']; ?></option>
                         <option value="Neurology">Neurology</option>
                         <option value="Urology">Urology</option>
                         <option value="Gynecological">Gynecological</option>
