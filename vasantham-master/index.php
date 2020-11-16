@@ -3,16 +3,10 @@ include "header.php"
 ?>
 
 <body>
-
     <div class="page-wrapper">
-
         <!-- Preloader -->
         <div class="preloader"></div>
-
-        <?php
-        include "header_main.php"
-        ?>
-
+        <?php include "header_main.php"  ?>
         <!--Main Slider-->
         <section class="main-slider">
             <div class="rev_slider_wrapper fullwidthbanner-container" id="rev_slider_one_wrapper" data-source="gallery">
@@ -149,7 +143,7 @@ include "header.php"
             </div>
         </section>
         <!-- End About Section -->
-
+        <div id="contact"><button type="button" class="btn btn-info btn" data-toggle="modal" data-target="#contact-modal">Show Contact Form</button></div>
         <!-- Services Section -->
         <section class="services-section">
             <div class="auto-container">
@@ -370,7 +364,7 @@ include "header.php"
         <!-- Testimonial Section -->
         <?php
 
-        include "testimonial_section_2.php"
+        include "testimonial_section.php"
         ?>
         <!-- End Testimonial Section -->
 
@@ -419,17 +413,17 @@ include "header.php"
     <script src="js/color-settings.js"></script>
     <script>
         // Open modal in AJAX callback
-	$('#appointment').on('click', function(event) {
-	  event.preventDefault();
-	  this.blur();
-	  $.get(this.href, function(html) {
-	    $(html).appendTo('body').modal({
-			clickClose: false,
-			fadeDuration: 300,
-			fadeDelay: 0.15,
-	    });
-	  });
-	});
+        $('#appointment').on('click', function(event) {
+            event.preventDefault();
+            this.blur();
+            $.get(this.href, function(html) {
+                $(html).appendTo('body').modal({
+                    clickClose: false,
+                    fadeDuration: 300,
+                    fadeDelay: 0.15,
+                });
+            });
+        });
     </script>
 </body>
 
