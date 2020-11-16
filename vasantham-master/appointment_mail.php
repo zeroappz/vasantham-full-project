@@ -63,18 +63,18 @@ if (isset($_POST["submit"])) {
         $mail = new PHPMailer;
         $mail->IsSMTP();
         $mail->SMTPDebug = 0; // 0 = off (for production use) - 1 = client messages - 2 = client and server messages						//Sets Mailer to send message using SMTP
-        $mail->Host = 'smtp.gmail.com';        //Sets the SMTP hosts of your Email hosting, eg: mail.xxxxxx.com
-        $mail->Port = 587;                                //Sets the default SMTP server port
+        $mail->Host = 'mail.zeroclientglobal.com';        //Sets the SMTP hosts of your Email hosting, eg: mail.xxxxxx.com
+        $mail->Port = 465;                                //Sets the default SMTP server port
         $mail->SMTPAuth = true;                            //Sets SMTP authentication. Utilizes the Username and Password variables
-        $mail->Username = 'Office.vasanthamhealthcentre@gmail.com';  //Sets SMTP username eg: info@zeroappz.com
-        $mail->Password = 'vasantham@2020';                    //Sets SMTP password eg: xxxxxx
+        $mail->Username = 'info@zeroappz.com';                    //Sets SMTP username eg: info@zeroappz.com
+        $mail->Password = '@WpCiofocnftp1#INF';                    //Sets SMTP password eg: xxxxxx
         $mail->SMTPSecure = 'ssl';                            //Sets connection prefix. Options are "", "ssl" or "tls"
         $mail->From = $_POST["email"];                    //Sets the From email address for the message
         $mail->FromName = $_POST["name"];                //Sets the From name of the message
         $mail->AddAddress('info@zeroappz.com', 'ZeroAppz');        //Adds a "To" address
         $mail->AddCC($_POST["email"], $_POST["name"]);    //Adds a "Cc" address
         $mail->WordWrap = 50;                            //Sets word wrapping on the body of the message to a given number of characters
-        $mail->IsHTML(true);                            //Sets message type to HTML				
+        $mail->IsHTML(true);                           //Sets message type to HTML				
         $mail->Subject = "Booking an Appointment";                //Sets the Subject of the message
         
         $body="";

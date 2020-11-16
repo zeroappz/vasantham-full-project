@@ -17,6 +17,12 @@ include "header.php";
 
         <!-- Contact Section -->
         <section class="contact-section" id="contact">
+
+            <div class="sec-title text-center">
+                <span class="sub-title">OUR SERVICES</span>
+                <h2>We Care Our Patients.</h2>
+                <span class="divider"></span>
+            </div>
             <div class="small-container">
                 <!-- Form box -->
                 <div class="form-box">
@@ -39,6 +45,7 @@ include "header.php";
                                     </div>
 
                                     <div class="form-group">
+                                        <label>Choose Department</label>
                                         <select name="departments" id="departments" onchange="appointment();" required>
                                             <option value="default" selected disabled>Select Departments</option>
                                             <!--  <option value="Cardiology"><?php echo $row['dep_name']; ?></option>-->
@@ -52,9 +59,11 @@ include "header.php";
                                 </div>
                                 <div class="col-lg-6 col-md-12">
                                     <div class="form-group">
-                                        <input type="date" name="date" placeholder="Select Date" class="form-control" value="<?php echo $date ?>">
+                                        <label>Date for Appointment</label>
+                                        <input style="height: 60px;" type="date" name="date" placeholder="Select Date" class="form-control" value="<?php echo $date ?>">
                                     </div>
                                     <div class="form-group">
+                                        <label>Select your time</label>
                                         <select name="time" required id="timing">
                                             <option value="" selected disabled>Select Time</option>
                                             <option value="" data-value="default" disabled>Please select a department</option>
@@ -74,10 +83,12 @@ include "header.php";
                                     </div>
                                     <div class="form-group">
                                         <label>Enter Message</label>
-                                        <textarea name="message" cols="40" rows="10" class="form-control wpcf7-textarea" placeholder="Enter your message here"><?php echo $message; ?></textarea>
+                                        <textarea style="height: 177px;" name="message" cols="40" rows="10" class="form-control wpcf7-textarea" placeholder="Enter your message here"><?php echo $message; ?></textarea>
                                     </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12">
                                     <div class="form-group" align="center">
-                                        <button class="theme-btn btn-style-one submit" type="submit" name="submit" value="SEND US"><span class="btn-title text-center">Send Message</span></button>
+                                        <button style="width: 33%;top: 10px;" class="theme-btn btn-style-one submit" type="submit" name="submit" value="SEND US"><span class="btn-title text-center">Send Message</span></button>
                                     </div>
                                 </div>
                             </div>

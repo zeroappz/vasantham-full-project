@@ -349,7 +349,7 @@ include "header.php"
                             <span class="title">Need a Doctor for Check-up?</span>
                             <h2>Just Make an Appointment <br>and You’re Done!</h2>
                             <div class="number">Get Your Quote or Call: <strong>(04652) 222626</strong></div>
-                            <a href="appointment.php" id="appointment" class="theme-btn btn-style-three"><span class="btn-title">Appointment</span></a>
+                            <a href="appointment.php" class="theme-btn btn-style-three"><span class="btn-title">Appointment</span></a>
                         </div>
                     </div>
                     <div class="image-column col-lg-6 col-md-12 col-sm-12">

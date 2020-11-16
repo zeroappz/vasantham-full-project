@@ -135,7 +135,7 @@
 
                     <div class="outer-box">
                         <!--<button class="search-btn"><span class="fa fa-search"></span></button>-->
-                        <a href="appointment.php" id="appointment-btn" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
+                        <a href="appointment.php" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
                     </div>
                 </div>
             </div>
