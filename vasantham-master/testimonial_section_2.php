@@ -1,3 +1,17 @@
+
+<script>
+  /*  $('#appointment-test-2').on('click', function(event) {
+	  event.preventDefault();
+	  this.blur();
+	  $.get(this.href, function(html) {
+	    $(html).appendTo('body').modal({
+			clickClose: false,
+			fadeDuration: 300,
+			fadeDelay: 0.15,
+	    });
+	  });
+	});*/
+</script>
 <!-- DB connection -->
 
 <?php
@@ -48,7 +62,6 @@ if ($total == 0) {
 
                 <!-- Client Testimonial Carousel -->
                 <div class="client-testimonial-carousel default-dots owl-carousel owl-theme">
-
                     <!--Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="inner-box">
@@ -66,7 +79,7 @@ if ($total == 0) {
                 <div class="content-column">
                     <h4>We Employ The Latest Technology</h4>
                     <h2>We Ensure Safe Dental Surgery </h2>
-                    <a href="appointment.php" class="theme-btn btn-style-three"><span class="btn-title">Take Appointment</span></a>
+                    <a href="appointment.php" id="appointment-test-2" class="theme-btn btn-style-three"><span class="btn-title">Take Appointment</span></a>
                 </div>
 
                 <div class="video-column">

@@ -1,3 +1,26 @@
+/*$('#appointment').on('click', function(event) {
+	event.preventDefault();
+	this.blur();
+	$.get(this.href, function(html) {
+	  $(html).appendTo('body').modal({
+		  clickClose: false,
+		  fadeDuration: 300,
+		  fadeDelay: 0.15,
+	  });
+	});
+  });
+  $('#appointment-test-2').on('click', function(event) {
+	event.preventDefault();
+	this.blur();
+	$.get(this.href, function(html) {
+	  $(html).appendTo('body').modal({
+		  clickClose: false,
+		  fadeDuration: 300,
+		  fadeDelay: 0.15,
+	  });
+	});
+  });
+*/
 (function($) {
 	
 	"use strict";
