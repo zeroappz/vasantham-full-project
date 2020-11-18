@@ -141,7 +141,13 @@ if ($_SESSION['user']['role'] == 'Publisher') {
 							<i class="fa fa-laptop"></i> <span>Dashboard</span>
 						</a>
 					</li>
-
+					<li class="treeview <?php if (($cur_page == 'appointment.php')) {
+											echo 'active';
+										} ?>">
+						<a href="appointment.php">
+							<i class="fa fa-cog"></i> <span>Appointment List</span>
+						</a>
+					</li>
 
 					<?php if ($_SESSION['user']['role'] == 'Super Admin') : ?>
 						<li class="treeview <?php if (($cur_page == 'user-add.php') || ($cur_page == 'user.php') || ($cur_page == 'user-edit.php')) {
@@ -257,7 +263,7 @@ if ($_SESSION['user']['role'] == 'Publisher') {
 							<!--<li><a href="comment.php"><i class="fa fa-circle-o"></i> Comment</a></li>-->
 						</ul>
 					</li>
-
+					<!--
 					<li class="treeview <?php if (($cur_page == 'faq-category-add.php') || ($cur_page == 'faq-category.php') || ($cur_page == 'faq-category-edit.php') || ($cur_page == 'faq-add.php') || ($cur_page == 'faq.php') || ($cur_page == 'faq-edit.php')) {
 											echo 'active';
 										} ?>">
@@ -272,7 +278,7 @@ if ($_SESSION['user']['role'] == 'Publisher') {
 							<li><a href="faq-category.php"><i class="fa fa-circle-o"></i> FAQ Category</a></li>
 							<li><a href="faq.php"><i class="fa fa-circle-o"></i> FAQ</a></li>
 						</ul>
-					</li>
+					</li>-->
 
 
 
