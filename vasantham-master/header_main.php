@@ -29,13 +29,21 @@
     <div class="header-lower">
         <div class="auto-container">
             <!-- Main box -->
+          
+          <table>
+              <tr>
+                   <td>
+                       <div class="logo-box">
+                          <div class="logo"><a href="index.php">
+                            <img style="height: 115px;padding-bottom:24px" src="images/vlogo.png" alt="" title=""></a>
+                          </div>
+                       </div>
+                   </td> 
+            
+            
+                    <td> 
             <div class="main-box">
-                <div class="logo-box">
-                    <div class="logo"><a href="index.php">
-                            <img style="height: 115px;padding-bottom:24px" src="images/vlogo.png" alt="" title=""></a></div>
-                </div>
-
-                <!--Nav Box-->
+                          <!--Nav Box-->
                 <div class="nav-outer">
                     <nav class="nav main-menu">
                         <ul class="navigation" id="navbar">
@@ -138,7 +146,9 @@
                         <a href="appointment.php" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
                     </div>
                 </div>
-            </div>
+            </div></td>
+</tr>
+          </table>
         </div>
     </div>
 

@@ -1,11 +1,23 @@
 <?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
+// require '../vendor/autoload.php';
+?>
+
+
+
+
+
+<?php
 $error = '';
 $name = '';
 $email = '';
 $phone = '';
-$departments='';
-$date='';
-$time='';
+$departments = '';
+$date = '';
+$time = '';
 $message = '';
 
 function clean_text($string)
@@ -38,17 +50,17 @@ if (isset($_POST["submit"])) {
     } else {
         $phone = clean_text($_POST["phone"]);
     }
-    if (empty($_POST["departments"])){
+    if (empty($_POST["departments"])) {
         $error .= '<p><label class="text-danger">Department is required</label></p>';
     } else {
         $departments = clean_text($_POST["message"]);
     }
-    if (empty($_POST["date"])){
+    if (empty($_POST["date"])) {
         $error .= '<p><label class="text-danger">Date is required</label></p>';
     } else {
         $date = clean_text($_POST["message"]);
     }
-    if (empty($_POST["time"])){
+    if (empty($_POST["time"])) {
         $error .= '<p><label class="text-danger">Time is required</label></p>';
     } else {
         $time = clean_text($_POST["time"]);
@@ -59,31 +71,36 @@ if (isset($_POST["submit"])) {
         $message = clean_text($_POST["message"]);
     }
     if ($error == '') {
-        require 'class/class.phpmailer.php';
-        $mail = new PHPMailer;
-        $mail->IsSMTP();
-        $mail->SMTPDebug = 0; // 0 = off (for production use) - 1 = client messages - 2 = client and server messages						//Sets Mailer to send message using SMTP
-        $mail->Host = 'mail.zeroclientglobal.com';        //Sets the SMTP hosts of your Email hosting, eg: mail.xxxxxx.com
-        $mail->Port = 465;                                //Sets the default SMTP server port
-        $mail->SMTPAuth = true;                            //Sets SMTP authentication. Utilizes the Username and Password variables
-        $mail->Username = 'info@zeroappz.com';                    //Sets SMTP username eg: info@zeroappz.com
-        $mail->Password = '@WpCiofocnftp1#INF';                    //Sets SMTP password eg: xxxxxx
-        $mail->SMTPSecure = 'ssl';                            //Sets connection prefix. Options are "", "ssl" or "tls"
-        $mail->From = $_POST["email"];                    //Sets the From email address for the message
-        $mail->FromName = $_POST["name"];                //Sets the From name of the message
-        $mail->AddAddress('info@zeroappz.com', 'ZeroAppz');        //Adds a "To" address
-        $mail->AddCC($_POST["email"], $_POST["name"]);    //Adds a "Cc" address
-        $mail->WordWrap = 50;                            //Sets word wrapping on the body of the message to a given number of characters
-        $mail->IsHTML(true);                           //Sets message type to HTML				
-        $mail->Subject = "Booking an Appointment";                //Sets the Subject of the message
-        
-        $body="";
+        try {
+        require 'PHPMailer-master/src/Exception.php';
+        require 'PHPMailer-master/src/PHPMailer.php';
+        require 'PHPMailer-master/src/SMTP.php';
 
-        $body .= 'Mr/Ms. '.$name. ' is trying to reach you with the following message.';
-        $body .=  "<br><h3>".$message."</h3>".' and his/her contact number is '."<strong>+91 ".$phone."</strong>";
-        
-    
-        $mail->Body = $body;
+
+
+        $mail = new PHPMailer();
+        $mail->isSMTP();
+        $mail->SMTPDebug = 0; 
+        $mail->Host = "smtp.gmail.com"; // use $mail->Host = gethostbyname('smtp.gmail.com'); // if your network does not support SMTP over IPv6
+        $mail->Port = 587; // TLS only
+        $mail->SMTPSecure = 'ssl'; // ssl is depracated
+        $mail->SMTPAuth = true;
+        $mail->Username = 'office.vasanthamhealthcentre@gmail.com';
+        $mail->Password = 'vasantham@2020';
+        $mail->setFrom( $_POST["email"], $_POST["name"]);
+        $mail->AddAddress('office.vasanthamhealthcentre@gmail.com', 'Vasantham Healthcentre');        //Adds a "To" address
+        // $mail->AddCC($_POST["email"], $_POST["name"]);    //Adds a "Cc" address
+        $mail->WordWrap = 50;                            //Sets word wrapping on the body of the message to a given number of characters
+        $mail->Subject = 'Booking an Appointment';
+        $current_date = date("M d,Y");
+        // $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+        $mail->msgHTML('<p style="font-size: 12px;text-align: left;"  >! Your Appointment has been registered, thanks!</p>');
+        $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+        // $mail->addAttachment('images/phpmailer_mini.png'); //Attach an image file
+
+        $mail->send();
+
+        echo "after mail";
         // $mail->Body = $_POST["message"];                //An HTML or plain text message body
         if ($mail->Send())                                //Send an Email. Return true on success or false on error
         {
@@ -94,10 +111,14 @@ if (isset($_POST["submit"])) {
         $name = '';
         $email = '';
         $phone = '';
-        $departments='';
-        $date='';
-        $time='';
+        $departments = '';
+        $date = '';
+        $time = '';
         $message = '';
+
+        } catch (Exception $e) {
+            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        }
     }
 }
 

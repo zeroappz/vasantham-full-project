@@ -44,7 +44,7 @@ if (isset($_POST["submit"])) {
         $message = clean_text($_POST["message"]);
     }
     if ($error == '') {
-        require 'class/class.phpmailer.php';
+        //require 'class/class.phpmailer.php';
         $mail = new PHPMailer;
         $mail->IsSMTP();
         $mail->SMTPDebug = 0; // 0 = off (for production use) - 1 = client messages - 2 = client and server messages						//Sets Mailer to send message using SMTP
@@ -52,7 +52,7 @@ if (isset($_POST["submit"])) {
         $mail->Port = 465;                                //Sets the default SMTP server port
         $mail->SMTPAuth = true;                            //Sets SMTP authentication. Utilizes the Username and Password variables
         $mail->Username = 'info@zeroappz.com';                    //Sets SMTP username eg: info@zeroappz.com
-        $mail->Password = '@WpCiofocnftp1#INF';                    //Sets SMTP password eg: xxxxxx
+        $mail->Password = '';                    //Sets SMTP password eg: xxxxxx
         $mail->SMTPSecure = 'ssl';                            //Sets connection prefix. Options are "", "ssl" or "tls"
         $mail->From = $_POST["email"];                    //Sets the From email address for the message
         $mail->FromName = $_POST["name"];                //Sets the From name of the message
