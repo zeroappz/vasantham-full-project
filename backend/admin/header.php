@@ -298,13 +298,13 @@ if ($_SESSION['user']['role'] == 'Publisher') {
 						<ul class="treeview-menu">
 							<li><a href="photo-category.php"><i class="fa fa-circle-o"></i> Photo Category</a></li>
 							<li><a href="photo.php"><i class="fa fa-circle-o"></i> Photo Gallery</a></li>
-							<!--<li><a href="video-category.php"><i class="fa fa-circle-o"></i> Video Category</a></li>
-							<li><a href="video.php"><i class="fa fa-circle-o"></i> Video</a></li>-->
+							<li><a href="video-category.php"><i class="fa fa-circle-o"></i> Video Category</a></li>
+							<li><a href="video.php"><i class="fa fa-circle-o"></i> Video</a></li>
 						</ul>
 					</li>
 
 
-					<!--
+					
 					<li class="treeview <?php if (($cur_page == 'advertisement-home.php') || ($cur_page == 'advertisement-sidebar.php') || ($cur_page == 'advertisement-sidebar-add.php') || ($cur_page == 'advertisement-sidebar-edit.php') || ($cur_page == 'advertisement-category.php') || ($cur_page == 'advertisement-category-add.php') || ($cur_page == 'advertisement-category-edit.php')) {
 											echo 'active';
 										} ?>">
@@ -354,7 +354,7 @@ if ($_SESSION['user']['role'] == 'Publisher') {
 						<a href="subscriber.php">
 							<i class="fa fa-users"></i> <span>Subscriber</span>
 						</a>
-					</li>-->
+					</li>
 					<?php
 					if (
 						$_SESSION['user']['role'] == 'Super Admin'

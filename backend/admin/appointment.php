@@ -21,12 +21,10 @@
 			    <tr>
 			        <th>#</th>
 			        <th>Patient Name</th>
-			        <th>Patient Phone</th>
-                    <th>Patient Email</th>
-                    <th>Patient Name</th>
+			        <th>Phone</th>
+                    <th>Email</th>
 			        <th>Department</th>
-                    <th>Schedule date</th>
-                    <th>Schedule Time</th>
+                    <th>Scheduled</th>
 					<th>Message</th>
 					<th>Status</th>
 					<th>Action</th>
@@ -47,9 +45,7 @@
 	                    <td><?php echo $row['patient_email']; ?></td>
                         <td><?php echo $row['patient_phone']; ?></td>
                         <td><?php echo $row['department']; ?></td>
-                        <td><?php echo $row['patient_phone']; ?></td>
-                        <td><?php echo $row['schedule_date']; ?></td>
-                        <td><?php echo $row['schedule_time']; ?></td>
+                        <td><?php echo $row['schedule_date']; ?> | <?php echo $row['schedule_time']; ?></td>
 						<td><?php echo $row['message']; ?></td>
 						<td>
 						<?php if($row['apmt_status'] == 0): ?>
