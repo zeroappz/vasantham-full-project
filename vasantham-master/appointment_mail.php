@@ -131,6 +131,7 @@ if (isset($_POST["submit"])) {
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }*/
     }
+    header('location: index.php');
 }
 
 
