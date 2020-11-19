@@ -66,7 +66,6 @@ include "header.php";
                                         <label>Select your time</label>
                                         <select name="time" required id="timing">
                                             <option value="" selected disabled>Select Time</option>
-                                            <option value="" data-value="default" disabled>Please select a department</option>
                                             <option value="<?php echo $time ?>" data-value="Cardiology">10:00AM - 12:00AM</option>
                                             <option value="12:00AM - 02:00AM" data-value="Cardiology">12:00AM - 02:00AM</option>
                                             <option value="02:00PM - 04:00PM" data-value="Neurology">02:00PM - 04:00PM</option>
