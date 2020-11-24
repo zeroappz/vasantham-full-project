@@ -192,6 +192,100 @@ include "header.php"
 
         <!------------------------------------------------------------------------------------------------>
         <!------------------------------------------------------------------------------------------------>
+
+
+  <!-- Services Section -->
+  <section class="services-section" style="padding: 60px 0 10px;">
+            <div class="auto-container">
+                <div class="sec-title text-center">
+                    <span class="sub-title">OUR SERVICES</span>
+                    <h2>We Care Our Patients.</h2>
+                    <span class="divider"></span>
+                </div>
+
+                <div class="row">
+                    <!-- Service Block -->
+                    <div class="service-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <span class="icon flaticon-heartbeat"></span>
+                            <h5><a href="#"></a>ICU</h5>
+                            <!--   <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>-->
+                        </div>
+                    </div>
+
+                    <!-- Service Block -->
+                    <div class="service-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <span class="icon flaticon-surgery-room"></span>
+                            <h5><a href="#">CCU</a></h5>
+                            <!--    <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>-->
+                        </div>
+                    </div>
+
+                    <!-- Service Block -->
+                    <div class="service-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                          <span class="icon flaticon-pharmacy"></span>
+                            <h5><a href="#">ECHO</a></h5>
+                            <!--   <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>-->
+                        </div>
+                    </div>
+
+                    <!-- Service Block -->
+                    <div class="service-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <span class="icon flaticon-transport"></span>
+                            <h5><a href="#">Ambulance Facilities</a></h5>
+                            <!--    <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>-->
+                        </div>
+                    </div>
+
+                    <!-- Service Block -->
+                    <div class="service-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <span class="icon flaticon-lab"></span>
+                            <h5><a href="#">Lab Tests</a></h5>
+                            <!--   <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>-->
+                        </div>
+                    </div>
+
+                    <!-- Service Block -->
+                    <div class="service-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <span class="icon flaticon-first-aid"></span>
+                            <h5><a href="#">Intensive Care</a></h5>
+                            <!--   <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Services Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <!------------------------------------------------------------------------------------------------>
 
         <!-- Appointment Section -->

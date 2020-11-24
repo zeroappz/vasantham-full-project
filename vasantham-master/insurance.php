@@ -125,7 +125,7 @@ include "header.php";
                         <div class="contact-info-block col-lg-4 col-md-6 col-sm-12">
                             <div class="inner" style="padding-left: 29px !important;">
 
-                                <h5 style="color: #1370B5;">Insurance Officer:</h5>
+                                <h5 style="color: #1370B5;"><strong>Insurance Officer</strong>:</h5>
                                 <p style="font-size: 16px;">E. Anburajaraman</p>
                                 <p style="font-size: 14px;">+91 88707-06620<br><a href="mailto:anburajaraman.vasatham@gmail.com">anburajaraman.vasatham@gmail.com</a></p>
                             </div>
