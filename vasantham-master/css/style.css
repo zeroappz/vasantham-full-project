@@ -1514,8 +1514,8 @@ Owl Carousel Arrows
     width: 100%;
     background-color: #fafafa;
     z-index: 9999;
-    background-image: url(../images/icons/page-loader.gif);
-    background-size: 200px;
+    background-image: url(../images/icons/page-loader-3.gif);
+    background-size: 300px;
     background-repeat: no-repeat;
     background-position: center;
 }
