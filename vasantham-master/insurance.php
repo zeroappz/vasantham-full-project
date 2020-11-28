@@ -156,7 +156,53 @@ include "header.php";
             </div>
     </div>
     </section><br>
-    <h3 style="border: black; text-align:center;color:#1370B5"> Our Empanelment</h3><br>
+<!------------------------------------------------------------------------------------------------------------->
+<h3 style="border: black; text-align:center;color:#1370B5"> Our Empanelment - Government</h3><br>
+<section class="contact-section" id="contact" style="padding-left:170px;">
+        <div class="row" style="margin-left: 0px;margin-right: 0px;">
+           
+                <!-- Feature BLock-->
+                <div class="feature-block-two col-lg-3 col-md-6 col-sm-9" style="width: 150px;">
+                    <a class="ins" href="" target="_blank">
+                        <div class="inner-box">
+                            <figure class="thumb-box">
+                                <img src="images\clients\1.png" style="width: 70%;left: 15%;position: relative; height:144px;"  alt="">
+                            </figure>
+                            <div class="insurance-list" style="text-align: center;">Chief Ministers Comprehensive Health Insurance Scheme</div>
+                        </div>
+                    </a>
+                </div>
+                 <!-- Feature BLock-->
+                 <div class="feature-block-two col-lg-3 col-md-6 col-sm-9" style="width: 150px;margin-left:64px;" >
+                    <a class="ins" href="" target="_blank">
+                        <div class="inner-box">
+                            <figure class="thumb-box">
+                                <img src="images\clients\2.png" style="width: 70%;left: 15%;position: relative; height:144px;"  alt="">
+                            </figure>
+                            <div class="insurance-list"  style="text-align: center;">TNNHIS MidIndia Health Services</div>
+                        </div>
+                    </a>
+                </div>
+                 <!-- Feature BLock -->
+                 <div class="feature-block-two col-lg-3 col-md-6 col-sm-9" style="width: 150px;margin-left:50px;">
+                    <a class="ins" href="" target="_blank">
+                        <div class="inner-box">
+                            <figure class="thumb-box">
+                                <img src="images\clients\3.jpg" style="width: 70%;left: 15%;position: relative; height:144px;"  alt="">
+                            </figure>
+                            <div class="insurance-list"  style="text-align: center;">Rashtriya Swasthya Bima Yojana</div>
+                        </div>
+                    </a>
+                </div>
+
+         </div>
+</section>
+
+
+
+<!--------------------------------------------------------------------------------------------------->
+<!-----------------------------------Our Empanelment-------------------------------------------------->
+h3 style="border: black; text-align:center;color:#1370B5"> Our Empanelment - Government</h3><br>
 
 
     <!--<table id="customers" style="align-self: center;">
@@ -202,3 +248,10 @@ include "header.php";
 </body>
 
 </html>
+
+
+
+
+
+
+    
