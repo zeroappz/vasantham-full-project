@@ -38,7 +38,6 @@
 												t1.video_title,
 												t1.video_iframe,
 												t1.v_category_id,
-
 												t2.v_category_id,
 												t2.v_category_name
 

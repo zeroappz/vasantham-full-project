@@ -16,6 +16,16 @@ function clean_text($string)
     return $string;
 }
 
+// Import PHPMailer classes into the global namespace
+// These must be at the top of your script, not inside a function
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+// Load Composer's autoloader
+require 'vendor/autoload.php';
+
+
 if (isset($_POST["submit"])) {
     if (empty($_POST["name"])) {
         $error .= '<p><label class="text-danger">Please Enter your Name</label></p>';
@@ -44,42 +54,46 @@ if (isset($_POST["submit"])) {
         $message = clean_text($_POST["message"]);
     }
     if ($error == '') {
-        //require 'class/class.phpmailer.php';
-        $mail = new PHPMailer;
-        $mail->IsSMTP();
-        $mail->SMTPDebug = 0; // 0 = off (for production use) - 1 = client messages - 2 = client and server messages						//Sets Mailer to send message using SMTP
-        $mail->Host = 'mail.zeroclientglobal.com';        //Sets the SMTP hosts of your Email hosting, eg: mail.xxxxxx.com
-        $mail->Port = 465;                                //Sets the default SMTP server port
-        $mail->SMTPAuth = true;                            //Sets SMTP authentication. Utilizes the Username and Password variables
-        $mail->Username = 'info@zeroappz.com';                    //Sets SMTP username eg: info@zeroappz.com
-        $mail->Password = '';                    //Sets SMTP password eg: xxxxxx
-        $mail->SMTPSecure = 'ssl';                            //Sets connection prefix. Options are "", "ssl" or "tls"
-        $mail->From = $_POST["email"];                    //Sets the From email address for the message
-        $mail->FromName = $_POST["name"];                //Sets the From name of the message
-        $mail->AddAddress('info@zeroappz.com', 'ZeroAppz');        //Adds a "To" address
-        $mail->AddCC($_POST["email"], $_POST["name"]);    //Adds a "Cc" address
-        $mail->WordWrap = 50;                            //Sets word wrapping on the body of the message to a given number of characters
-        $mail->IsHTML(true);                            //Sets message type to HTML				
-        $mail->Subject = "Looking for an Appointment";                //Sets the Subject of the message
-        
-        $body="";
+        try {
+            $mail = new PHPMailer(true);
 
-        $body .= 'Mr/Ms. '.$name. ' is trying to reach you with the following message.';
-        $body .=  "<br><h3>".$message."</h3>".' and his/her contact number is '."<strong>+91 ".$phone."</strong>";
-        
-    
-        $mail->Body = $body;
-        // $mail->Body = $_POST["message"];                //An HTML or plain text message body
-        if ($mail->Send())                                //Send an Email. Return true on success or false on error
-        {
-            $error = '<label class="text-success">Thank you for contacting us</label>';
-        } else {
-            $error = '<label class="text-danger">There is an Error</label>';
+            //Server settings
+            $mail->SMTPDebug = 0;                      // Enable verbose debug output
+            $mail->isSMTP();                                            // Send using SMTP
+            $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
+            $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+            $mail->Username   = 'office.vasanthamhealthcentre@gmail.com';                     // SMTP username
+            $mail->Password   = 'vasantham@2020';                               // SMTP password
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+            $mail->Port       = 465;
+            $mail->setFrom($_POST["email"], 'Vasantham HealthCentre');
+            $mail->addAddress('office.vasanthamhealthcentre@gmail.com');     // Add a recipient
+            // Content
+            $mail->isHTML(true);                                  // Set email format to HTML
+            $mail->AddCC($_POST["email"], $_POST["name"]);    //Adds a "Cc" address
+            $mail->WordWrap = 50;                            //Sets word wrapping on the body of the message to a given number of characters
+            $mail->Subject = 'Looking for an Appointment';
+            $mail->Body    = '<h2>Dear Vasantham Hospital,</h2>
+            <br><p>One Person approached us for the following information <strong>' . $message . ' </strong>and his/her name <strong>'. $name .  '</strong> and contact details are ' . '<strong>+91 ' . $phone . '</strong> and <strong>'. $email . '</strong></p> 
+            <br/>
+            <br>
+            <b>AUTO RESPONSE CONTACT FORM</b>
+            <h3>Vasantham Hospital</h3>';
+            $mail->AltBody = 'Your query has been submitted to Vasantham HealthCentre!';
+            //An HTML or plain text message body
+            if ($mail->Send())                                //Send an Email. Return true on success or false on error
+            {
+                $error = '<label class="text-success">Thank you for contacting us</label>';
+            } else {
+                $error = '<label class="text-danger">There is an Error</label>';
+            }
+            $name = '';
+            $email = '';
+            $phone = '';
+            $message = '';
+        } catch (Exception $e) {
+            //echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
-        $name = '';
-        $email = '';
-        $phone = '';
-        $message = '';
     }
 }
 
