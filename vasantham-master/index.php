@@ -1,5 +1,28 @@
+<!-- DB connection -->
+
 <?php
-include "header.php"
+include("../backend/admin/config.php");
+// include("blog.php");
+// include("../backend/admin/functions.php");
+$error_message = '';
+$success_message = '';
+
+$statement = $pdo->prepare("SELECT * FROM slider WHERE status=? ORDER BY id DESC");
+$statement->execute(array('Active'));
+$result = $statement->fetchAll(PDO::FETCH_ASSOC);							
+$total = $statement->rowCount();
+if ($total == 0) {
+    header('location: ' . BASE_URL . 'vasantham-master');
+    //echo 'no rows available';
+    exit;
+} else {
+    // echo $newsList[0]['category_name'];
+}
+?>
+
+
+<?php
+include "header.php";
 ?>
 
 <body>
@@ -15,7 +38,7 @@ include "header.php"
                         <li data-index="rs-1" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 
                             <!-- MAIN IMAGE -->
-                            <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="20" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="images/main-slider/Cardio.jpg">
+                            <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="20" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="http://localhost/vasantham/vasantham-full-project/backend/assets/uploads/<?php echo $result[0]['photo'];?>">
 
                             <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['750','750','750','650']" data-whitespace="normal" data-hoffset="['0','0','0','0']" data-voffset="['-180','-170','-180','-180']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
                                 <span class="title">Welcome to our Vasantham Health Centre Center </span><br><br><br><br>
@@ -43,7 +66,7 @@ include "header.php"
                         <li data-index="rs-2" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 
                             <!-- MAIN IMAGE -->
-                            <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="20" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="images/main-slider/dia.JPG">
+                            <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="20" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="http://localhost/vasantham/vasantham-full-project/backend/assets/uploads/<?php echo $result[1]['photo'];?>">
 
                             <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['750','750','750','650']" data-whitespace="normal" data-hoffset="['0','0','0','0']" data-voffset="['-180','-170','-180','-180']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
                                 <span class="title">Welcome to our Vasantham Health Centre Center </span>
