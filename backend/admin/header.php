@@ -221,8 +221,8 @@ if ($_SESSION['user']['role'] == 'Publisher') {
 							</span>
 						</a>
 						<ul class="treeview-menu">
-							<!--<li><a href="slider.php"><i class="fa fa-circle-o"></i> Slider</a></li>
-							<li><a href="service.php"><i class="fa fa-circle-o"></i> Service</a></li>-->
+							<li><a href="slider.php"><i class="fa fa-circle-o"></i> Slider</a></li>
+							<li><a href="service.php"><i class="fa fa-circle-o"></i> Service</a></li>
 							<li><a href="testimonial.php"><i class="fa fa-circle-o"></i> Testimonial</a></li>
 							<li><a href="partner.php"><i class="fa fa-circle-o"></i> Partner</a></li>
 							<li><a href="department.php"><i class="fa fa-circle-o"></i> Department</a></li>
