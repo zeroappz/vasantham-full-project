@@ -1,26 +1,7 @@
 <!-- DB connection -->
 
 <?php
-
 require_once("../backend/admin/config.php");
-?>
-<?php
-
-// Check the page slug is valid or not.
-// $statement = $pdo->prepare("SELECT * FROM photo");
-// $statement->execute();
-// $galleryList = $statement->fetchAll(PDO::FETCH_ASSOC);	
-// $total = $statement->rowCount();
-// if ($total == 0) {
-//     header('location: ' . BASE_URL . 'vasantham-master');
-//     //echo 'no rows available';
-//     exit;
-// } else {
-//     // echo $galleryList[0]['photo_caption'];
-// }
-
-?>
-<?php
 include "header.php"
 ?>
 
@@ -36,14 +17,14 @@ include "header.php"
         include "header_main.php"
         ?>
         <!--End Main Header -->
-        <!--Page Title -->
-        <section class="page-title" style="background-image: url(images/background/gallery.jpg);">
+        <!--Page Title-->
+        <section class="page-title" style="background-image: url(images/background/Gallery-Banner.jpg);">
             <div class="auto-container">
                 <div class="title-outer">
-                    <h1 style="color:white">Gallery</h1>
+                    <h1>Gallery</h1>
                     <ul class="page-breadcrumb">
-                        <li><a href="index-2.php" style="color:white">Home</a></li>
-                        <li style="color:white">Gallery</li>
+                        <li><a href="index-2.php">Home</a></li>
+                        <li>Gallery</li>
                     </ul>
                 </div>
             </div>
@@ -51,14 +32,14 @@ include "header.php"
         <!--End Page Title-->
 
         <!-- Portfolio Section -->
-        <section class="portfolio-section alternate">
+        <section class="portfolio-section alternate" style="position: 80px 0;">
             <div class="auto-container">
                 <!--MixitUp Galery-->
                 <div class="mixitup-gallery">
 
                     <div class="btns-outer">
                         <!--Filter-->
-                        <ul class="filter-tabs filter-btns clearfix">
+                        <ul class="filter-tabs filter-btns clearfix" style="margin-bottom: 25px;;">
                             <li class="filter active " data-role="button" data-filter="all">All</li>
                             <?php
                             $statement = $pdo->prepare("SELECT * FROM category_photo WHERE status=?");
@@ -68,7 +49,7 @@ include "header.php"
                                 $temp_string = strtolower($row['p_category_name']);
                                 $temp_slug = preg_replace('/[^A-Za-z0-9-]+/', '-', $temp_string);
                             ?>
-                                <li class="filter" data-filter=".<?php echo $temp_slug; ?>" data-role="button"><?php echo $row['p_category_name']; ?></li>
+                                <li class="filter" data-role="button" data-filter=".<?php echo $temp_slug; ?>"><?php echo $row['p_category_name']; ?></li>
                             <?php
                             }
                             ?>
@@ -76,12 +57,9 @@ include "header.php"
                     </div>
 
                     <div class="filter-list row mid-spacing">
-
-                        <!--cath--------------->
-                        <!-- Portfolio Block -->
-                        <?php
-                        $i = 0;
-                        $statement = $pdo->prepare("SELECT
+                    <?php
+						$i = 0;
+						$statement = $pdo->prepare("SELECT
 					                           	t1.photo_id,
 												t1.photo_caption,
 												t1.photo_name,
@@ -93,30 +71,29 @@ include "header.php"
 					                            JOIN category_photo t2
 					                            ON t1.p_category_id = t2.p_category_id 
 					                            ");
-                        $statement->execute();
-                        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-                        foreach ($result as $row) {
-                            $i++;
-                            $temp_string = strtolower($row['p_category_name']);
-                            $temp_slug = preg_replace('/[^A-Za-z0-9-]+/', '-', $temp_string);
-                        ?>
-
-                            <div class="portfolio-block all mix cath col-lg-3 col-md-4 col-sm-8">
-                                <div class="image-box">
-                                    <figure class="image"><img src="<?php echo BASE_URL; ?>assets/uploads/<?php echo $row['photo_name']; ?>" alt="" width="50px" height="50px"></figure>
-
-                                    <div class="overlay">
-                                        <a href="<?php echo BASE_URL; ?>assets/uploads/<?php echo $row['photo_name']; ?>" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
-                                        <div class="title-box">
-                                            <h5><?php echo $temp_string; ?></h5>
-
-                                        </div>
+						$statement->execute();
+						$result = $statement->fetchAll(PDO::FETCH_ASSOC);
+						foreach ($result as $row) {
+							$i++;
+							$temp_string = strtolower($row['p_category_name']);
+							$temp_slug = preg_replace('/[^A-Za-z0-9-]+/', '-', $temp_string);
+						?>
+                        
+                        <!-- Portfolio Block -->
+                        <div class="portfolio-block all mix <?php echo $temp_slug; ?> col-lg-3 col-md-4 col-sm-12" data-my-order="<?php echo $i; ?>">
+                            <div class="image-box">
+                                <figure class="image"><img src="<?php echo BASE_URL; ?>assets/uploads/<?php echo $row['photo_name']; ?>" alt="" width="50px" height="15px"></figure>
+                                <div class="overlay">
+                                    <a href="<?php echo BASE_URL; ?>assets/uploads/<?php echo $row['photo_name']; ?>" class="icon-box lightbox-image" data-fancybox="gallery"><span class="fa fa-expand"></span></a>
+                                    <div class="title-box">
+                                        <h5><?php echo $temp_string; ?></h5>
                                     </div>
                                 </div>
                             </div>
+                        </div>
                         <?php
-                        }
-                        ?>
+						}
+						?>
                     </div>
                 </div>
 
@@ -125,11 +102,6 @@ include "header.php"
                 </div>-->
             </div>
         </section>
-        <!-- End Portfolio Section ---------------------------------------->
-        <!-----------------------------------------------------------------------------------------------
-
-
-
 
         <!-- Main Footer -->
         <?php

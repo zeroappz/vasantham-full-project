@@ -6543,18 +6543,25 @@ Portfolio Section
 
 .mixitup-gallery .filter-tabs li {
     position: relative;
-    font-size: 18px;
-    color: #666666;
-    font-weight: 600;
-    margin-left: 44px;
-    transition: all 300ms ease;
     border-top: 3px solid transparent;
     cursor: pointer;
+    display: inline-block;
+    padding: 6px 14px;
+    border: 2px solid #efeded;
+    transition: all 0.4s ease;
+    border-radius: 6px;
+    text-transform: none;
+    font-weight: bold;
+    font-size: 14px;
+    background: #efeded;
+    color: #1AABDD;
+    margin-left:-8px;
 }
 
 .mixitup-gallery .filter-tabs li.active {
-    color: #1370b5;
-    border-color: #1370b5;
+    border: 2px solid #1AABDD !important;
+    background: #1AABDD;
+    color: #fff !important;
 }
 
 .mixitup-gallery .mix {
@@ -6578,6 +6585,7 @@ Portfolio Section
 .portfolio-block .image-box .image img {
     display: block;
     width: 100%;
+    height: 240px;
     transition: all 200ms ease;
 }
 
